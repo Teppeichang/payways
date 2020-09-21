@@ -1,0 +1,64 @@
+.main{
+  height: 560px;
+}
+
+.header-area{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: greenyellow;
+  color:black;
+  height: 70px;
+}
+
+.header-area h2{
+  padding: 0 0 0 15px;
+  font-size: 20px;
+}
+
+.header-area ul{
+  display: flex;
+}
+
+.header-area a{
+  text-decoration: none;
+  color: black;
+  padding: 0 15px 0 0;
+}
+
+.overview-area{
+  height: 200px;
+  text-align: center;
+}
+
+.overview-area h1{
+  padding: 15px 0 15px 0;
+  font-size: 50px;
+}
+
+.search-form-area{
+  height: 60px;
+  text-align: center;
+  padding: 15px 0 0 0;
+}
+
+.shop-search{
+  width: 500px;
+}
+
+.search-btn{
+  width: 90px;
+}
+
+.latest-post-area{
+  height: 200px;
+}
+
+.latest-post-area h1{
+  text-align: center;
+  padding: 15px 0 0 0;
+}
+
+.footer-area{
+  text-align: center;
+}
