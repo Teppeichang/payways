@@ -1,0 +1,36 @@
+.main{
+  height: 560px;
+}
+
+.overview-area{
+  height: 200px;
+  text-align: center;
+}
+
+.overview-area h1{
+  padding: 15px 0 15px 0;
+  font-size: 50px;
+}
+
+.search-form-area{
+  height: 60px;
+  text-align: center;
+  padding: 15px 0 0 0;
+}
+
+.shop-search{
+  width: 500px;
+}
+
+.search-btn{
+  width: 90px;
+}
+
+.latest-post-area{
+  height: 200px;
+}
+
+.latest-post-area h1{
+  text-align: center;
+  padding: 15px 0 0 0;
+}
