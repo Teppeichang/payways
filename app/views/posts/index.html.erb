@@ -3,7 +3,7 @@
   <div class="overview-area">
     <h1>Payways</h1>
     <p>あなたが行こうとしているお店の決済方法は？</p>
-    <p>Paywaysがすぐにお調べします。</p>
+    <p>Paywaysならすぐにお調べできます。</p>
   </div>
 
   <div class="search-form-area">
@@ -14,7 +14,7 @@
   <div class="latest-post-area">
     <h1>最近投稿された情報</h1>
     <% @posts.each do |post| %>
-      <%= post.content %>
+      <%= link_to post.content, post_path(post.id) %>
     <% end %>
   </div>
 
