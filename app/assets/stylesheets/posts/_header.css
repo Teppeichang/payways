@@ -1,0 +1,19 @@
+.header-area{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: greenyellow;
+  color:black;
+  height: 70px;
+}
+
+.header-area a{
+  padding: 0 15px 0 15px;
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+}
+
+.header-area ul{
+  display: flex;
+}

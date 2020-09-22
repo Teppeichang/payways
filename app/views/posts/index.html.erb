@@ -1,13 +1,4 @@
-<div class="main">
-  <div class="header-area">
-    <h2>Payways</h2>
-    <ul class="header-menu">
-      <li><a href="#">新規登録</a></li>
-      <li><a href="#">ログイン</a></li>
-      <li><a href="#">投稿</a></li>
-      <li><a href="#">ログアウト</a></li>
-    </ul>
-  </div>
+<%= render partial: "header" %>
 
   <div class="overview-area">
     <h1>Payways</h1>
@@ -22,9 +13,9 @@
 
   <div class="latest-post-area">
     <h1>最近投稿された情報</h1>
+    <% @posts.each do |post| %>
+      <%= post.content %>
+    <% end %>
   </div>
 
-  <div class="footer-area">
-    <p>Copyright © Teppei Torii 2020</p>
-  </div>
-</div>
+<%= render partial: "footer" %>
