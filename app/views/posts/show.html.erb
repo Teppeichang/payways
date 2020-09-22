@@ -1,0 +1,16 @@
+<%= render partial: "header" %>
+
+<div class="post-area">
+  <%= @post.content %>
+</div>
+
+<div class="post-menu-area">
+  <ul>
+    <% if user_signed_in? && current_user.id == @post.user_id %>
+      <li><%= link_to "編集", edit_post_path(@post.id) %></li>
+      <li><%= link_to "削除", post_path(@post.id), method: :delete %></li>
+    <% end %>
+  </ul>
+</div>
+
+<%= render partial: "footer" %>

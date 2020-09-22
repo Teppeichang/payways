@@ -1,0 +1,11 @@
+<%= render partial: "header" %>
+
+<div class="form-area">
+  <h1>投稿の編集</h1>
+  <%= form_with(model: @post, local: true) do |form|%>
+    <%= form.text_area :content %>
+    <%= form.submit "投稿する"%>
+  <% end %>
+</div>
+
+<%= render partial: "footer" %>
