@@ -7,15 +7,19 @@
   </div>
 
   <div class="search-form-area">
-    <input class="shop-search" type="text", placeholder="例:スターバックスコーヒー 原宿店">
-    <input class="search-btn" type="submit", value="検索">
-  </div>
-
-  <div class="latest-post-area">
-    <h1>最近投稿された情報</h1>
-    <% @posts.each do |post| %>
-      <%= link_to post.content, post_path(post.id) %>
+    <%= form_with url: shops_path, local: true, method: :get do |form| %>
+      <%= form.text_field :keyword %>
+      <%= form.submit "検索" %>
     <% end %>
   </div>
+
+  <% if user_signed_in? %>
+    <div class="latest-post-area">
+      <h1>最近投稿された情報</h1>
+      <% @posts.each do |post| %>
+        <%= link_to post.content, post_path(post.id) %>
+      <% end %>
+    </div>
+  <% end %>
 
 <%= render partial: "footer" %>
