@@ -3,7 +3,17 @@
 <div class="form-area">
   <h1>投稿の編集</h1>
   <%= form_with(model: @post, local: true) do |form|%>
-    <%= form.text_area :content %>
+    <p class="form-text">店名</p>
+    <%= form.text_field :shop_name, placeholder: "例:スターバックスコーヒー 原宿店", class: "shop_name" %>
+    <p class="form-text">対応していた決済方式</p>
+    <p class="form-text">クレジットカード</p>
+    <%= form.collection_select :credit_card_id, CreditCard.all, :id, :name, {}, {class:"select-box", id: "credit_card"} %>
+    <p class="form-text">電子マネー</p>
+    <%= form.collection_select :e_money_id, EMoney.all, :id, :name, {}, {class:"select-box", id: "e_money"} %>
+    <p class="form-text">QRコード決済</p>
+    <%= form.collection_select :code_pay_id, CodePay.all, :id, :name, {}, {class: "select-box", id: "code_pay"} %>
+    <p class="form-text">その他追加情報</p>
+    <%= form.text_area :explain, placeholder: "例: ", class: "shop_explain" %>
     <%= form.submit "投稿する"%>
   <% end %>
 </div>
