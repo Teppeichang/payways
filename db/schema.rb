@@ -15,9 +15,9 @@ ActiveRecord::Schema.define(version: 2020_09_21_080147) do
   create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.string "shop_name", null: false
-    t.integer "credit_card", null: false
-    t.integer "e_money", null: false
-    t.integer "code_pay", null: false
+    t.integer "credit_card_id", null: false
+    t.integer "e_money_id", null: false
+    t.integer "code_pay_id", null: false
     t.text "explain"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

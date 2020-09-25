@@ -13,14 +13,14 @@ has_many :comments
 has_many :bookmarks
 
 ## postsテーブル
-| Column      | Type    | Options                        |
-| ----------- | ------- | ------------------------------ |
-| user_id     | integer | null: false, foreign_key: true |
-| shop_name   | string  | null: false                    |
-| credit_card | integer | null: false                    |
-| e_money     | integer | null: false                    |
-| code_pay    | integer | null: false                    |
-| explain     | text    |                                |
+| Column         | Type    | Options                        |
+| -------------- | ------- | ------------------------------ |
+| user_id        | integer | null: false, foreign_key: true |
+| shop_name      | string  | null: false                    |
+| credit_card_id | integer | null: false                    |
+| e_money_id     | integer | null: false                    |
+| code_pay_id    | integer | null: false                    |
+| explain        | text    |                                |
 ## アソシエーション
 belongs_to :user
 has_many :bookmarks
