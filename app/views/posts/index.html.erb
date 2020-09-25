@@ -16,9 +16,7 @@
   <% if user_signed_in? %>
     <div class="latest-post-area">
       <h1>最近投稿された情報</h1>
-      <% @posts.each do |post| %>
-        <%= link_to post.shop_name, post_path(post.id) %>
-      <% end %>
+      <%= render partial: "post" %>
     </div>
   <% end %>
 

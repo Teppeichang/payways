@@ -1,0 +1,16 @@
+<%= render partial: "header" %>
+
+  <div class="search-form-area">
+    <%= form_with url: search_posts_path, local: true, method: :get do |form| %>
+      <%= form.text_field :keyword %>
+      <%= form.submit "検索" %>
+    <% end %>
+  </div>
+
+  <div class="latest-post-area">
+    <% @posts.each do |post| %>
+      <%= render partial: "post", locals: { post: post } %>
+    <% end %>
+  </div>
+
+<%= render partial: "footer" %>
