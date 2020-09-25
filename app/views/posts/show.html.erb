@@ -1,7 +1,23 @@
 <%= render partial: "header" %>
 
 <div class="post-area">
-  <%= @post.content %>
+  <p class="form-text">店名</p>
+  <%= @post.shop_name %>
+  <p class="form-text">対応する決済方式</p>
+  <% if @post.credit_card.id != 1 %>
+    <p class="form-text">クレジットカード</p>
+    <%= @post.credit_card.name %>
+  <% end %>
+  <% if @post.e_money.id != 1%>
+    <p class="form-text">電子マネー</p>
+    <%= @post.e_money.name %>
+  <% end %>
+  <% if @post.code_pay.id != 1%>
+    <p class="form-text">QRコード決済</p>
+    <%= @post.code_pay.name %>
+  <% end %>
+  <p class="form-text">その他追加情報</p>
+  <%= @post.explain %>
 </div>
 
 <div class="post-menu-area">

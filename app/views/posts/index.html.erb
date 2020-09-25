@@ -7,17 +7,17 @@
   </div>
 
   <div class="search-form-area">
-    <%#= form_with url:, local: true, method: :get do |form| %>
-      <%#= form.text_field :keyword %>
-      <%#= form.submit "検索" %>
-    <%# end %>
+    <%= form_with url: search_posts_path, local: true, method: :get do |form| %>
+      <%= form.text_field :keyword %>
+      <%= form.submit "検索" %>
+    <% end %>
   </div>
 
   <% if user_signed_in? %>
     <div class="latest-post-area">
       <h1>最近投稿された情報</h1>
       <% @posts.each do |post| %>
-        <%= link_to post.content, post_path(post.id) %>
+        <%= link_to post.shop_name, post_path(post.id) %>
       <% end %>
     </div>
   <% end %>
