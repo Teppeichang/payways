@@ -10,5 +10,13 @@ class Post < ApplicationRecord
     validates :e_money_id
     validates :code_pay_id
   end
+
+  def self.search(search)
+    if search != ""
+      Post.where('shop_name LIKE(?)', "%#{search}%")
+    else
+      Post.all
+    end
+  end
   
 end

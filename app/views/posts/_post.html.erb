@@ -1,0 +1,3 @@
+<% @posts.each do |post| %>
+    <%= link_to post.shop_name, post_path(post.id) %>
+<% end %>
