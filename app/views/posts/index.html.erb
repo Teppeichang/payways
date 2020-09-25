@@ -7,10 +7,10 @@
   </div>
 
   <div class="search-form-area">
-    <%= form_with url: shops_path, local: true, method: :get do |form| %>
-      <%= form.text_field :keyword %>
-      <%= form.submit "検索" %>
-    <% end %>
+    <%#= form_with url:, local: true, method: :get do |form| %>
+      <%#= form.text_field :keyword %>
+      <%#= form.submit "検索" %>
+    <%# end %>
   </div>
 
   <% if user_signed_in? %>
