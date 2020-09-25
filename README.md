@@ -13,10 +13,14 @@ has_many :comments
 has_many :bookmarks
 
 ## postsテーブル
-| Column  | Type    | Options                        |
-| ------- | ------- | ------------------------------ |
-| user_id | integer | null: false, foreign_key: true |
-| content | text    | null: false                    |
+| Column      | Type    | Options                        |
+| ----------- | ------- | ------------------------------ |
+| user_id     | integer | null: false, foreign_key: true |
+| shop_name   | string  | null: false                    |
+| credit_card | integer | null: false                    |
+| e_money     | integer | null: false                    |
+| code_pay    | integer | null: false                    |
+| explain     | text    |                                |
 ## アソシエーション
 belongs_to :user
 has_many :bookmarks
@@ -25,9 +29,10 @@ has_many :bookmarks
 | Column  | Type    | Options                        |
 | ------- | ------- | ------------------------------ |
 | user_id | integer | null: false, foreign_key: true |
-| content | text    | null: false                    |
+| post_id | integer | null: false, foreign_key: true |
 ## アソシエーション
 belongs_to :user
+belongs_to :post
 
 ## bookmarksテーブル
 | Column  | Type    | Options                        |
