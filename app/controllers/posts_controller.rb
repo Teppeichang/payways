@@ -45,11 +45,12 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:shop_name, :credit_card_id, :e_money_id, :code_pay_id, :explain).merge(user_id: current_user.id)
+    params.require(:post).permit(:image, :shop_name, :credit_card_id, :e_money_id, :code_pay_id, :explain).merge(user_id: current_user.id)
   end
 
   def set_post
     @post = Post.find(params[:id])
   end
+
 
 end

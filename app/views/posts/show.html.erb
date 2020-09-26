@@ -3,7 +3,9 @@
 <div class="post-area">
   <p class="form-text">店名</p>
   <%= @post.shop_name %>
-  <p class="form-text">対応する決済方式</p>
+    <p class="form-text">写真</p>
+    <%= image_tag @post.image.variant(resize:'350x350') %>
+    <p class="form-text">対応する決済方式</p>
   <% if @post.credit_card.id != 1 %>
     <p class="form-text">クレジットカード</p>
     <%= @post.credit_card.name %>
