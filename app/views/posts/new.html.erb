@@ -3,9 +3,11 @@
 <div class="form-area">
   <h1>新規投稿</h1>
   <%= form_with(model: @post, local: true) do |form|%>
-    <p class="form-text">店名</p>
+    <p class="form-text">店名（必須）</p>
     <%= form.text_field :shop_name, placeholder: "例:スターバックスコーヒー 原宿店", class: "shop_name" %>
-    <p class="form-text">対応していた決済方式</p>
+    <p class="form-text">写真</p>
+    <%= form.file_field :image %>
+    <p class="form-text">対応していた決済方式（必須）</p>
     <p class="form-text">クレジットカード</p>
     <%= form.collection_select :credit_card_id, CreditCard.all, :id, :name, {}, {class:"select-box", id: "credit_card"} %>
     <p class="form-text">電子マネー</p>
