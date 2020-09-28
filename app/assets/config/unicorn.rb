@@ -23,6 +23,7 @@ stdout_path "#{app_path}/log/unicorn.stdout.log"
 timeout 60
 
 #以下は応用的な設定なので説明は割愛
+#（Unicorn立ち上げの際に必要となる記述）
 
 preload_app true
 GC.respond_to?(:copy_on_write_friendly=) && GC.copy_on_write_friendly = true
