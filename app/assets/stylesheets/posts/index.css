@@ -1,31 +1,57 @@
 .main{
-  height: 560px;
+  height: 100%;
+  width: 100%;
+  background-image: url("/holiday-shopping-1921658_1920.jpg");
+  background-size: cover;
 }
 
 .overview-area{
-  height: 200px;
+  height: 300px;
   text-align: center;
 }
 
 .overview-area h1{
-  padding: 15px 0 15px 0;
+  padding: 30px 0 15px 0;
   font-size: 50px;
+  color: white;
+}
+
+.overview-area p{
+  padding: 15px 0 0 0;
+  font-size: 20px;
+  color: white;
 }
 
 .search-form-area{
-  height: 60px;
+  height: 300px;
   text-align: center;
   padding: 15px 0 0 0;
 }
 
-.shop-search{
+.search-form-area input[name="keyword"]{
   width: 500px;
+  height: 40px;
 }
 
-.search-btn{
+.search-form-area input[name="commit"]{
   width: 90px;
+  height: 40px;
+  margin: 0 0 0 10px;
 }
 
+/* 非ログイン時のみ表示部分 */
+.about-service{
+  height: 300px;
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+
+.about-service h1{
+  font-size: 30px;
+}
+
+/* ログイン時のみ表示部分 */
 .latest-post-area{
   height: 200px;
 }

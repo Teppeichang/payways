@@ -1,9 +1,8 @@
 <%= render partial: "header" %>
 
   <div class="overview-area">
-    <h1>Payways</h1>
-    <p>あなたが行こうとしているお店の決済方法は？</p>
-    <p>Paywaysならすぐにお調べできます。</p>
+    <h1>Paywaysへようこそ</h1>
+    <p>Paywaysはキャッシュレス決済に対応するお店の検索・情報共有サービスです。</p>
   </div>
 
   <div class="search-form-area">
@@ -12,6 +11,15 @@
       <%= form.submit "検索" %>
     <% end %>
   </div>
+
+  <% unless user_signed_in? %>
+    <div class="about-service">
+      <h1>Paywaysでできること</h1>
+      <%= image_tag  "/クレジットカードのアイコン素材.png" %>
+      <%= image_tag  "/スマートフォンアイコン12 .png" %>
+      <%= image_tag  "/コメントのアイコン素材 その2.png" %>
+    </div>
+  <% end %>
 
   <% if user_signed_in? %>
     <div class="latest-post-area">
