@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: payways_production
-  username: payways
-  password: <%= ENV['PAYWAYS_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
