@@ -1,3 +1,4 @@
+# requireによって引数として置かれたディレクトリが読み込まれる。ディレクトリ内には、デプロイに関して必要な動作が記述されている。
 require "capistrano/setup"
 require "capistrano/deploy"
 require 'capistrano/rbenv'
