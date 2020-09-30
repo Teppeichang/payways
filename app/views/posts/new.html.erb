@@ -1,15 +1,20 @@
 <%= render partial: "header" %>
 
+<h1>新規投稿</h1>
+
 <div class="form-area">
-  <h1>新規投稿</h1>
   <%= form_with(model: @post, local: true) do |form|%>
-    <p class="form-text">店名（必須）</p>
-    <%= form.text_field :shop_name, placeholder: "例:スターバックスコーヒー 原宿店", class: "shop_name" %>
-    <p class="form-text">写真</p>
-    <%= form.file_field :image %>
-    <p class="form-text">決済方式・お店に関する情報</p>
-    <%= form.text_area :explain, placeholder: "例:クレジットカードは全ブランド、電子マネーはクイックペイが使えました。オムライスがとても美味しいお店です。 ", class: "shop_explain" %>
-    <%= form.submit "投稿する"%>
+    <div class="post-form">
+      <p>店名（必須）</p>
+      <%= form.text_field :shop_name, placeholder: "例:スターバックスコーヒー 原宿店", class: "shop_name" %>
+      <p>写真</p>
+      <%= form.file_field :image %>
+      <p>決済方式・お店に関する情報</p>
+      <%= form.text_area :explain, placeholder: "例:クレジットカードは全ブランド、電子マネーはクイックペイが使えました。オムライスがとても美味しいお店です。 ", class: "shop_explain" %>
+    </div>
+    <div class="post-btn">
+      <%= form.submit "投稿する"%>
+    </div>
   <% end %>
 </div>
 

@@ -1,7 +1,11 @@
 <% @posts.each do |post| %>
     <div class="post-container">
         <div class="post-left">
-            <%= image_tag post.image.variant(resize:'300x300') %>
+            <% if post.image.blank? %>
+                <p>No Image</p>
+            <% else %>
+                <%= image_tag post.image.variant(resize:'300x300') %>
+            <% end %>
         </div>
         <div class="post-right">
             <ul class="post-right-list">
