@@ -2,12 +2,13 @@
 
   <div class="search-form-area">
     <%= form_with url: search_posts_path, local: true, method: :get do |form| %>
-      <%= form.text_field :keyword %>
+      <%= form.text_field :keyword, placeholder: "店名・キーワードを入力してください" %>
       <%= form.submit "検索" %>
     <% end %>
   </div>
 
-  <div class="latest-post-area">
+  <div class="search-post-area">
+    <h1>検索結果</h1>
     <% @posts.each do |post| %>
       <%= render partial: "post", locals: { post: post } %>
     <% end %>
