@@ -4,16 +4,25 @@
   justify-content: space-between;
   background-color: black;
   height: 70px;
+  width: 100%;
+  position: fixed;
 }
 
-.header-area a{
+.app-name a{
   padding: 0 15px 0 15px;
   font-size: 20px;
   font-family: 'Zapfino', sans-serif;
   text-decoration: none;
-  color: white;
+  color: whitesmoke;
 }
 
 .header-area ul{
   display: flex;
+}
+
+li a{
+  font-size: 20px;
+  padding: 0 15px 0 15px;
+  color: whitesmoke;
+  text-decoration: none;
 }

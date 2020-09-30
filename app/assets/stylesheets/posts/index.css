@@ -82,32 +82,32 @@
   justify-content: center;
 }
 
-.signup-btn{
+.signup{
   width: 200px;
   height: 60px;
   padding: 10px;
   margin-right: 40px;
-  border: 3px solid green;
-  background-color: greenyellow;
+  border: 1px solid black;
+  background: linear-gradient(to bottom, yellowgreen,whitesmoke);
   font-size: 20px;
 }
 
-.signup-btn a{
+.signup a{
   text-decoration: none;
   color: black;
 }
 
-.signin-btn{
+.signin{
   width: 200px;
   height: 60px;
   padding: 10px;
   margin-left: 40px;
-  border: 3px solid darkgoldenrod;
-  background-color: yellow;
+  border: 1px solid black;
+  background: linear-gradient(to bottom, yellow,whitesmoke);
   font-size: 20px;
 }
 
-.signin-btn a{
+.signin a{
   text-decoration: none;
   color: black;
 }

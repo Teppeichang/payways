@@ -1,0 +1,16 @@
+.remember-field{
+  text-align: center;
+  padding: 20px 0 0 0;
+}
+
+.actions{
+  text-align: center;
+  padding: 35px 0 0 0;
+}
+
+.actions input{
+  width: 500px;
+  height: 45px;
+  background: linear-gradient(to bottom, yellow,whitesmoke);
+  cursor: pointer;
+}

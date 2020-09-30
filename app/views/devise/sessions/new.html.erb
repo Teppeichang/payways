@@ -2,16 +2,16 @@
 
 <%= form_with model: @user, url: user_session_path, class: "session-main" do |f| %>
 
-  <h2>ログイン</h2>
-
-  <div class="email-field">
-    <%= f.label "登録メールアドレス" %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <div class="password-field">
-    <%= f.label "パスワード" %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
+  <div class="form-main">
+    <h1>ログイン</h1>
+    <div class="email-field">
+      <%= f.label "登録メールアドレス" %><br />
+      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    </div>
+    <div class="password-field">
+      <%= f.label "パスワード" %><br />
+      <%= f.password_field :password, autocomplete: "current-password" %>
+    </div>
   </div>
 
   <% if devise_mapping.rememberable? %>

@@ -1,6 +1,8 @@
 <div class="main">
   <div class="header-area">
-    <%= link_to "Payways", root_path %>
+    <div class="app-name">
+      <%= link_to "Payways", root_path %>
+    </div>
     <ul class="header-menu">
       <% if user_signed_in? %>
         <li><%= link_to current_user.name, user_path(current_user.id) %></li>

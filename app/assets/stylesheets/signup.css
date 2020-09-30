@@ -1,0 +1,58 @@
+.form-main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 200px 0 0 0;
+}
+
+.form-main h1{
+  font-size: 40px;
+}
+
+.name-field{
+  padding: 20px 0 0 0;
+}
+
+.name-field input{
+  width: 500px;
+  height: 30px;
+}
+
+.email-field{
+  padding: 20px 0 0 0;
+}
+
+.email-field input{
+  width: 500px;
+  height: 30px;
+}
+
+.password-field{
+  padding: 20px 0 0 0;
+}
+
+.password-field input{
+  width: 500px;
+  height: 30px;
+}
+
+.password-confirm-field{
+  padding: 20px 0 0 0;
+}
+
+.password-confirm-field input{
+  width: 500px;
+  height: 30px;
+}
+
+.signup-btn{
+  padding: 35px 0 0 0;
+  text-align: center;
+}
+
+.signup-btn input{
+  width: 500px;
+  height: 45px;
+  background: linear-gradient(to bottom, yellowgreen,whitesmoke);
+  cursor: pointer;
+}
