@@ -113,11 +113,17 @@
 }
 
 /* ログイン時のみ表示部分 */
+.search-form-area{
+  text-align: center;
+}
+
 .latest-post-area{
-  height: 200px;
+  padding: 100px 0 0 0;
+  height: auto;
 }
 
 .latest-post-area h1{
   text-align: center;
   padding: 15px 0 0 0;
+  font-size: 35px;
 }
