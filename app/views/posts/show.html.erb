@@ -5,7 +5,9 @@
   <%= @post.shop_name %>
   <% unless @post.image.blank?%>
     <p class="form-text">写真</p>
-    <%= image_tag @post.image.variant(resize:'350x350') %>
+    <%= image_tag @post.image.variant(resize:'250x250') %>
+  <% else %>
+    <p>No Image</p>
   <% end %>
   <p class="form-text">その他追加情報</p>
   <%= @post.explain %>

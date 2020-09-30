@@ -1,16 +1,27 @@
 .post-container{
   display: flex;
   justify-content: center;
+  padding: 20px 0 20px 0px;
 }
 
 .post-left{
-  border: 1px solid black;
-  width:350px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  width:270px;
+  padding: 20px;
+  background: linear-gradient(to bottom, lightgray,whitesmoke);
+  box-shadow: 10px 10px 5px 2px gray;
 }
 
 .post-right{
-  border: 1px solid black;
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
   width: 550px;
+  padding: 20px;
+  background: linear-gradient(to bottom, lightgray,whitesmoke);
+  box-shadow: 10px 10px 5px 2px gray;
 }
 
 .post-right a{
