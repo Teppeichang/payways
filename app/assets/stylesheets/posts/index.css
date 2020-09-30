@@ -11,28 +11,29 @@
 }
 
 .overview-area h1{
-  padding: 60px 0 15px 0;
+  padding: 55px 0 15px 0;
   font-size: 50px;
-  color: white;
+  font-family: 'Zapfino', sans-serif;
+  color: whitesmoke;
 }
 
 .overview-area p{
-  padding: 15px 0 0 0;
-  font-size: 20px;
-  color: white;
+  padding: 2px 0 0 0;
+  font-size: 25px;
+  color: whitesmoke;
 }
 
 
 .search-form-area input[name="keyword"]{
   width: 500px;
   height: 40px;
-  margin: 50px 0 0 0;
+  margin: 200px 0 0 0;
 }
 
 .search-form-area input[name="commit"]{
   width: 90px;
   height: 40px;
-  margin: 50px 0 0 10px;
+  margin: 200px 0 0 10px;
 }
 
 /* 非ログイン時のみ表示部分 */
@@ -40,7 +41,6 @@
   height: auto;
   text-align: center;
   background-color: black;
-  color: white;
   flex-direction: column;
 }
 
@@ -53,6 +53,7 @@
 .about-service h1{
   font-size: 30px;
   padding: 10px 0 30px 0;
+  color: white;
 }
 
 .icon-area{
@@ -62,6 +63,53 @@
 
 .about-service p{
   padding: 30px 0 30px 0;
+  color: white;
+}
+
+.invitation{
+  height: 500px;
+  background-color: whitesmoke;
+}
+
+.invitation h1{
+  text-align: center;
+  padding: 100px 0 100px 0 ;
+  color: black;
+}
+
+.btn{
+  display: flex;
+  justify-content: center;
+}
+
+.signup-btn{
+  width: 200px;
+  height: 60px;
+  padding: 10px;
+  margin-right: 40px;
+  border: 3px solid green;
+  background-color: greenyellow;
+  font-size: 20px;
+}
+
+.signup-btn a{
+  text-decoration: none;
+  color: black;
+}
+
+.signin-btn{
+  width: 200px;
+  height: 60px;
+  padding: 10px;
+  margin-left: 40px;
+  border: 3px solid darkgoldenrod;
+  background-color: yellow;
+  font-size: 20px;
+}
+
+.signin-btn a{
+  text-decoration: none;
+  color: black;
 }
 
 /* ログイン時のみ表示部分 */

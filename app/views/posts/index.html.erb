@@ -14,15 +14,19 @@
   <% unless user_signed_in? %>
     <div class="about-service">
       <h2>Paywaysのサービス</h2>
-      <h1>- お店の検索と情報共有 -</h1>
+      <h1>店舗検索と情報共有</h1>
         <div class="icon-area">
           <div class="credit-card-icon">
+            <p>〜 検索ツールとして 〜</p>
             <%= image_tag  "/クレジットカードのアイコン素材.png" %>
-            <p>クレジットカード/電子マネー/QRコード決済<br>キャッシュレス決済に対応しているお店をジャンル問わず、店名やキーワードで検索できます。</p>
+            <%= image_tag  "/スマホアイコン.png" %>
+            <p>クレジットカード/電子マネー/スマートフォン決済<br>キャッシュレス決済に対応しているお店をジャンル問わず、店名やキーワードで検索できます。</p>
           </div>
           <div class="icon-area">
             <div class="comment-icon">
+              <p>〜 SNSとして 〜</p>
               <%= image_tag  "/コメントのアイコン素材 その2.png" %>
+              <%= image_tag "/人物アイコン　チーム.png" %>
               <p>ユーザー登録することで、あなたが行ったお店の情報を投稿し、ユーザー同士で共有することができます。</p>
             </div>
           </div>
@@ -31,9 +35,14 @@
 
   <% unless user_signed_in? %>
     <div class="invitation">
-      <h1>今すぐPaywaysをはじめてみましょう</h1>
-      <div class="signup-btn">
-        <input type="submit", value="ユーザー登録する">
+      <h1>今すぐPaywaysをはじめてみましょう!</h1>
+      <div class="btn">
+        <div class="signup-btn">
+          <%= link_to "新規登録", new_user_registration_path %>
+        </div>
+        <div class="signin-btn">
+          <%= link_to "ログイン", new_user_session_path %>
+        </div>
       </div>
     </div>
   <% end %>
