@@ -1,3 +1,17 @@
 <% @posts.each do |post| %>
-    <%= link_to post.shop_name, post_path(post.id) %>
+    <div class="post-container">
+        <div class="post-left">
+            <% if post.image.blank? %>
+                <p>No Image</p>
+            <% else %>
+                <%= image_tag post.image.variant(resize:'300x300') %>
+            <% end %>
+        </div>
+        <div class="post-right">
+            <ul class="post-right-list">
+                <li><%= link_to post.shop_name, post_path(post.id) %></li>
+                <li><%= post.explain %></li>
+            </ul>
+        </div>
+    </div>
 <% end %>

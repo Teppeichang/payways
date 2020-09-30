@@ -1,62 +1,129 @@
 .main{
   height: 100%;
   width: 100%;
-  background-image: url("/holiday-shopping-1921658_1920.jpg");
-  background-size: cover;
 }
 
 .overview-area{
-  height: 300px;
+  height: 1000px;
   text-align: center;
+  background-image: url("/ec-cash-1750490_1920.jpg");
+  background-size: cover;
 }
 
 .overview-area h1{
-  padding: 30px 0 15px 0;
+  padding: 55px 0 15px 0;
   font-size: 50px;
-  color: white;
+  font-family: 'Zapfino', sans-serif;
+  color: whitesmoke;
 }
 
 .overview-area p{
-  padding: 15px 0 0 0;
-  font-size: 20px;
-  color: white;
+  padding: 2px 0 0 0;
+  font-size: 25px;
+  color: whitesmoke;
 }
 
-.search-form-area{
-  height: 300px;
-  text-align: center;
-  padding: 15px 0 0 0;
-}
 
 .search-form-area input[name="keyword"]{
   width: 500px;
   height: 40px;
+  margin: 200px 0 0 0;
 }
 
 .search-form-area input[name="commit"]{
   width: 90px;
   height: 40px;
-  margin: 0 0 0 10px;
+  margin: 200px 0 0 10px;
 }
 
 /* 非ログイン時のみ表示部分 */
 .about-service{
-  height: 300px;
+  height: auto;
   text-align: center;
   background-color: black;
-  color: white;
+  flex-direction: column;
+}
+
+.about-service h2{
+  color: yellow;
+  font-size: 25px;
+  padding: 20px 0 0 0 ;
 }
 
 .about-service h1{
   font-size: 30px;
+  padding: 10px 0 30px 0;
+  color: white;
+}
+
+.icon-area{
+  display: flex;
+  justify-content: space-around;
+}
+
+.about-service p{
+  padding: 30px 0 30px 0;
+  color: white;
+}
+
+.invitation{
+  height: 500px;
+  background-color: whitesmoke;
+}
+
+.invitation h1{
+  text-align: center;
+  padding: 100px 0 100px 0 ;
+  color: black;
+}
+
+.btn{
+  display: flex;
+  justify-content: center;
+}
+
+.signup{
+  width: 200px;
+  height: 60px;
+  padding: 10px;
+  margin-right: 40px;
+  border: 1px solid black;
+  background: linear-gradient(to bottom, yellowgreen,whitesmoke);
+  font-size: 20px;
+}
+
+.signup a{
+  text-decoration: none;
+  color: black;
+}
+
+.signin{
+  width: 200px;
+  height: 60px;
+  padding: 10px;
+  margin-left: 40px;
+  border: 1px solid black;
+  background: linear-gradient(to bottom, yellow,whitesmoke);
+  font-size: 20px;
+}
+
+.signin a{
+  text-decoration: none;
+  color: black;
 }
 
 /* ログイン時のみ表示部分 */
+.search-form-area{
+  text-align: center;
+}
+
 .latest-post-area{
-  height: 200px;
+  padding: 100px 0 0 0;
+  height: auto;
 }
 
 .latest-post-area h1{
   text-align: center;
   padding: 15px 0 0 0;
+  font-size: 35px;
 }
