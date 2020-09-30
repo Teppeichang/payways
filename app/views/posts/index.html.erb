@@ -1,25 +1,43 @@
 <%= render partial: "header" %>
 
   <div class="overview-area">
-    <h1>Paywaysへようこそ</h1>
-    <p>Paywaysはキャッシュレス決済に対応するお店の検索・情報共有サービスです。</p>
-  </div>
-
-  <div class="search-form-area">
-    <%= form_with url: search_posts_path, local: true, method: :get do |form| %>
-      <%= form.text_field :keyword %>
-      <%= form.submit "検索" %>
-    <% end %>
+    <h1>Payways</h1>
+    <p>キャッシュレス生活者に向けた店舗検索・情報共有サービス</p>
+    <div class="search-form-area">
+      <%= form_with url: search_posts_path, local: true, method: :get do |form| %>
+        <%= form.text_field :keyword %>
+        <%= form.submit "検索" %>
+      <% end %>
+    </div>
   </div>
 
   <% unless user_signed_in? %>
     <div class="about-service">
-      <h1>Paywaysでできること</h1>
-      <%= image_tag  "/クレジットカードのアイコン素材.png" %>
-      <%= image_tag  "/スマートフォンアイコン12 .png" %>
-      <%= image_tag  "/コメントのアイコン素材 その2.png" %>
+      <h2>Paywaysのサービス</h2>
+      <h1>- お店の検索と情報共有 -</h1>
+        <div class="icon-area">
+          <div class="credit-card-icon">
+            <%= image_tag  "/クレジットカードのアイコン素材.png" %>
+            <p>クレジットカード/電子マネー/QRコード決済<br>キャッシュレス決済に対応しているお店をジャンル問わず、店名やキーワードで検索できます。</p>
+          </div>
+          <div class="icon-area">
+            <div class="comment-icon">
+              <%= image_tag  "/コメントのアイコン素材 その2.png" %>
+              <p>ユーザー登録することで、あなたが行ったお店の情報を投稿し、ユーザー同士で共有することができます。</p>
+            </div>
+          </div>
+      </div>
+  <% end %>
+
+  <% unless user_signed_in? %>
+    <div class="invitation">
+      <h1>今すぐPaywaysをはじめてみましょう</h1>
+      <div class="signup-btn">
+        <input type="submit", value="ユーザー登録する">
+      </div>
     </div>
   <% end %>
+
 
   <% if user_signed_in? %>
     <div class="latest-post-area">
