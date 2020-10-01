@@ -1,5 +1,26 @@
 <%= render partial: "posts/header" %>
 
-<h1>ユーザーページ</h1>
+<div class="user-container">
+  <div class="user-profile">
+    <div class="user-image">
+      <%= image_tag "/登録のピクトアイコン1.png" %>
+    </div>
+    <div class="user-name">
+      <h2><%= @user.name %><h2>
+    </div>
+    <div class="user-email">
+      <%= @user.email %>
+    </div>
+    <div class="user-edit">
+      <i class="far fa-edit"></i>
+      <%= link_to "ユーザー情報の編集", edit_user_path(current_user.id) %>
+    </div>
+  </div>
+</div>
 
-<%= link_to "ユーザー情報の編集", edit_user_path(current_user.id) %>
+<div class="user-post-container">
+  <h1><%= @user.name %>さんの投稿一覧</h1>
+  <% @posts.each do |post| %>
+    <%= render partial: "posts/post", locals:{post: post} %>
+  <% end %>
+</div>
