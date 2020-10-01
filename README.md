@@ -20,6 +20,7 @@ has_many :bookmarks
 | explain        | text    |                                |
 ## アソシエーション
 belongs_to :user
+has_one_attached :image
 has_many :bookmarks
 
 ## commentsテーブル

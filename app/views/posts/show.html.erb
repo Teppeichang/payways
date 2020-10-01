@@ -1,23 +1,25 @@
 <%= render partial: "header" %>
 
 <div class="post-area">
-  <p class="form-text">店名</p>
-  <%= @post.shop_name %>
-  <% unless @post.image.blank?%>
-    <p class="form-text">写真</p>
-    <%= image_tag @post.image.variant(resize:'350x350') %>
-  <% end %>
-  <p class="form-text">その他追加情報</p>
-  <%= @post.explain %>
-</div>
-
-<div class="post-menu-area">
-  <ul>
-    <% if user_signed_in? && current_user.id == @post.user_id %>
-      <li><%= link_to "編集", edit_post_path(@post.id) %></li>
-      <li><%= link_to "削除", post_path(@post.id), method: :delete %></li>
+  <div class="post-left-content">
+    <% unless @post.image.blank?%>
+      <%= image_tag @post.image.variant(resize:'250x250') %>
+    <% else %>
+      <p>No Image</p>
     <% end %>
-  </ul>
+  </div>
+  <div class="post-right-content">
+    <h2 class="shop-name"><%= @post.shop_name %></h2>
+    <%= @post.explain %>
+    <div class="post-right-bottom-content">
+      <% if user_signed_in? && current_user.id == @post.user_id %>
+        <i class="far fa-edit"></i>
+        <%= link_to "編集", edit_post_path(@post.id), class:"post-edit" %>
+        <i class="fas fa-trash"></i>
+        <%= link_to "削除", post_path(@post.id), method: :delete, class:"post-delete" %>
+      <% end %>
+    </div>
+  </div>
 </div>
 
 <%= render partial: "footer" %>

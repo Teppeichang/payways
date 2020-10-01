@@ -1,3 +1,20 @@
 <%= render partial: "posts/header" %>
 
-<h1>ユーザー編集ページ</h1>
+<h1>ユーザ情報の編集</h1>
+
+<div class="user-edit-container">
+  <%= form_with model: current_user, local: true do |form| %>
+    <div class="user-edit-profile">
+      <p>プロフィール画像</p>
+      <%= form.file_field :image %>
+      <p>ユーザー名</p>
+      <%= form.text_field :name %>
+      <p>登録メールアドレス</p>
+      <%= form.text_field :email %>
+    </div>
+    <div class="user-edit-btn">
+      <i class="far fa-edit"></i>
+      <%= form.submit "更新" %>
+    </div>
+  <% end %>
+</div>

@@ -5,12 +5,12 @@
     </div>
     <ul class="header-menu">
       <% if user_signed_in? %>
-        <li><%= link_to current_user.name, user_path(current_user.id) %></li>
+        <li><%= link_to current_user.name, user_path(current_user) %></li>
         <li><%= link_to "新規投稿", new_post_path %></li>
         <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
       <% else %>
         <li><%= link_to "新規登録", new_user_registration_path %></li>
-        <li><%= link_to "ログイン", new_user_session_path%></li>
+        <li><%= link_to "ログイン", new_user_session_path %></li>
       <% end %>
     </ul>
   </div>

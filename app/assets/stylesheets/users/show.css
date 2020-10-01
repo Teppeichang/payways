@@ -1,0 +1,25 @@
+.user-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 200px;
+}
+
+.user-profile{
+  width: 1000px;
+  height: 500px;
+  border: 1px solid black;
+  text-align: center;
+  background: linear-gradient(to bottom, lightgray,whitesmoke);
+}
+
+.user-name h2{
+  font-size: 25px;
+}
+
+.user-edit a{
+  color: green;
+  text-decoration: none;
+  font-weight: bold;
+}

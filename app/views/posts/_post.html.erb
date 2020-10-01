@@ -4,14 +4,16 @@
             <% if post.image.blank? %>
                 <p>No Image</p>
             <% else %>
-                <%= image_tag post.image.variant(resize:'300x300') %>
+                <%= image_tag post.image.variant(resize:'250x250') %>
             <% end %>
         </div>
         <div class="post-right">
-            <ul class="post-right-list">
-                <li><%= link_to post.shop_name, post_path(post.id) %></li>
-                <li><%= post.explain %></li>
-            </ul>
+            <div class="post-right-top">
+                <%= link_to post.shop_name, post_path(post.id) %>
+            </div>
+            <div class="post-right-bottom">
+                <%= post.explain %>
+            </div>
         </div>
     </div>
 <% end %>
