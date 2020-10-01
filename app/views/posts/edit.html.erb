@@ -6,11 +6,11 @@
   <%= form_with(model: @post, local: true) do |form|%>
     <div class="post-form">
       <p>店名（必須）</p>
-      <%= form.text_field :shop_name, placeholder: "例:スターバックスコーヒー 原宿店", class: "shop_name" %>
+      <%= form.text_field :shop_name, class: "shop_name" %>
       <p>写真</p>
       <%= form.file_field :image %>
       <p>決済方式・お店に関する情報</p>
-      <%= form.text_area :explain, placeholder: "例:クレジットカードは全ブランド、電子マネーはクイックペイが使えました。オムライスがとても美味しいお店です。 ", class: "shop_explain" %>
+      <%= form.text_area :explain, class: "shop_explain" %>
     </div>
     <div class="post-btn">
       <%= form.submit "投稿する"%>

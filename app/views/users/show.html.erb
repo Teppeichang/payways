@@ -3,13 +3,17 @@
 <div class="user-container">
   <div class="user-profile">
     <div class="user-image">
-      <%= image_tag "/登録のピクトアイコン1.png" %>
+      <% if current_user.image.blank? %>
+        <%= image_tag "/登録のピクトアイコン1.png" %>
+      <% else %>
+        <%= image_tag current_user.image.variant(resize:'200x200') %>
+      <% end %>
     </div>
     <div class="user-name">
-      <h2><%= @user.name %><h2>
+      <h2><%= current_user.name %><h2>
     </div>
     <div class="user-email">
-      <%= @user.email %>
+      <%= current_user.email %>
     </div>
     <div class="user-edit">
       <i class="far fa-edit"></i>
@@ -19,7 +23,7 @@
 </div>
 
 <div class="user-post-container">
-  <h1><%= @user.name %>さんの投稿一覧</h1>
+  <h1><%= current_user.name %>さんの投稿一覧</h1>
   <% @posts.each do |post| %>
     <%= render partial: "posts/post", locals:{post: post} %>
   <% end %>
