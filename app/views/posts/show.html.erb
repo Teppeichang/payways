@@ -22,4 +22,28 @@
   </div>
 </div>
 
-<%= render partial: "footer" %>
+<div class="comment-index">
+  <p>
+    <i class="fas fa-comment-dots"></i>
+    コメント一覧
+  </p>
+  <% if @comments %>
+    <% @comments.each do |comment|%>
+      <%= comment.text %>
+    <% end %>
+  <% end %>
+</div>
+
+<div class="comment-area">
+  <% if user_signed_in? %>
+    <%= form_with(model: [@post, @comment], local: true) do |form| %>
+      <%= form.text_area :text, placeholder: "コメントを記入してください" %>
+      <%= form.submit "コメントする" %>
+    <% end %>
+  <% else %>
+    <p>
+      <i class="fas fa-exclamation-circle"></i>
+      コメントの投稿には新規登録/ログインが必要です
+      </p>
+  <% end %>
+</div>
