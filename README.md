@@ -10,7 +10,7 @@
 ## アソシエーション
 has_many :posts
 has_many :comments
-has_many :bookmarks
+<!-- has_many :bookmarks -->
 
 ## postsテーブル
 | Column         | Type    | Options                        |
@@ -21,7 +21,8 @@ has_many :bookmarks
 ## アソシエーション
 belongs_to :user
 has_one_attached :image
-has_many :bookmarks
+has_many :comments
+<!-- has_many :bookmarks -->
 
 ## commentsテーブル
 | Column  | Type    | Options                        |
@@ -33,11 +34,11 @@ has_many :bookmarks
 belongs_to :user
 belongs_to :post
 
-## bookmarksテーブル
+<!-- ## bookmarksテーブル
 | Column  | Type    | Options                        |
 | ------- | ------- | ------------------------------ |
 | user_id | integer | null: false, foreign_key: true |
 | post_id | integer | null: false, foreign_key: true |
 ## アソシエーション
 belongs_to :user
-belongs_to :post
+belongs_to :post -->
