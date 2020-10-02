@@ -28,6 +28,7 @@ has_many :bookmarks
 | ------- | ------- | ------------------------------ |
 | user_id | integer | null: false, foreign_key: true |
 | post_id | integer | null: false, foreign_key: true |
+| text    | text    |                                |
 ## アソシエーション
 belongs_to :user
 belongs_to :post
