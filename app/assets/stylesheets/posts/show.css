@@ -10,7 +10,7 @@
   border-left: 1px solid black;
   width:270px;
   padding: 20px;
-  background: linear-gradient(to bottom, lightgray,whitesmoke);
+  background-color: whitesmoke;
   box-shadow: 10px 10px 5px 2px gray;
 }
 
@@ -20,7 +20,7 @@
   border-bottom: 1px solid black;
   width: 550px;
   padding: 20px;
-  background: linear-gradient(to bottom, lightgray,whitesmoke);
+  background-color: whitesmoke;
   box-shadow: 10px 10px 5px 2px gray;
 }
 
@@ -29,6 +29,18 @@
   font-weight: bold;
   color: blue;
   padding: 0 0 15px 0;
+}
+
+.like-btn{
+  padding: 30px 0 0 0;
+}
+
+.like-btn a{
+  text-decoration: none;
+  color: orangered;
+  border: 2px solid orangered;
+  margin: 0 0 0 10px;
+  padding: 10px 10px 10px 10px;
 }
 
 .post-right-bottom-content{
@@ -44,8 +56,10 @@
 .post-edit{
   color: green;
   padding: 0 15px 0 0;
+  text-decoration: none;
 }
 
 .post-delete{
   color: red;
+  text-decoration: none;
 }

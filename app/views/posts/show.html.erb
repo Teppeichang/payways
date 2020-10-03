@@ -11,6 +11,9 @@
   <div class="post-right-content">
     <h2 class="shop-name"><%= @post.shop_name %></h2>
     <%= @post.explain %>
+    <div class="like-btn">
+      <%= render partial: "like", post: @post %>
+    </div>
     <div class="post-right-bottom-content">
       <% if user_signed_in? && current_user.id == @post.user_id %>
         <i class="far fa-edit"></i>
