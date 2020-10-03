@@ -9,8 +9,9 @@
 | password_confirmation | string | null: false |
 ## アソシエーション
 has_many :posts
+has_one_attached :image
 has_many :comments
-<!-- has_many :bookmarks -->
+has_many :likes
 
 ## postsテーブル
 | Column         | Type    | Options                        |
@@ -22,7 +23,7 @@ has_many :comments
 belongs_to :user
 has_one_attached :image
 has_many :comments
-<!-- has_many :bookmarks -->
+has_many :likes
 
 ## commentsテーブル
 | Column  | Type    | Options                        |
@@ -34,11 +35,11 @@ has_many :comments
 belongs_to :user
 belongs_to :post
 
-<!-- ## bookmarksテーブル
-| Column  | Type    | Options                        |
-| ------- | ------- | ------------------------------ |
-| user_id | integer | null: false, foreign_key: true |
-| post_id | integer | null: false, foreign_key: true |
+## likesテーブル
+| Column  | Type    | Options           |
+| ------- | ------- | ----------------- |
+| user_id | integer | foreign_key: true |
+| post_id | integer | foreign_key: true |
 ## アソシエーション
 belongs_to :user
-belongs_to :post -->
+belongs_to :post
