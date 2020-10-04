@@ -1,7 +1,9 @@
-<% if current_user.liked_by?(@post.id) %>
-  <i class="fas fa-heart", style="color: orangered;"><%= @post.likes.count %></i>
-  <%= link_to "いいね！済み", destroy_like_path(@post), method: :delete %>
-<% else %>
-  <i class="fas fa-heart", style="color: gray;"><%= @post.likes.count %></i>
-  <%= link_to "いいね！", create_like_path(@post), method: :post %>
+<% if user_signed_in? %>
+  <% if current_user.liked_by?(@post.id) %>
+    <i class="fas fa-heart", style="color: orangered;"><%= @post.likes.count %></i>
+    <%= link_to "いいね！済み", destroy_like_path(@post), method: :delete %>
+  <% else %>
+    <i class="fas fa-heart", style="color: gray;"><%= @post.likes.count %></i>
+    <%= link_to "いいね！", create_like_path(@post), method: :post %>
+  <% end %>
 <% end %>
