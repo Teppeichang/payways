@@ -25,28 +25,37 @@
   </div>
 </div>
 
-<div class="comment-index">
-  <p>
-    <i class="fas fa-comment-dots"></i>
-    コメント一覧
-  </p>
-  <% if @comments %>
-    <% @comments.each do |comment|%>
-      <%= comment.text %>
-    <% end %>
+<div class="comment-container">
+  <% if user_signed_in? %>
+    <h2>
+      <i class="fas fa-comment-dots"></i>
+      コメント一覧
+    </h2>
+    <div class="comment-index">
+      <% if @comments %>
+        <% @comments.each do |comment|%>
+          <p><%= comment.text %></p>
+          <p class="comment-user"><%= link_to comment.user.name, user_path(comment.user_id) %>さん</p>
+        <% end %>
+      <% end %>
+    </div>
   <% end %>
 </div>
 
-<div class="comment-area">
+<div class="comment-form">
   <% if user_signed_in? %>
     <%= form_with(model: [@post, @comment], local: true) do |form| %>
-      <%= form.text_area :text, placeholder: "コメントを記入してください" %>
-      <%= form.submit "コメントする" %>
+      <div class="comment-text">
+        <%= form.text_area :text, placeholder: "コメントを記入してください" %>
+      </div>
+      <div class="comment-submit">
+        <%= form.submit "コメントする" %>
+      </div>
     <% end %>
   <% else %>
-    <p>
+    <p class="notice">
       <i class="fas fa-exclamation-circle"></i>
-      コメントの投稿には新規登録/ログインが必要です
-      </p>
+      コメントの閲覧および投稿には、新規登録/ログインが必要です
+    </p>
   <% end %>
 </div>

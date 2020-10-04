@@ -1,8 +1,8 @@
 class Post < ApplicationRecord
   belongs_to :user
-  has_many :comments
+  has_many :comments, dependent: :destroy
   has_one_attached :image
-  has_many :likes
+  has_many :likes, dependent: :destroy
 
   with_options presence: true do
     validates :shop_name
