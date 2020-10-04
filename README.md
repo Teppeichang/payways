@@ -8,10 +8,12 @@
 | password              | string | null: false |
 | password_confirmation | string | null: false |
 ## アソシエーション
-has_many :posts
-has_one_attached :image
-has_many :comments
-has_many :likes
+- has_many :posts
+- has_one_attached :image
+- has_many :comments
+- has_many :likes
+- has_many :tags
+- has_many :post_tag_relations
 
 ## postsテーブル
 | Column         | Type    | Options                        |
@@ -20,10 +22,25 @@ has_many :likes
 | shop_name      | string  | null: false                    |
 | explain        | text    |                                |
 ## アソシエーション
-belongs_to :user
-has_one_attached :image
-has_many :comments
-has_many :likes
+- belongs_to :user
+- has_one_attached :image
+- has_many :comments
+- has_many :likes
+
+## tagsテーブル
+| Column | Type    | Options |
+| name   | string  |         |
+## アソシエーション
+- has_many :posts
+- has_many :post_tag_relations
+
+## post_tag_relationsテーブル
+| Column  | Type    | Options           |
+| post_id | integer | foreign_key: true |
+| tag_id  | integer | foreign_key: true |
+## アソシエーション
+- belongs_to :post
+- belongs_to :tag
 
 ## commentsテーブル
 | Column  | Type    | Options                        |
