@@ -28,8 +28,8 @@
 - has_many :likes
 
 ## tagsテーブル
-| Column | Type    | Options |
-| name   | string  |         |
+| Column | Type    | Options                       |
+| name   | string  | null: false, uniqueness: true |
 ## アソシエーション
 - has_many :posts
 - has_many :post_tag_relations
