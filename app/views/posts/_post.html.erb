@@ -11,13 +11,8 @@
             <div class="post-right-top">
                 <%= link_to post.shop_name, post_path(post.id) %>
             </div>
-            <div class="post-right-middle">
-                <%= post.explain %>
-            </div>
             <div class="post-right-bottom">
-                <% post.tags.each do |tag| %>
-                    <%= tag.name %>
-                <% end %>
+                <%= post.explain %>
             </div>
         </div>
     </div>

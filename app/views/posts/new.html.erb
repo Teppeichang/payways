@@ -3,7 +3,7 @@
 <h1>新規投稿</h1>
 
 <div class="form-area">
-  <%= form_with(model: @post, url: posts_path, local: true) do |form|%>
+  <%= form_with(model: @post, local: true) do |form|%>
     <div class="post-form">
       <p>店名（必須）</p>
       <%= form.text_field :shop_name, placeholder: "例:スターバックスコーヒー 原宿店", class: "shop_name" %>
@@ -11,8 +11,6 @@
       <%= form.file_field :image %>
       <p>決済方式・お店に関する情報</p>
       <%= form.text_area :explain, placeholder: "例:クレジットカードは全ブランド、電子マネーはクイックペイが使えました。オムライスがとても美味しいお店です。 ", class: "shop_explain" %>
-      <p>タグ</p>
-      <%= form.text_field :name, class:"shop_tag" %>
     </div>
     <div class="post-btn">
       <%= form.submit "投稿する"%>

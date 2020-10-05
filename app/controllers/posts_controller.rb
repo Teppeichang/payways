@@ -2,17 +2,16 @@ class PostsController < ApplicationController
   before_action :set_post, only:[:show, :edit, :update, :destroy]
 
   def index
-    @posts = Post.all.order(created_at: :desc)
+    @posts = Post.all
   end
 
   def new
-    @post = PostsTag.new
+    @post = Post.new
   end
 
   def create
-    @post = PostsTag.new(post_params)
-    if @post.valid?
-      @post.save
+    @post = Post.new(post_params)
+    if @post.save
       redirect_to root_path
     else
       render :new
@@ -48,7 +47,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:posts_tag).permit(:image, :shop_name, :explain, :name).merge(user_id: current_user.id)
+    params.require(:post).permit(:image, :shop_name, :explain).merge(user_id: current_user.id)
   end
 
   def set_post

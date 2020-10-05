@@ -3,9 +3,11 @@ class Post < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_one_attached :image
   has_many :likes, dependent: :destroy
-  has_many :post_tag_relations
-  has_many :tags, through: :post_tag_relations
 
+  with_options presence: true do
+    validates :shop_name
+    validates :explain
+  end
 
   def self.search(search)
     if search != ""
