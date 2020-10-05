@@ -20,7 +20,7 @@
 | -------------- | ------- | ------------------------------ |
 | user_id        | integer | null: false, foreign_key: true |
 | shop_name      | string  | null: false                    |
-| explain        | text    |                                |
+| explain        | text    | null: false                    |
 ## アソシエーション
 - belongs_to :user
 - has_one_attached :image
