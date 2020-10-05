@@ -12,18 +12,22 @@
 - has_one_attached :image
 - has_many :comments
 - has_many :likes
+- has_many :tags
+- has_many :post_tag_relations
+
 
 ## postsテーブル
 | Column         | Type    | Options                        |
 | -------------- | ------- | ------------------------------ |
 | user_id        | integer | null: false, foreign_key: true |
 | shop_name      | string  | null: false                    |
-| explain        | text    |                                |
+| explain        | text    | null: false                    |
 ## アソシエーション
 - belongs_to :user
 - has_one_attached :image
 - has_many :comments
 - has_many :likes
+
 
 ## commentsテーブル
 | Column  | Type    | Options                        |
