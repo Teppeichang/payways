@@ -10,6 +10,12 @@
   </div>
   <div class="post-right-content">
     <h2 class="shop-name"><%= @post.shop_name %></h2>
+    <div class="post-tags">
+      <% if @post.tag_list.present? %>
+        <h2>タグ</h2>
+        <%= @post.tag_list %>
+      <% end %>
+    </div>
     <%= @post.explain %>
     <div class="like-btn">
       <%= render partial: "like", post: @post %>
