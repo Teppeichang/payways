@@ -1,46 +1,54 @@
-# DB設計
+## Payways
+https://gyazo.com/2198a041466b4504b8b9be7a4b0ac3bf
 
-## usersテーブル
-| Column                | Type   | Options     |
-| --------------------- | ------ | ----------- |
-| name                  | string | null: false |
-| email                 | string | null: false |
-| password              | string | null: false |
-| password_confirmation | string | null: false |
-## アソシエーション
-- has_many :posts
-- has_one_attached :image
-- has_many :comments
-- has_many :likes
+## 概要
+キャッシュレス生活者に向けた店舗検索・情報共有サービスとなっております。
+検索ツールとしても、SNSとしても、2つの使い方ができるアプリケーションです。
+2020年1月から始めたプログラミング学習とテックキャンプ(2020年8月〜10月)での学習を経て
+ポートフォリオとして作成したものです。
 
-## postsテーブル
-| Column         | Type    | Options                        |
-| -------------- | ------- | ------------------------------ |
-| user_id        | integer | null: false, foreign_key: true |
-| shop_name      | string  | null: false                    |
-| explain        | text    |                                |
-## アソシエーション
-- belongs_to :user
-- has_one_attached :image
-- has_many :comments
-- has_many :likes
+## URL
+http://www.payways.work/
+ゲストログイン機能は現在実装中です。
+実装完了まではお手数ですが、以下のメールアドレス・パスワードにてログインをお願いします。
+- メールアドレス testuser@gmail.com
+- パスワード test1234
+
+## なぜこのサービスを作ったか
+私は普段キャッシュレス生活をしており、小銭や紙幣ではなく、カードを持ち歩きます。ゆえに
+「ふと立ち寄ったお店が現金決済しか対応しておらず、会計時にコンビニのATMを探すはめになる」
+というちょっとした失敗体験をしました。
+この自身の失敗体験をもとに、「キャッシュレスで生活している人がふとお店に立ち寄る前に、事前に
+キャッシュレスで決済できるかどうかすぐ調べられたら、自分と同じ思いをするような人が減るのでは」
+という思いから作りました。
+
+## 使用技術
+- Ruby 2.7.1
+- Ruby on Rails 6.0.3.3
+- JavaScript
+- AWS(S3,EC2,MariaDB,VPC,Route53)
+- Nginx,Unicorn
+- Capistranoによる自動デプロイ
+- RSpec
+- Rubocop
+- GitHub
+
+## DB設計
+https://gyazo.com/a2179c02b3a0ce8652fc235c5ff8c0a1
+
+## アプリケーションの機能
+- ユーザーログイン/登録機能(devise)
+- ユーザープロフィール編集機能
+- 店舗情報の投稿のCRUD機能ととタグ付け(タグ付け機能はacts-as-taggable-onで実装)
+- 投稿に対する「いいね！」機能
+- 投稿に対するコメント投稿機能
+- 画像投稿機能
+
+## 開発において意識したこと
+- 全体的に使用方法がわかりやすい、シンプルなUIデザインを心がけました。
+- 「ふとお店に立ち寄る前にすぐ調べられる」よう、検索機能はログイン/ユーザー登録せずとも使えるようにしました。
+- 冒頭に挙げた自身の失敗体験をもとに、同じ思いをする人を減らすよう「課題解決」を意識して作成しました。
+- 「映え」や「いいね！」を好むSNSユーザーの使用も想定し、画像投稿・タグ付け、投稿に対する「いいね！」機能を実装しました。
+- 現場での開発を想定し、GitHubを使用してこまめなcommitやissue管理を行いました。
 
 
-## commentsテーブル
-| Column  | Type    | Options                        |
-| ------- | ------- | ------------------------------ |
-| user_id | integer | null: false, foreign_key: true |
-| post_id | integer | null: false, foreign_key: true |
-| text    | text    |                                |
-## アソシエーション
-belongs_to :user
-belongs_to :post
-
-## likesテーブル
-| Column  | Type    | Options           |
-| ------- | ------- | ----------------- |
-| user_id | integer | foreign_key: true |
-| post_id | integer | foreign_key: true |
-## アソシエーション
-belongs_to :user
-belongs_to :post
