@@ -15,6 +15,7 @@
 - has_many :tags
 - has_many :post_tag_relations
 
+
 ## postsテーブル
 | Column         | Type    | Options                        |
 | -------------- | ------- | ------------------------------ |
@@ -27,20 +28,6 @@
 - has_many :comments
 - has_many :likes
 
-## tagsテーブル
-| Column | Type    | Options                       |
-| name   | string  | null: false, uniqueness: true |
-## アソシエーション
-- has_many :posts
-- has_many :post_tag_relations
-
-## post_tag_relationsテーブル
-| Column  | Type    | Options           |
-| post_id | integer | foreign_key: true |
-| tag_id  | integer | foreign_key: true |
-## アソシエーション
-- belongs_to :post
-- belongs_to :tag
 
 ## commentsテーブル
 | Column  | Type    | Options                        |
@@ -49,8 +36,8 @@
 | post_id | integer | null: false, foreign_key: true |
 | text    | text    |                                |
 ## アソシエーション
-belongs_to :user
-belongs_to :post
+- belongs_to :user
+- belongs_to :post
 
 ## likesテーブル
 | Column  | Type    | Options           |
@@ -58,5 +45,5 @@ belongs_to :post
 | user_id | integer | foreign_key: true |
 | post_id | integer | foreign_key: true |
 ## アソシエーション
-belongs_to :user
-belongs_to :post
+- belongs_to :user
+- belongs_to :post
