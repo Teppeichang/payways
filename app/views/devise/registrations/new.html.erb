@@ -1,9 +1,8 @@
 <%= render partial: "posts/header" %>
 
-<%= form_with model: @user, url: user_registration_path, class: "registration-main" do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
-
+<%= form_with model: @user, url: user_registration_path, class: "registration-main", local: true do |f| %>
   <div class="form-main">
+    <%= render "shared/error_messages", model: f.object %>
     <h1>ユーザー新規登録</h1>
     <div class="name-field">
       <%= f.label "ユーザー名" %><br />
@@ -22,7 +21,6 @@
       <%= f.password_field :password_confirmation, placeholder:"同じパスワードを入力してください", autocomplete: "new-password" %>
     </div>
   </div>
-  
   <div class="signup-btn">
     <%= f.submit "登録" %>
   </div>

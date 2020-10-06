@@ -9,6 +9,7 @@ class User < ApplicationRecord
 
   validates :name, presence: true
   validates :email, presence: true
+  validates :password, length: {minimum: 6}
 
   def liked_by?(post_id)
     likes.where(post_id: post_id).exists?
