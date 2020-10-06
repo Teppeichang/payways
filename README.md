@@ -1,5 +1,5 @@
 ## Payways
-https://gyazo.com/2198a041466b4504b8b9be7a4b0ac3bf
+![payways_top](https://user-images.githubusercontent.com/65349790/95150922-58d0de80-07c4-11eb-84bb-90eeded2538b.jpg)
 
 ## 概要
 キャッシュレス生活者に向けた店舗検索・情報共有サービスとなっております。
@@ -34,7 +34,7 @@ http://www.payways.work/
 - GitHub
 
 ## DB設計
-https://gyazo.com/a2179c02b3a0ce8652fc235c5ff8c0a1
+<img width="830" alt="payways_er_diagram" src="https://user-images.githubusercontent.com/65349790/95151081-ba914880-07c4-11eb-9f87-03f4ed0862be.png">
 
 ## アプリケーションの機能
 - ユーザーログイン/登録機能(devise)
