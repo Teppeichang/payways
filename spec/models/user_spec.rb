@@ -12,23 +12,28 @@ RSpec.describe User, type: :model do
     it 'ユーザー名が半角英数字でないと登録できない' do
       @user.name = "あいうえお"
       @user.valid?
-      expect(@user.errors.full_messages).to include("Name is invalid")
+      expect(@user.errors.full_messages).to include("ユーザー名を正しく入力してください")
     end
     it 'メールアドレスが入力されていないと登録できない' do
       @user.email = ""
       @user.valid?
-      expect(@user.errors.full_messages).to include("Email can't be blank")
+      expect(@user.errors.full_messages).to include("メールアドレスを入力してください")
+    end
+    it 'パスワードが入力されていないと登録できない' do
+      @user.password = ""
+      @user.valid?
+      expect(@user.errors.full_messages).to include("パスワードを入力してください")
     end
     it 'パスワードが６文字未満だと登録できない' do
       @user.password = "aaaaa"
       @user.valid?
-      expect(@user.errors.full_messages).to include("Password is too short (minimum is 6 characters)")
+      expect(@user.errors.full_messages).to include("パスワードは6文字以上で入力してください")
     end
     it 'パスワード（確認）がパスワードと合致していないと登録できない' do
       @user.password = "aaaaaa"
       @user.password_confirmation = "bbbbbb"
       @user.valid?
-      expect(@user.errors.full_messages).to include("Password confirmation doesn't match Password")
+      expect(@user.errors.full_messages).to include("確認用パスワードとパスワードの入力が一致しません")
     end
   end
 
@@ -39,12 +44,12 @@ RSpec.describe User, type: :model do
     it 'メールアドレスが入力されていないとログインできない' do
       @user.email = ""
       @user.valid?
-      expect(@user.errors.full_messages).to include("Email can't be blank")
+      expect(@user.errors.full_messages).to include("メールアドレスを入力してください")
     end
     it 'パスワードが入力されていないとログインできない' do
       @user.password = ""
       @user.valid?
-      expect(@user.errors.full_messages).to include("Password can't be blank")
+      expect(@user.errors.full_messages).to include("パスワードを入力してください")
     end
   end
 end
