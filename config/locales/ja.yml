@@ -1,0 +1,6 @@
+ja:
+  activerecord:
+    attributes:
+      post:
+        shop_name: "店名"
+        explain: "決済方式・お店に関する情報"
