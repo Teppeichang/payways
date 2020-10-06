@@ -34,7 +34,7 @@ http://www.payways.work/
 - GitHub
 
 ## DB設計
-https://gyazo.com/a2179c02b3a0ce8652fc235c5ff8c0a1
+<img width="830" alt="payways_er_diagram" src="https://user-images.githubusercontent.com/65349790/95151081-ba914880-07c4-11eb-9f87-03f4ed0862be.png">
 
 ## アプリケーションの機能
 - ユーザーログイン/登録機能(devise)
