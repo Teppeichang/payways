@@ -31,12 +31,14 @@
   </div>
 </div>
 
+
 <div class="comment-container">
   <% if user_signed_in? %>
     <h2>
       <i class="fas fa-comment-dots"></i>
       コメント一覧
     </h2>
+    <%= flash[:alert] %>
     <div class="comment-index">
       <% if @comments %>
         <% @comments.each do |comment|%>
