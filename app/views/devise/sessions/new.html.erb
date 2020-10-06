@@ -1,8 +1,10 @@
 <%= render partial: "posts/header" %>
 
-<%= form_with model: @user, url: user_session_path, class: "session-main" do |f| %>
+<%= form_with model: @user, url: user_session_path, class: "session-main", local: true do |f| %>
 
   <div class="form-main">
+    <%= flash[:notice] %>
+    <%= flash[:alert] %>
     <h1>ログイン</h1>
     <div class="email-field">
       <%= f.label "登録メールアドレス" %><br />
