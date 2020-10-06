@@ -1,8 +1,13 @@
 class CommentsController < ApplicationController
   
   def create
-    comment = Comment.create(comment_params)
-    redirect_to post_path(comment.post.id)
+    comment = Comment.new(comment_params)
+    if comment.save
+      redirect_to post_path(comment.post.id)
+    else
+      flash[:alert] = "コメントを入力してください"
+      redirect_to post_path(comment.post.id)
+    end
   end
 
   private
