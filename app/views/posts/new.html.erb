@@ -9,6 +9,8 @@
       <%= form.text_field :shop_name, placeholder: "例:スターバックスコーヒー 原宿店", class: "shop_name" %>
       <p>写真</p>
       <%= form.file_field :image %>
+      <p>タグ</p>
+      <%= form.text_field :tag_list, value: @post.tag_list.join(',') %>
       <p>決済方式・お店に関する情報</p>
       <%= form.text_area :explain, placeholder: "例:クレジットカードは全ブランド、電子マネーはクイックペイが使えました。オムライスがとても美味しいお店です。 ", class: "shop_explain" %>
     </div>

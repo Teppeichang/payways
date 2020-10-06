@@ -31,6 +31,23 @@
   font-weight: bold;
 }
 
+.post-tags{
+  padding: 20px 0 20px 0 ;
+}
+
+.tag-label{
+  width: 60px;
+  text-align: center;
+  border: 2px solid white;
+  border-radius: 20px 20px;
+  background-color: royalblue;
+  color: white;
+}
+
+.tag_list{
+  color: royalblue;
+}
+
 .post-right-middle{
   padding: 10px 0 0 0 ;
 }
