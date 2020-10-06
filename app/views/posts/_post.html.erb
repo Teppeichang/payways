@@ -13,8 +13,8 @@
             </div>
             <div class="post-tags">
                 <% if post.tag_list.present? %>
-                    <h2>タグ</h2>
-                    <%= post.tag_list %>
+                    <h2 class="tag-label">#タグ</h2>
+                    <h3 class="tag_list"><%= post.tag_list %></h3>
                 <% end %>
             </div>
             <div class="post-right-bottom">
