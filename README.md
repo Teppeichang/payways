@@ -1,5 +1,5 @@
 ## Payways
-https://gyazo.com/2198a041466b4504b8b9be7a4b0ac3bf
+![payways_top](https://user-images.githubusercontent.com/65349790/95150922-58d0de80-07c4-11eb-84bb-90eeded2538b.jpg)
 
 ## 概要
 キャッシュレス生活者に向けた店舗検索・情報共有サービスとなっております。
