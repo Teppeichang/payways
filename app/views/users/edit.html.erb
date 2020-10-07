@@ -4,7 +4,6 @@
 <div class="user-edit-container">
   <%= form_with model: current_user, local: true do |form| %>
     <div class="user-edit-profile">
-      <%= flash[:alert] %>
       <div class="edit-profile-image">
         <p>プロフィール画像</p>
         <%= form.file_field :image %>

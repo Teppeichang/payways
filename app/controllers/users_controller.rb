@@ -9,10 +9,10 @@ class UsersController < ApplicationController
   end
 
   def update
+    binding.pry
     if current_user.update(user_params)
-      redirect_to root_path
+      redirect_to user_path(current_user)
     else
-      flash[:alert] = "ユーザー名またはメールアドレスを入力してください"
       render :edit
     end
   end
