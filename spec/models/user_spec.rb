@@ -52,4 +52,20 @@ RSpec.describe User, type: :model do
       expect(@user.errors.full_messages).to include("パスワードを入力してください")
     end
   end
+
+  describe 'ユーザー情報編集' do
+    it 'ユーザー名とメールアドレスが入力できていると情報を更新できる' do
+      expect(@user).to be_valid
+    end
+    it 'ユーザー名が入力されていないと情報を更新できない' do
+      @user.name = ""
+      @user.valid?
+      expect(@user.errors.full_messages).to include("ユーザー名を入力してください")
+    end
+    it 'メールアドレスが入力されていないと情報を更新できない' do
+      @user.email = ""
+      @user.valid?
+      expect(@user.errors.full_messages).to include("メールアドレスを入力してください")
+    end
+  end
 end
