@@ -200,6 +200,16 @@ RSpec.describe '投稿詳細', type: :system do
     visit post_path(@post)
     # 詳細ページに「いいね！」ボタンが存在する
     expect(page).to have_content("いいね！")
+    # 「いいね！」をクリックするとLikeモデルのカウントが1上がる
+    expect{
+      find_link("いいね！", href: create_like_path(@post)).click
+    }.to change { Like.count }.by(1)
+    # （「いいね！」ボタンクリック後）表示が「いいね！済み」になることを確認する
+    expect(page).to have_content("いいね！済み")
+    # 「いいね！済み」をクリックするとLikeモデルのカウントが1減る
+    expect{
+      find_link("いいね！済み", href: destroy_like_path(@post)).click
+    }.to change { Like.count }.by(-1)
   end
   it 'ログインしていない状態でも投稿詳細を閲覧できるが「いいね！」はできない' do
     # トップページへ遷移する
