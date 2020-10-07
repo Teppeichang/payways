@@ -120,7 +120,7 @@ RSpec.describe "ユーザー情報の編集", type: :system do
       # 「更新」ボタンをクリックする
       find('input[name = "commit"]').click
       # トップページに遷移することを確認する
-      expect(current_path).to eq root_path
+      expect(current_path).to eq user_path(@user.id)
     end
   end
 end
