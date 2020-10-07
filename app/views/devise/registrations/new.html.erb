@@ -14,7 +14,7 @@
     </div>
     <div class="password-field">
       <%= f.label "パスワード" %><br />
-      <%= f.password_field :password, placeholder:"6文字以上の半角英数字", autocomplete: "new-password" %>
+      <%= f.password_field :password, placeholder:"6文字以上の半角英数字", autocomplete: "new-password", minlength: "6" %>
     </div>
     <div class="password-confirm-field">
       <%= f.label "パスワード（確認）" %><br />

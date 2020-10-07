@@ -9,7 +9,6 @@ class User < ApplicationRecord
 
   validates :name, presence: true, format: {with: /[0-9a-zA-Z]/, message: "を正しく入力してください"}
   validates :email, presence: true
-  validates :password, length: {minimum: 6}
   
   def liked_by?(post_id)
     likes.where(post_id: post_id).exists?
