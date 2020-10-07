@@ -73,8 +73,8 @@ RSpec.describe "投稿の編集", type: :system do
       # （編集後）トップページに遷移する
       visit root_path
       # トップページには先程編集した投稿が存在する
-      expect(page).to have_content ("#{@post1.shop_name}+編集したテキスト")
-      expect(page).to have_content ("#{@post1.explain}+編集したテキスト")
+      expect(page).to have_content("#{@post1.shop_name}+編集したテキスト")
+      expect(page).to have_content("#{@post1.explain}+編集したテキスト")
     end
   end
   context '投稿の編集ができない時' do
