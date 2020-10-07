@@ -12,7 +12,6 @@ RSpec.describe Comment, type: :model do
     it 'コメントが入力されていないと投稿できない' do
       @comment.text = ""
       @comment.valid?
-      binding.pry
       expect(@comment.errors.full_messages).to include("コメントを入力してください")
     end
   end
