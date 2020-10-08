@@ -6,13 +6,13 @@
     <%= render "shared/error_messages", model: form.object %>
     <div class="post-form">
       <p>店名（必須）</p>
-      <%= form.text_field :shop_name, placeholder: "例:スターバックスコーヒー 原宿店", class: "shop_name" %>
+      <%= form.text_field :shop_name, placeholder: "例: スターバックスコーヒー 原宿店", class: "shop_name" %>
       <p>写真</p>
       <%= form.file_field :image %>
       <p>タグ</p>
-      <%= form.text_field :tag_list, value: @post.tag_list.join(',') %>
+      <%= form.text_field :tag_list, value: @post.tag_list.join(','), placeholder: "例: 全クレジットカード対応" %>
       <p>決済方式・お店に関する情報（必須）</p>
-      <%= form.text_area :explain, placeholder: "例:クレジットカードは全ブランド、電子マネーはクイックペイが使えました。オムライスがとても美味しいお店です。 ", class: "shop_explain" %>
+      <%= form.text_area :explain, placeholder: "例: クレジットカードは全ブランド使えます。カフェラテとサンドイッチがとても美味しいお店です。 ", class: "shop_explain" %>
     </div>
     <div class="post-btn">
       <%= form.submit "投稿する"%>
