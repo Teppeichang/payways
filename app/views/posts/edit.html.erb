@@ -12,6 +12,7 @@
       <%= form.text_field :shop_name, class: "shop_name" %>
       <p>写真</p>
       <%= form.file_field :image %>
+      <div id="image-list"></div>
       <p>タグ</p>
       <%= form.text_field :tag_list, value: @post.tag_list.join(',') %>
       <p>決済方式・お店に関する情報（必須）</p>
