@@ -87,7 +87,7 @@
   border: 1px solid black;
   background-color: whitesmoke;
   width: 820px;
-  height: 200px;
+  height: auto;
   padding: 15px;
 }
 
