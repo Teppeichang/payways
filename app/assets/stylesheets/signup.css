@@ -5,6 +5,11 @@
   padding: 200px 0 0 0;
 }
 
+.signup-error{
+  color: red;
+  font-weight: bold;
+}
+
 .form-main h1{
   font-size: 40px;
 }

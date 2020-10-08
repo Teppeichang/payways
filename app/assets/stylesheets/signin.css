@@ -1,3 +1,8 @@
+.signin-error{
+  color: red;
+  font-weight: bold;
+}
+
 .remember-field{
   text-align: center;
   padding: 20px 0 0 0;

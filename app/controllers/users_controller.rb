@@ -12,6 +12,7 @@ class UsersController < ApplicationController
     if current_user.update(user_params)
       redirect_to user_path(current_user)
     else
+      flash.now[:alert] = "ユーザー名とメールアドレスを入力してください"
       render :edit
     end
   end

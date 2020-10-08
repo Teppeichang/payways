@@ -3,8 +3,10 @@
 <%= form_with model: @user, url: user_session_path, class: "session-main", local: true do |f| %>
 
   <div class="form-main">
-    <%= flash[:notice] %>
-    <%= flash[:alert] %>
+    <div class="signin-error">
+      <%= flash[:notice] %>
+      <%= flash[:alert] %>
+    </div>
     <h1>ログイン</h1>
     <div class="email-field">
       <%= f.label "登録メールアドレス" %><br />

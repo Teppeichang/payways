@@ -13,11 +13,15 @@
       <h2><%= @user.name %><h2>
     </div>
     <div class="user-email">
-      <%= @user.email %>
+      <% if @user == current_user %>
+        <%= @user.email %>
+      <% end %>
     </div>
     <div class="user-edit">
-      <i class="far fa-edit"></i>
-      <%= link_to "ユーザー情報の編集", edit_user_path(@user.id) %>
+      <% if @user == current_user %>
+        <i class="far fa-edit"></i>
+        <%= link_to "ユーザー情報の編集", edit_user_path(@user.id) %>
+      <% end %>
     </div>
   </div>
 </div>
