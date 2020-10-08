@@ -5,6 +5,12 @@
   padding: 30px 0 0 0;
 }
 
+.user-edit-error{
+  color: red;
+  font-weight: bold;
+  padding: 0 0 10px 0;
+}
+
 .edit-profile-image{
   padding: 0 0 20px 0;
 }

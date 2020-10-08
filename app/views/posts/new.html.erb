@@ -3,7 +3,9 @@
 <h1>新規投稿</h1>
 <div class="form-area">
   <%= form_with(model: @post, local: true) do |form|%>
-    <%= render "shared/error_messages", model: form.object %>
+    <div class="posting-error">
+      <%= render "shared/error_messages", model: form.object %>
+    </div>
     <div class="post-form">
       <p>店名（必須）</p>
       <%= form.text_field :shop_name, placeholder: "例: スターバックスコーヒー 原宿店", class: "shop_name" %>

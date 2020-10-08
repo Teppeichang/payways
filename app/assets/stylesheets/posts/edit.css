@@ -12,6 +12,12 @@ h1{
   padding: 100px 0 0 0;
 }
 
+.post-edit-error{
+  color: red;
+  font-weight: bold;
+  padding: 0 0 10px 0;
+}
+
 .form-area textarea{
   width: 500px;
   height: 200px;
