@@ -8,6 +8,7 @@ require("@rails/ujs").start()
 require("@rails/activestorage").start()
 require("channels")
 require('./user_preview')
+require('./post_preview')
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
