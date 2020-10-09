@@ -31,7 +31,7 @@ http://www.payways.work/
 - GitHub
 
 ## DB設計
-<img width="955" alt="payways_er_diagram" src="https://user-images.githubusercontent.com/65349790/95584776-32879900-0a79-11eb-86d6-a92e7669a381.png">
+<img width="960" alt="payways_er_diagram" src="https://user-images.githubusercontent.com/65349790/95585127-c0fc1a80-0a79-11eb-8bd6-b7d7a1feaaab.png">
 
 ## アプリケーションの機能
 - ユーザーログイン/登録機能(devise)
