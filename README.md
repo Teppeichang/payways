@@ -34,6 +34,7 @@ http://www.payways.work/
 <img width="960" alt="payways_er_diagram" src="https://user-images.githubusercontent.com/65349790/95585127-c0fc1a80-0a79-11eb-8bd6-b7d7a1feaaab.png">
 
 ## アプリケーションの機能
+- 検索機能
 - ユーザーログイン/登録機能(devise)
 - ゲストログイン機能
 - ユーザープロフィール編集機能
