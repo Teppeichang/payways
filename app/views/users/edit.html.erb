@@ -28,6 +28,10 @@
         <p>お住まいの地域</p>
         <%= form.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"living-area-select"}) %>
       </div>
+      <div class="introduce">
+        <p>自己紹介</p>
+        <%= form.text_area :introduce %>
+      </div>
     </div>
     <div class="user-edit-btn">
       <%= form.submit "更新" %>

@@ -24,6 +24,10 @@
 
 .user-name h2{
   font-size: 30px;
+  padding: 0 0 15px 0;
+}
+
+.user-introduce{
   padding: 0 0 20px 0;
 }
 
