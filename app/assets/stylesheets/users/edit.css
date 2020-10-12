@@ -49,6 +49,9 @@
   width:150px;
 }
 
+.introduce textarea{
+  width: 500px;
+}
 .user-edit-btn{
   padding: 20px 0 0 0;
 }
