@@ -8,7 +8,7 @@
 
 .user-profile{
   width: 1000px;
-  height: 400px;
+  height: auto;
   text-align: center;
 }
 
@@ -23,7 +23,8 @@
 }
 
 .user-name h2{
-  font-size: 25px;
+  font-size: 30px;
+  padding: 0 0 20px 0;
 }
 
 .user-edit{

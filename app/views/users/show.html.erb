@@ -12,10 +12,13 @@
     <div class="user-name">
       <h2><%= @user.name %><h2>
     </div>
-    <div class="user-email">
-      <% if @user == current_user %>
-        <%= @user.email %>
-      <% end %>
+    <div class="user-fav">
+      <p style="color: blue;">好きなお店・ジャンル</p>
+      <%= @user.favorite_shop %>
+    </div>
+    <div class="user-living">
+      <p style="color: blue;">お住まいの地域</p>
+      <%= @user.prefecture.name %>
     </div>
     <div class="user-edit">
       <% if @user == current_user %>

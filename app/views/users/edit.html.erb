@@ -13,12 +13,20 @@
         <div id="image-list"></div>
       </div>
       <div class="edit-user-name">
-        <p>ユーザー名</p>
+        <p>ユーザー名（必須）</p>
         <%= form.text_field :name %>
       </div>
       <div class="edit-email">
-        <p>登録メールアドレス</p>
+        <p>登録メールアドレス（必須）</p>
         <%= form.text_field :email %>
+      </div>
+      <div class="fav-shop">
+        <p>好きなお店・ジャンル</p>
+        <%= form.text_field :favorite_shop %>
+      </div>
+      <div class="living-area">
+        <p>お住まいの地域</p>
+        <%= form.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"living-area-select"}) %>
       </div>
     </div>
     <div class="user-edit-btn">
