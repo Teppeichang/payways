@@ -6,6 +6,9 @@ class User < ApplicationRecord
   has_many :comments
   has_one_attached :image
   has_many :likes
+  
+  extend ActiveHash::Associations::ActiveRecordExtensions
+  belongs_to_active_hash :prefecture
 
   validates :name, presence: true, format: {with: /[0-9a-zA-Z]/, message: "を正しく入力してください"}
   validates :email, presence: true
