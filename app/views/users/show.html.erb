@@ -24,7 +24,8 @@
       <%= @user.prefecture.name %>
     </div>
     <div class="user-edit">
-      <% if @user == current_user %>
+      <!--自分以外のユーザーの編集ページと、ゲストユーザーの編集ページにはアクセスできないよう設定-->
+      <% if @user == current_user && current_user.id != 5 %>
         <i class="far fa-edit"></i>
         <%= link_to "ユーザー情報の編集", edit_user_path(@user.id) %>
       <% end %>
