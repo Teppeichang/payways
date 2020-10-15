@@ -30,8 +30,11 @@ http://www.payways.work/
 - Rubocop
 - GitHub
 
+## インフラ構成
+![payways_インフラ図](https://user-images.githubusercontent.com/65349790/96076842-499b1080-0ee9-11eb-9769-09dd18f6abed.png)
+
 ## DB設計
-<img width="960" alt="payways_er_diagram" src="https://user-images.githubusercontent.com/65349790/95585127-c0fc1a80-0a79-11eb-8bd6-b7d7a1feaaab.png">
+![payways_er_diagram](https://user-images.githubusercontent.com/65349790/96076817-37b96d80-0ee9-11eb-87a3-b692ce86b7b9.png)
 
 ## アプリケーションの機能
 - 検索機能
