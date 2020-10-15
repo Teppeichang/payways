@@ -113,6 +113,26 @@
   color: black;
 }
 
+/* 非ログイン時の表示（タブレット） */
+
+@media (max-width: 1024px) {
+  .icon-area{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
+
+/* 非ログイン時の表示（スマートフォン） */
+
+@media (max-width: 500px) {
+  .icon-area{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
+
 /* ログイン時のみ表示部分 */
 .search-form-area{
   text-align: center;
