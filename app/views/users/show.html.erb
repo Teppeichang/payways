@@ -34,7 +34,7 @@
 </div>
 
 <div class="user-post-container">
-  <h1><%= @user.name %>さんの投稿一覧</h1>
+  <h2 class="user-post-index">投稿一覧</h2>
   <% @posts.each do |post| %>
     <%= render partial: "posts/post", locals:{post: post} %>
   <% end %>

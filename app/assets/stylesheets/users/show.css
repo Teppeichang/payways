@@ -32,7 +32,7 @@
 }
 
 .user-edit{
-  padding: 30px 0 0 0 ;
+  padding: 30px 0 30px 0 ;
   font-weight: bold;
 }
 
@@ -40,4 +40,10 @@
   color: green;
   text-decoration: none;
   font-size: 20px;
+}
+
+.user-post-index{
+  text-align: center;
+  font-size: 20px;
+  padding: 30px 0 0 0 ;
 }
