@@ -6,7 +6,7 @@
     <div class="post-container">
       <div class="post-left">
         <% if l_post.image.blank? %>
-          <p>No Image</p>
+          <p class="no-image">No Image</p>
         <% else %>
           <%= image_tag l_post.image.variant(resize:'250x250') %>
         <% end %>
