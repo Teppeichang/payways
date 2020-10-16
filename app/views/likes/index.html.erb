@@ -1,6 +1,7 @@
 <%= render partial: "posts/header" %>
 
-<div class="user-liked-post">
+<div class="user-liked-index">
+  <h2 class="liked-index-head">いいね！した投稿</h2>
   <% @like_posts.each do |l_post| %>
     <div class="post-container">
       <div class="post-left">
