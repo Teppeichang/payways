@@ -1,0 +1,8 @@
+<%= render partial: "posts/header" %>
+
+<div class="user-liked-post">
+  <h2>いいね！</h2>
+  <% @like_posts.each do |l_post| %>
+    <%=link_to l_post.shop_name, post_path(l_post.id) %>
+  <% end %>
+</div>

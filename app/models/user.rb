@@ -6,6 +6,7 @@ class User < ApplicationRecord
   has_many :comments
   has_one_attached :image
   has_many :likes
+  has_many :like_posts, through: :likes, source: :post
   
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to_active_hash :prefecture
