@@ -1,8 +1,29 @@
 <%= render partial: "posts/header" %>
 
 <div class="user-liked-post">
-  <h2>いいね！</h2>
   <% @like_posts.each do |l_post| %>
-    <%=link_to l_post.shop_name, post_path(l_post.id) %>
+    <div class="post-container">
+      <div class="post-left">
+        <% if l_post.image.blank? %>
+          <p>No Image</p>
+        <% else %>
+          <%= image_tag l_post.image.variant(resize:'250x250') %>
+        <% end %>
+      </div>
+      <div class="post-right">
+        <div class="post-right-top">
+          <%= link_to l_post.shop_name, post_path(l_post.id) %>
+        </div>
+        <div class="post-tags">
+          <% if l_post.tag_list.present? %>
+            <h2 class="tag-label">#タグ</h2>
+            <h3 class="tag_list"><%= l_post.tag_list %></h3>
+          <% end %>
+        </div>
+        <div class="post-right-bottom">
+          <%= l_post.explain %>
+        </div>
+      </div>
+    </div>
   <% end %>
 </div>
