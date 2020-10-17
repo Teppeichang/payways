@@ -64,6 +64,11 @@
   text-decoration: none;
 }
 
+#map{
+  width: 300px;
+  height: 300px;
+}
+
 .comment-container{
   display: flex;
   flex-direction: column;
