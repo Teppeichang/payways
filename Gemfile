@@ -81,3 +81,5 @@ gem 'devise-i18n-views'
 group :development do
   gem 'rubocop', require: false
 end
+
+gem 'dotenv-rails'
