@@ -31,6 +31,37 @@
   </div>
 </div>
 
+<div class="post-map">
+  <div id="map"></div>
+</div>
+
+<script>
+var latLng;
+var marker;
+var infoWindow;
+function initMap() {
+  latLng = {lat: <%= @post.latitude %>, lng: <%= @post.longitude %>};
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: latLng,
+    zoom: 15,
+    mapTypeControl: false,
+    streetViewControl: false
+  });
+  marker = new google.maps.Marker({
+    position: latLng,
+    map: map
+  });
+  infoWindow = new google.maps.InfoWindow({
+    content: "<a href='https://www.google.com/search?q=<%= @post.shop_name %>' target='_blank' style='color: #00f;'><%= @post.shop_name %> を検索</a><br><br><a href='http://www.google.com/search?q=<%= @post.shop_name %> &tbm=isch' target='_blank'>画像検索 by google</a>"
+  });
+  marker.addListener('click', function() {
+    infoWindow.open(map, marker);
+  });
+}
+initMap();
+</script>
+
+
 <div class="comment-container">
   <% if user_signed_in? %>
     <h2>
