@@ -5,7 +5,7 @@
     <% unless @post.image.blank?%>
       <%= image_tag @post.image.variant(resize:'250x250') %>
     <% else %>
-      <p>No Image</p>
+      <p class="no-image">No Image</p>
     <% end %>
   </div>
   <div class="post-right-content">
