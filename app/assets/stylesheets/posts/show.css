@@ -95,9 +95,8 @@
 }
 
 .comment-index{
-  border: 1px solid black;
   background-color: whitesmoke;
-  width: 820px;
+  width: 1000px;
   height: auto;
   padding: 15px;
 }
@@ -118,7 +117,7 @@
 }
 
 .comment-text textarea{
-  width: 500px;
+  width: 1000px;
 }
 
 .comment-submit input{
