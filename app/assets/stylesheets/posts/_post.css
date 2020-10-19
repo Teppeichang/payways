@@ -12,11 +12,11 @@
   padding: 20px;
   background-color: whitesmoke;
   box-shadow: 10px 10px 5px 2px gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.no-image{
-  padding: 50px;
-}
 
 .post-right{
   border-top: 1px solid black;
