@@ -83,3 +83,5 @@ group :development do
 end
 
 gem 'dotenv-rails'
+gem 'geocoder'
+gem 'gon'

@@ -6,7 +6,8 @@ class Post < ApplicationRecord
   has_one_attached :image
   has_many :likes, dependent: :destroy
 
-  before_save :geocode
+  geocoded_by :shop_name
+  after_validation :geocode, if: :shop_name_changed?
   
   with_options presence: true do
     validates :shop_name
