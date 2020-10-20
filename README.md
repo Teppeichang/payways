@@ -26,6 +26,7 @@ http://www.payways.work/
 - Nginx,Unicorn
 - Capistranoによる自動デプロイ
 - 常時SSL化
+- レスポンシブデザイン対応
 - RSpec
 - Rubocop
 - GitHub
