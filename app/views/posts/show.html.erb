@@ -18,7 +18,7 @@
     </div>
     <%= @post.explain %>
     <div class="like-btn">
-      <%= render partial: "like", post: @post %>
+      <div class="buttons_<%= @post.id %>"><%= render partial: "like", post: @post %></div>
     </div>
     <div class="post-right-bottom-content">
       <% if user_signed_in? && current_user.id == @post.user_id %>
