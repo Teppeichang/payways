@@ -25,6 +25,7 @@ http://www.payways.work/
 - AWS(S3,EC2,MariaDB,VPC,Route53)
 - Nginx,Unicorn
 - Capistranoによる自動デプロイ
+- 常時SSL化
 - RSpec
 - Rubocop
 - GitHub
@@ -33,7 +34,7 @@ http://www.payways.work/
 ![payways_インフラ図](https://user-images.githubusercontent.com/65349790/96076842-499b1080-0ee9-11eb-9769-09dd18f6abed.png)
 
 ## DB設計
-![payways_er_diagram](https://user-images.githubusercontent.com/65349790/96076817-37b96d80-0ee9-11eb-87a3-b692ce86b7b9.png)
+![payways_er_diagram](https://user-images.githubusercontent.com/65349790/96544938-77fe5e80-12e2-11eb-9631-ccdd5555ffa5.png)
 
 ## アプリケーションの機能
 - 検索機能
@@ -43,7 +44,8 @@ http://www.payways.work/
 - 店舗情報の投稿のCRUD機能ととタグ付け(タグ付け機能はacts-as-taggable-onで実装)
 - 投稿に対する「いいね！」機能
 - 投稿に対するコメント投稿機能
-- 画像投稿機能
+- 画像投稿機能(プレビュー付き)
+- 投稿された店舗情報に基づいたGoogle Mapでの位置表示(GoogleMaps API)
 
 ## 開発において意識したこと
 - 全体的に使用方法がわかりやすい、シンプルなUIデザインを心がけました。
