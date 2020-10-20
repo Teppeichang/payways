@@ -71,18 +71,15 @@ initMap();
     <div class="comment-error">
       <%= flash[:alert] %>
     </div>
-    <div class="comment-index">
+    <div class="comment-index" id="comment-index">
       <% if @comments %>
-        <% @comments.each do |comment|%>
-          <p><%= comment.text %></p>
-          <p class="comment-user"><%= link_to comment.user.name, user_path(comment.user_id) %>さん</p>
-        <% end %>
+        <%= render "comment", comment: @comment %>
       <% end %>
     </div>
   <% end %>
 </div>
 
-<div class="comment-form">
+<div class="comment-form" id="comment-form">
   <% if user_signed_in? %>
     <%= form_with(model: [@post, @comment], local: true) do |form| %>
       <div class="comment-text">
