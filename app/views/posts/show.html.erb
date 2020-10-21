@@ -71,9 +71,9 @@ initMap();
     <div class="comment-error">
       <%= flash[:alert] %>
     </div>
-    <div class="comment-index" id="comment-index">
+    <div class="comment-index">
       <% if @comments %>
-        <%= render "comment", comment: @comment %>
+        <%= render partial: "comment", comments: @comments %>
       <% end %>
     </div>
   <% end %>
@@ -81,7 +81,7 @@ initMap();
 
 <div class="comment-form" id="comment-form">
   <% if user_signed_in? %>
-    <%= form_with(model: [@post, @comment], local: true) do |form| %>
+    <%= form_with(model: [@post, @comment]) do |form| %>
       <div class="comment-text">
         <%= form.text_area :text, placeholder: "コメントを記入してください" %>
       </div>
