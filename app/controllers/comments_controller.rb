@@ -6,6 +6,7 @@ class CommentsController < ApplicationController
     if @comment.save
     else
       flash[:alert] = "コメントを入力してください"
+      redirect_to post_path(@comment.post.id)
     end
   end
 
