@@ -1,7 +1,7 @@
 <% @comments.each do |comment|%>
-  <p><%= comment.text %></p>
-  <p class="comment-user"><%= link_to comment.user.name, user_path(comment.user_id) %>さん</p>
+  <p id="comment_<%= comment.id %>"><%= comment.text %></p>
+  <p class="comment-user" id="comment-user_<%= comment.id %>"><%= link_to comment.user.name, user_path(comment.user_id) %>さん</p>
   <% if comment.user == current_user %>
-    <%= link_to "削除",  post_comment_path(comment.post_id, comment.id), method: :delete %>
+    <div id="comment-delete_<%= comment.id %>"><%= link_to "削除",  post_comment_path(comment.post_id, comment.id), method: :delete, remote: true %></div>
   <% end %>
 <% end %>
