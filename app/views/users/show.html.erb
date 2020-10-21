@@ -35,7 +35,5 @@
 
 <div class="user-post-container">
   <h2 class="user-post-index">投稿一覧</h2>
-  <% @posts.each do |post| %>
-    <%= render partial: "posts/post", locals:{post: post} %>
-  <% end %>
+  <%= render partial: "posts/post", locals:{posts: @posts} %>
 </div>
