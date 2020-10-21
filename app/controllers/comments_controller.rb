@@ -4,11 +4,8 @@ class CommentsController < ApplicationController
     @comment = Comment.new(comment_params)
     @comments = Comment.all
     if @comment.save
-      # render :create
-      # redirect_to post_path(@comment.post.id)
     else
       flash[:alert] = "コメントを入力してください"
-      # redirect_to post_path(@comment.post.id)
     end
   end
 
