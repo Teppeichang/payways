@@ -1,0 +1,15 @@
+.comment{
+  padding: 0 40px 0 0 ;
+}
+
+.comment-user{
+  padding: 0 20px 0 0 ;
+}
+
+.comment-user a{
+  text-decoration: none;
+}
+
+.comment-bottom{
+  display: flex;
+}

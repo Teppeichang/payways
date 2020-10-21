@@ -104,14 +104,8 @@
   width: 1000px;
   height: auto;
   padding: 15px;
-}
-
-.comment-user{
-  padding: 0 0 10px 0;
-}
-
-.comment-user a{
-  text-decoration: none;
+  display: flex;
+  flex-direction: column;
 }
 
 .comment-form{

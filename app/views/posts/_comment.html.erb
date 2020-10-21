@@ -1,7 +1,15 @@
 <% @comments.each do |comment|%>
-  <p id="comment_<%= comment.id %>"><%= comment.text %></p>
-  <p class="comment-user" id="comment-user_<%= comment.id %>"><%= link_to comment.user.name, user_path(comment.user_id) %>さん</p>
-  <% if comment.user == current_user %>
-    <div id="comment-delete_<%= comment.id %>"><%= link_to "削除",  post_comment_path(comment.post_id, comment.id), method: :delete, remote: true %></div>
-  <% end %>
+  <div class="comment-top">
+    <p class="comment" id="comment_<%= comment.id %>"><%= comment.text %></p>
+  </div>
+  <div class="comment-bottom">
+    <p class="comment-user" id="comment-user_<%= comment.id %>"><%= link_to comment.user.name, user_path(comment.user_id) %>さん</p>
+    <% if comment.user == current_user %>
+      <div id="comment-delete_<%= comment.id %>">
+        <%= link_to post_comment_path(comment.post_id, comment.id), method: :delete, remote: true do %>
+          <i class="fas fa-trash" style="color: black;"></i>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
 <% end %>
