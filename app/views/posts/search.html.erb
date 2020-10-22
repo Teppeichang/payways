@@ -9,7 +9,5 @@
 
   <div class="search-post-area">
     <h1>検索結果</h1>
-    <% @posts.each do |post| %>
-      <%= render partial: "post", locals: { post: post } %>
-    <% end %>
+    <%= render partial: "post", locals: { posts: @posts } %>
   </div>
