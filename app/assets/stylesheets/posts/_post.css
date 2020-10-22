@@ -48,9 +48,10 @@
   color: white;
 }
 
-.tag_list{
+.tag_list a{
   color: royalblue;
   font-weight: bold;
+  text-decoration: none;
 }
 
 .post-right-middle{
