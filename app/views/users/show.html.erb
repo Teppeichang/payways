@@ -4,7 +4,7 @@
   <div class="user-profile">
     <div class="user-image">
       <% if @user.image.blank? %>
-        <%= image_tag "/登録のピクトアイコン1.png" %>
+        <%= image_tag "/登録のピクトアイコン1.png", alt:"画像が登録されていません" %>
       <% else %>
         <%= image_tag @user.image.variant(resize:'200x200') %>
       <% end %>
