@@ -1,7 +1,11 @@
 <div class="main">
   <div class="header-area">
     <div class="app-name">
-      <%= link_to "Payways", root_path %>
+      <% if user_signed_in? %>
+        <%= link_to "Payways", posts_path %>
+      <% else %>
+        <%= link_to "Payways", root_path %>
+      <% end %>
     </div>
     <ul class="header-menu">
       <% if user_signed_in? %>
