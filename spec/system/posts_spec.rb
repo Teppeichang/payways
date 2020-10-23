@@ -28,7 +28,7 @@ RSpec.describe "店舗情報の投稿", type: :system do
         find('input[name="commit"]').click  
       }.to change {Post.count}.by(1)
       # トップページに遷移する
-      visit root_path
+      visit posts_path
       # トップページに先程投稿した内容が表示されていることを確認する
       expect(page).to have_content(@posts_shop_name)
       expect(page).to have_content(@posts_explain)
@@ -71,7 +71,7 @@ RSpec.describe "投稿の編集", type: :system do
         find('input[name="commit"]').click
       }.to change { Post.count }.by(0)
       # （編集後）トップページに遷移する
-      visit root_path
+      visit posts_path
       # トップページには先程編集した投稿が存在する
       expect(page).to have_content("#{@post1.shop_name}+編集したテキスト")
       expect(page).to have_content("#{@post1.explain}+編集したテキスト")
