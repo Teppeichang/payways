@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: 'posts#index'
+  root to: 'homes#index'
 
   # タグにリンク付けし、同じタグを持つ投稿が一覧表示されるよう設定
   get 'tags/:tag', to: 'posts#index', as: :tag
