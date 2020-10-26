@@ -16,6 +16,14 @@
 .actions input{
   width: 500px;
   height: 45px;
-  background: linear-gradient(to bottom, yellow,whitesmoke);
+  font-size: 20px;
+  border-style: none;
+  border-radius: 5px 5px;
+  background: #FFC107;
+  color: black;
   cursor: pointer;
+}
+
+.actions input:hover{
+  background: #e0a800;
 }

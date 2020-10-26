@@ -58,6 +58,14 @@
 .signup-btn input{
   width: 500px;
   height: 45px;
-  background: linear-gradient(to bottom, yellowgreen,whitesmoke);
+  font-size: 20px;
+  border-style: none;
+  border-radius: 5px 5px;
+  background: #28a745;
+  color: whitesmoke;
   cursor: pointer;
+}
+
+.signup-btn input:hover{
+  background: #218838;
 }

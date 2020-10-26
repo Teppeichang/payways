@@ -24,13 +24,25 @@
 li a{
   font-size: 20px;
   padding: 0 15px 0 15px;
-  color: whitesmoke;
+}
+
+.header a,
+.header a:visited,
+.header a:focus,
+.header a:hover{
   text-decoration: none;
+  color: whitesmoke;
 }
 
 .guest-login {
-  color: yellowgreen;
-  text-decoration: none;
   font-size: 20px;
   padding: 0 15px 0 15px;
+}
+
+.guest-login, 
+.guest-login:visited,
+.guest-login:focus,
+.guest-login:hover {
+  text-decoration: none;
+  color: yellowgreen;
 }

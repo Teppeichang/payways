@@ -1,0 +1,129 @@
+.main{
+  height: 100%;
+  width: 100%;
+}
+
+.overview-area{
+  height: 1000px;
+  text-align: center;
+  background-image: url("/ec-cash-1750490_1920.jpg");
+  background-size: cover;
+}
+
+.overview-area h1{
+  padding: 150px 0 55px 0;
+  font-size: 60px;
+  font-family: 'Zapfino', sans-serif;
+  color: whitesmoke;
+}
+
+.overview-area p{
+  padding: 2px 0 0 0;
+  font-size: 25px;
+  color: whitesmoke;
+}
+
+
+.search-form-area input[name="keyword"]{
+  width: 500px;
+  height: 40px;
+  margin: 200px 0 0 0;
+}
+
+.search-form-area input[name="commit"]{
+  width: 90px;
+  height: 40px;
+  margin: 200px 0 0 10px;
+}
+
+.about-service{
+  height: auto;
+  text-align: center;
+  background-color: black;
+  flex-direction: column;
+}
+
+.about-service h2{
+  color: yellow;
+  font-size: 25px;
+  padding: 20px 0 0 0 ;
+}
+
+.about-service h1{
+  font-size: 30px;
+  padding: 10px 0 30px 0;
+  color: white;
+}
+
+.icon-area{
+  display: flex;
+  justify-content: space-around;
+}
+
+.about-service p{
+  padding: 30px 0 30px 0;
+  color: white;
+  font-size: 20px;
+}
+
+.invitation{
+  height: 500px;
+  background-color: whitesmoke;
+}
+
+.invitation h1{
+  text-align: center;
+  padding: 100px 0 100px 0 ;
+  color: black;
+}
+
+.btn{
+  display: flex;
+  justify-content: center;
+}
+
+.btn-success{
+  width: 200px;
+  height:60px;
+  margin: 0 20px 0 0;
+}
+
+.signup a{
+  text-decoration: none;
+  color: whitesmoke;
+  font-size: 20px;
+  padding: 8px;
+}
+
+.btn-warning{
+  width: 200px;
+  height:60px;
+  margin: 0 20px 0 0;
+}
+
+.signin a{
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  padding: 8px;
+}
+
+/* タブレット */
+
+@media (max-width: 1024px) {
+  .icon-area{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
+
+/* スマートフォン */
+
+@media (max-width: 500px) {
+  .icon-area{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
