@@ -40,10 +40,14 @@
       <h1>今すぐPaywaysをはじめてみましょう!</h1>
       <div class="btn">
         <div class="signup">
-          <%= link_to "新規登録", new_user_registration_path %>
+          <button type="button" class="btn btn-success">
+            <%= link_to "新規登録", new_user_registration_path %>
+          </button>
         </div>
         <div class="signin">
-          <%= link_to "ログイン", new_user_session_path %>
+          <button type="button" class="btn btn-warning">
+            <%= link_to "ログイン", new_user_session_path %>
+          </button>
         </div>
       </div>
     </div>

@@ -36,7 +36,6 @@
   margin: 200px 0 0 10px;
 }
 
-/* 非ログイン時のみ表示部分 */
 .about-service{
   height: auto;
   text-align: center;
@@ -83,34 +82,30 @@
   justify-content: center;
 }
 
-.signup{
+.btn-success{
   width: 200px;
-  height: 60px;
-  padding: 10px;
-  margin-right: 40px;
-  border: 1px solid black;
-  background: linear-gradient(to bottom, yellowgreen,whitesmoke);
-  font-size: 20px;
+  height:60px;
+  margin: 0 20px 0 0;
 }
 
 .signup a{
   text-decoration: none;
-  color: black;
+  color: whitesmoke;
+  font-size: 20px;
+  padding: 8px;
 }
 
-.signin{
+.btn-warning{
   width: 200px;
-  height: 60px;
-  padding: 10px;
-  margin-left: 40px;
-  border: 1px solid black;
-  background: linear-gradient(to bottom, yellow,whitesmoke);
-  font-size: 20px;
+  height:60px;
+  margin: 0 20px 0 0;
 }
 
 .signin a{
   text-decoration: none;
   color: black;
+  font-size: 20px;
+  padding: 8px;
 }
 
 /* タブレット */
