@@ -85,3 +85,5 @@ end
 gem 'dotenv-rails'
 gem 'geocoder'
 gem 'gon'
+
+gem 'kaminari'
