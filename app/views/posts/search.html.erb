@@ -11,3 +11,5 @@
     <h1 class="search-head">検索結果</h1>
     <%= render partial: "post", locals: { posts: @posts } %>
   </div>
+
+<%= paginate @posts %>
