@@ -26,10 +26,10 @@ li a{
   padding: 0 15px 0 15px;
 }
 
-li a,
-li a:visited,
-li a:focus,
-li a:hover{
+.header a,
+.header a:visited,
+.header a:focus,
+.header a:hover{
   text-decoration: none;
   color: whitesmoke;
 }
