@@ -87,3 +87,6 @@ gem 'geocoder'
 gem 'gon'
 
 gem 'kaminari'
+
+gem 'omniauth-rails_csrf_protection'
+gem 'omniauth-google-oauth2'

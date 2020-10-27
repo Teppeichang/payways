@@ -26,4 +26,7 @@
   <div class="signup-btn">
     <%= f.submit "登録" %>
   </div>
+
+  <%= link_to "Googleで登録", user_google_oauth2_omniauth_authorize_path, method: :post %>
+
 <% end %>
