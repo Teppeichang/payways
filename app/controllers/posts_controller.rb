@@ -45,6 +45,15 @@ class PostsController < ApplicationController
 
 
   def search
+    split_keywords = params[:keyword].split(/[[:blank]]+/) #検索キーワードを分割可能にする
+    @posts = []
+    split_keywords.each do |keyword| #分割したキーワードごとに検索する
+      if keyword == ""
+        @posts += Post.where('shop_name LIKE(?)', "%#{keyword}%") #部分一致でキーワードごとに検索
+      else
+        @posts.uniq! #検索レコードの重複を防ぐための処理
+      end
+    end
     @posts = Post.search(params[:keyword]).page(params[:page]).per(10)
   end
 
