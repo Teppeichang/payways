@@ -22,7 +22,7 @@ http://www.payways.work/
 - Ruby 2.7.1
 - Ruby on Rails 6.0.3.3
 - JavaScript
-- AWS(S3,EC2,MariaDB,VPC,Route53)
+- AWS(S3,VPC,EC2,Route53,ACM,ELB)
 - Nginx,Unicorn
 - Capistranoによる自動デプロイ
 - 常時SSL化
@@ -38,7 +38,7 @@ http://www.payways.work/
 ![payways_er_diagram](https://user-images.githubusercontent.com/65349790/96544938-77fe5e80-12e2-11eb-9631-ccdd5555ffa5.png)
 
 ## アプリケーションの機能
-- 検索機能
+- 検索機能(複数ワードで検索可能)
 - 検索結果表示画面にページネーションを実装(kaminari)
 - ユーザーログイン/登録機能(devise)
 - ゲストログイン機能
