@@ -17,8 +17,7 @@
         </div>
         <div class="post-tags">
           <% if l_post.tag_list.present? %>
-            <h2 class="tag-label">#タグ</h2>
-            <h3 class="tag_list"><%= l_post.tag_list %></h3>
+            <span class="badge badge-primary"><%= link_to l_post.tag_list, tag_path(l_post.tag_list) %></span>
           <% end %>
         </div>
         <div class="post-right-bottom">
