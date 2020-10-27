@@ -25,6 +25,7 @@ class Post < ApplicationRecord
 
   private
 
+  # postsテーブルのshop_nameを元に、GoogleMaps API（geocoder）で緯度経度を計算する処理
   def geocode
     require 'net/http'
     uri = URI.escape("https://maps.googleapis.com/maps/api/geocode/json?address="+self.shop_name+"&key="+ENV['MAPS_API_KEY'])
