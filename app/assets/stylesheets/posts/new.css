@@ -34,6 +34,16 @@ h1{
 }
 
 .post-btn input{
-  background: linear-gradient(to bottom, yellow,whitesmoke);
+  width: 500px;
+  height: 45px;
+  font-size: 20px;
+  border-style: none;
+  border-radius: 5px 5px;
+  background: #FFC107;
+  color: black;
   cursor: pointer;
+}
+
+.post-btn input:hover{
+  background: #e0a800;
 }

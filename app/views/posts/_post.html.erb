@@ -13,9 +13,8 @@
             </div>
             <div class="post-tags">
                 <% if post.tag_list.present? %>
-                    <h2 class="tag-label">#タグ</h2>
                     <% post.tag_list.each do |tag| %>
-                        <h3 class="tag_list"><%= link_to tag, tag_path(tag) %></h3>
+                        <span class="badge badge-primary"><%= link_to tag, tag_path(tag) %></span>
                     <% end %>
                 <% end %>
             </div>

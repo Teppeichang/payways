@@ -7,3 +7,9 @@
   text-align: center;
   padding: 0 0 10px 0;
 }
+
+.badge-primary a{
+  color: whitesmoke;
+  font-size: 15px;
+  text-decoration: none;
+}

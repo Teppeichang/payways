@@ -63,7 +63,15 @@
 
 .user-edit-btn input{
   width: 500px;
-  height: 30px;
-  background: linear-gradient(to bottom, yellow,whitesmoke);
+  height: 45px;
+  font-size: 20px;
+  border-style: none;
+  border-radius: 5px 5px;
+  background: #FFC107;
+  color: black;
   cursor: pointer;
+}
+
+.user-edit-btn input:hover{
+  background: #e0a800;
 }
