@@ -14,6 +14,7 @@ class Post < ApplicationRecord
     validates :explain
   end
 
+  # 検索機能
   def self.search(search)
     if search != ""
       Post.where('shop_name LIKE(?)', "%#{search}%")
