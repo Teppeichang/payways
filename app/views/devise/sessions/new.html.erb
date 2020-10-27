@@ -29,6 +29,10 @@
     <%= f.submit "ログイン" %>
   </div>
 
-    <%= link_to "Googleでログイン", user_google_oauth2_omniauth_authorize_path, method: :post %>
+  <div class="google-signin">
+    <%= link_to user_google_oauth2_omniauth_authorize_path, class: "btn btn-danger", method: :post do %>
+      <i class="fab fa-google"></i>Googleでログイン
+    <% end %>
+  </div>
 
 <% end %>

@@ -87,3 +87,18 @@
 .signup-btn input:hover{
   background: #218838;
 }
+
+.google-signup{
+  padding: 10px 0 0 0;
+  display: flex;
+  justify-content: center;
+}
+
+.google-signup > .btn-danger{
+  width: 500px;
+  height: 45px;
+}
+
+.google-signup i{
+  padding: 5px;
+}
