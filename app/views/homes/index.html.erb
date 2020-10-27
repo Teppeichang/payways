@@ -50,6 +50,13 @@
           </button>
         </div>
       </div>
+      <div class="oauth-btn">
+        <div class="google-signup-home">
+          <%= link_to user_google_oauth2_omniauth_authorize_path, class: "btn btn-danger", method: :post do %>
+            <i class="fab fa-google"></i>Googleで登録
+          <% end %>
+        </div>
+      </div>
     </div>
   <% end %>
 

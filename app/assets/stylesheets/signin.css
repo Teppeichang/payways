@@ -27,3 +27,18 @@
 .actions input:hover{
   background: #e0a800;
 }
+
+.google-signin{
+  padding: 10px 0 0 0;
+  display: flex;
+  justify-content: center;
+}
+
+.google-signin > .btn-danger{
+  width: 500px;
+  height: 45px;
+}
+
+.google-signin i{
+  padding: 5px;
+}

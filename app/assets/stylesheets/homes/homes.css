@@ -85,7 +85,7 @@
 .btn-success{
   width: 200px;
   height:60px;
-  margin: 0 20px 0 0;
+  margin: 0 10px 0 0;
 }
 
 .signup a{
@@ -98,7 +98,7 @@
 .btn-warning{
   width: 200px;
   height:60px;
-  margin: 0 20px 0 0;
+  margin: 0 10px 0 0;
 }
 
 .signin a{
@@ -106,6 +106,25 @@
   color: black;
   font-size: 20px;
   padding: 8px;
+}
+
+.oauth-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.google-signup-home{
+  padding: 10px 0 0 0;
+}
+
+.google-signup-home > .btn-danger{
+  width: 440px;
+  height: 45px;
+}
+
+.google-signup-home i{
+  padding: 5px;
 }
 
 /* タブレット */
