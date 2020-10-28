@@ -34,5 +34,10 @@
       <i class="fab fa-google"></i>Googleでログイン
     <% end %>
   </div>
+    <div class="twitter-signin">
+    <%= link_to user_twitter_omniauth_authorize_path, class: "btn btn-info", method: :post do %>
+      <i class="fab fa-twitter"> Twitterでログイン</i>
+    <% end %>
+  </div>
 
 <% end %>

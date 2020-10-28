@@ -127,6 +127,22 @@
   padding: 5px;
 }
 
+.twitter-signup-home{
+  padding: 10px 0 0 0;
+  display: flex;
+  justify-content: center;
+}
+
+.twitter-signup-home > .btn-info{
+  width: 440px;
+  height: 45px;
+}
+
+.twitter-signup-home i{
+  padding: 5px;
+  font-weight: bold;
+}
+
 /* タブレット */
 
 @media (max-width: 1024px) {
