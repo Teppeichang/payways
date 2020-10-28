@@ -101,4 +101,21 @@
 
 .google-signup i{
   padding: 5px;
+  font-weight: bold;
+}
+
+.twitter-signup{
+  padding: 10px 0 0 0;
+  display: flex;
+  justify-content: center;
+}
+
+.twitter-signup > .btn-info{
+  width: 500px;
+  height: 45px;
+}
+
+.twitter-signup i{
+  padding: 5px;
+  font-weight: bold;
 }
