@@ -55,6 +55,11 @@
           <%= link_to user_google_oauth2_omniauth_authorize_path, class: "btn btn-danger", method: :post do %>
             <i class="fab fa-google"></i>Googleで登録
           <% end %>
+          <div class="twitter-signup-home">
+            <%= link_to user_twitter_omniauth_authorize_path, class: "btn btn-info", method: :post do %>
+              <i class="fab fa-twitter"> Twitterで登録</i>
+            <% end %>
+          </div>
         </div>
       </div>
     </div>

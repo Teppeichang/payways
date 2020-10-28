@@ -6,6 +6,11 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     callback_for(:google)
   end
 
+  # callback for twitter
+  def twitter
+    callback_for(:twitter)
+  end
+
   def callback_for(provider)
     # user.rbのメソッド(from_omniauth)をここで使用
     # 'request.env["omniauth.auth"]'この中にgoogoleアカウントから取得したメールアドレスや、名前のデータが含まれている
