@@ -85,7 +85,6 @@
 .btn-success{
   width: 200px;
   height:60px;
-  margin: 0 10px 0 0;
 }
 
 .signup a{
@@ -98,7 +97,7 @@
 .btn-warning{
   width: 200px;
   height:60px;
-  margin: 0 10px 0 0;
+  margin: 0 10px 20px 30px;
 }
 
 .signin a{
@@ -119,7 +118,7 @@
 }
 
 .google-signup-home > .btn-danger{
-  width: 440px;
+  width: 500px;
   height: 45px;
 }
 
@@ -128,17 +127,29 @@
 }
 
 .twitter-signup-home{
-  padding: 10px 0 0 0;
-  display: flex;
-  justify-content: center;
+  padding: 10px 20px 0 20px;
 }
 
 .twitter-signup-home > .btn-info{
-  width: 440px;
+  width: 500px;
   height: 45px;
 }
 
 .twitter-signup-home i{
+  padding: 5px;
+  font-weight: bold;
+}
+
+.facebook-signup-home{
+  padding: 10px 0 0 0;
+}
+
+.facebook-signup-home > .btn-primary{
+  width: 500px;
+  height: 45px;
+}
+
+.facebook-signup-home i{
   padding: 5px;
   font-weight: bold;
 }
@@ -151,6 +162,11 @@
     flex-direction: column;
     justify-content: space-around;
   }
+  .oauth-btn{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
 }
 
 /* スマートフォン */
@@ -160,5 +176,10 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+  }
+  .oauth-btn{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
   }
 }
