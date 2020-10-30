@@ -17,6 +17,18 @@
   color: whitesmoke;
 }
 
+.search-form-header{
+  margin: 0 1300px 0 0;
+}
+
+.search-form-header #keyword{
+  width: 500px;
+} 
+
+.search-form-header input{
+  width: 50px;
+}
+
 .header-area ul{
   display: flex;
 }
@@ -45,4 +57,27 @@ li a{
 .guest-login:hover {
   text-decoration: none;
   color: yellowgreen;
+}
+
+/* ヘッダー検索フォーム:タブレット */
+@media (max-width: 1024px) {
+  .search-form-header{
+    display: flex;
+    margin: 0 0 0 0;
+  }
+  .search-form-header #keyword{
+    width: 250px;
+  } 
+  
+}
+
+/* ヘッダー検索フォーム:スマートフォン */
+@media (max-width: 500px) {
+  .search-form-header{
+    display: flex;
+    margin: 0 0 0 0;
+  }
+  .search-form-header #keyword{
+    width: 200px;
+  } 
 }

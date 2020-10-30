@@ -58,3 +58,19 @@
   padding: 5px;
   font-weight: bold;
 }
+
+.facebook-signin{
+  padding: 10px 0 0 0;
+  display: flex;
+  justify-content: center;
+}
+
+.facebook-signin > .btn-primary{
+  width: 500px;
+  height: 45px;
+}
+
+.facebook-signin i{
+  padding: 5px;
+  font-weight: bold;
+}
