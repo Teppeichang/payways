@@ -120,21 +120,18 @@
   font-weight: bold;
 }
 
-.line-signup{
+.facebook-signup{
   padding: 10px 0 0 0;
   display: flex;
   justify-content: center;
 }
 
-.line-signup a{
+.facebook-signup > .btn-primary{
   width: 500px;
   height: 45px;
-  padding: 7px;
-  background: lime;
-  text-align: center;
 }
 
-.line-signup i{
+.facebook-signup i{
+  padding: 5px;
   font-weight: bold;
-  color: black;
 }

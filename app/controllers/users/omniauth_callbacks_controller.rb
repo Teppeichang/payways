@@ -11,6 +11,11 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     callback_for(:twitter)
   end
 
+  # callback for facebook
+  def facebook
+    callback_for(:facebook)
+  end
+
   # # callback for line
   # def line
   #   callback_for(:line)
