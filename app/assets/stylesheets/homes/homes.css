@@ -82,81 +82,122 @@
   justify-content: center;
 }
 
-.btn-success{
+.btn-signup{
   width: 200px;
-  height:60px;
+  height:45px;
+  background-color: black;
 }
 
 .signup a{
   text-decoration: none;
   color: whitesmoke;
   font-size: 20px;
-  padding: 8px;
 }
 
-.btn-warning{
+.signup a:hover{
+  text-decoration: none;
+  color: lime;
+}
+
+.btn-signin{
   width: 200px;
-  height:60px;
+  height:45px;
   margin: 0 10px 20px 30px;
+  background-color: black;
 }
 
 .signin a{
   text-decoration: none;
-  color: black;
+  color: whitesmoke;
   font-size: 20px;
-  padding: 8px;
+}
+
+.signin a:hover{
+  text-decoration: none;
+  color: yellow;
 }
 
 .oauth-btn{
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 15px 0 0 0;
 }
 
 .google-signup-home{
   padding: 10px 0 0 0;
+  width: 350px;
+  height: 45px;
+  border-radius: 5px 5px;
+  background-color: black;
 }
 
-.google-signup-home > .btn-danger{
-  width: 500px;
-  height: 45px;
+.google-signup-home a{
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+.google-signup-home a:hover{
+  text-decoration: none;
+  color: orangered ;
 }
 
 .google-signup-home i{
-  padding: 5px;
+  font-weight: bold;
 }
 
 .twitter-signup-home{
   padding: 10px 20px 0 20px;
+  margin: 0 30px 0 30px;
+  width: 350px;
+  height: 45px;
+  border-radius: 5px 5px;
+  background-color: black;
 }
 
-.twitter-signup-home > .btn-info{
-  width: 500px;
-  height: 45px;
+.twitter-signup-home a{
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+.twitter-signup-home a:hover{
+  text-decoration: none;
+  color: skyblue;
 }
 
 .twitter-signup-home i{
-  padding: 5px;
   font-weight: bold;
 }
 
 .facebook-signup-home{
   padding: 10px 0 0 0;
+  width: 350px;
+  height: 45px;
+  border-radius: 5px 5px;
+  background-color: black;
 }
 
-.facebook-signup-home > .btn-primary{
-  width: 500px;
-  height: 45px;
+.facebook-signup-home a{
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+.facebook-signup-home a:hover{
+  text-decoration: none;
+  color: #007bff;
 }
 
 .facebook-signup-home i{
-  padding: 5px;
   font-weight: bold;
 }
 
 /* タブレット */
 
 @media (max-width: 1024px) {
+  .invitation h1{
+    padding: 100px 0 50px 0 ;
+  }
+  
   .icon-area{
     display: flex;
     flex-direction: column;
@@ -166,6 +207,16 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+  }
+  .google-signup-home{
+    width: 450px;
+  }
+  .twitter-signup-home{
+    margin: 15px 0 15px 0;
+    width: 450px;
+  }
+  .facebook-signup-home{
+    width: 450px;
   }
 }
 

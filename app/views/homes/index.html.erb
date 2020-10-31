@@ -40,29 +40,25 @@
       <h1>今すぐPaywaysをはじめてみましょう!</h1>
       <div class="btn">
         <div class="signup">
-          <button type="button" class="btn btn-success">
-            <%= link_to "新規登録", new_user_registration_path %>
-          </button>
+          <%= link_to "新規登録", new_user_registration_path, class:"btn btn-signup" %>
         </div>
         <div class="signin">
-          <button type="button" class="btn btn-warning">
-            <%= link_to "ログイン", new_user_session_path %>
-          </button>
+          <%= link_to "ログイン", new_user_session_path, class:"btn btn-signin" %>
         </div>
       </div>
       <div class="oauth-btn">
         <div class="google-signup-home">
-          <%= link_to user_google_oauth2_omniauth_authorize_path, class: "btn btn-danger", method: :post do %>
-            <i class="fab fa-google"></i>Googleで登録
+          <%= link_to user_google_oauth2_omniauth_authorize_path, class: "btn btn-google", method: :post do %>
+            <i class="fab fa-google"> Googleで登録</i>
           <% end %>
         </div>
         <div class="twitter-signup-home">
-          <%= link_to user_twitter_omniauth_authorize_path, class: "btn btn-info", method: :post do %>
+          <%= link_to user_twitter_omniauth_authorize_path, class: "btn btn-twitter", method: :post do %>
             <i class="fab fa-twitter"> Twitterで登録</i>
           <% end %>
         </div>
         <div class="facebook-signup-home">
-          <%= link_to user_facebook_omniauth_authorize_path, class:"btn btn-primary", method: :post do %>
+          <%= link_to user_facebook_omniauth_authorize_path, class:"btn btn-facebook", method: :post do %>
             <i class="fab fa-facebook-square"> Facebookで登録</i>
           <% end %>
         </div>
