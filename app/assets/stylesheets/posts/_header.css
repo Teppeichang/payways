@@ -26,7 +26,8 @@
 } 
 
 .search-form-header input{
-  width: 50px;
+  width: 70px;
+  text-align: center;
 }
 
 .header-area ul{
@@ -56,7 +57,7 @@ li a{
 .guest-login:focus,
 .guest-login:hover {
   text-decoration: none;
-  color: yellowgreen;
+  color: lime;
 }
 
 /* ヘッダー検索フォーム:タブレット */
