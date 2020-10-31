@@ -17,12 +17,8 @@
   color: whitesmoke;
 }
 
-.search-form-header{
-  margin: 0 1300px 0 0;
-}
-
 .search-form-header #keyword{
-  width: 500px;
+  width: 400px;
 } 
 
 .search-form-header input{
