@@ -69,9 +69,6 @@ initMap();
       <i class="fas fa-comment-dots"></i>
       コメント一覧
     </h2>
-    <div class="comment-error">
-      <%= flash[:alert] %>
-    </div>
     <div class="comment-index">
       <% if @comments %>
         <%= render partial: "comment", comments: @comments %>
@@ -84,7 +81,7 @@ initMap();
   <% if user_signed_in? %>
     <%= form_with(model: [@post, @comment]) do |form| %>
       <div class="comment-text">
-        <%= form.text_area :text, placeholder: "コメントを記入してください" %>
+        <%= form.text_area :text, placeholder: "コメントを記入してください。(空コメントや、空白のみのコメントは投稿できません)" %>
       </div>
       <div class="comment-submit">
         <%= form.submit "コメントする" %>
