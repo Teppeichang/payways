@@ -32,20 +32,21 @@
     </div>
   </div>
   <div class="signup-btn">
-    <%= f.submit "登録" %>
+    <%= f.submit "登 録" %>
   </div>
+  <p class="signup-btn-bridge">または</p>
   <div class="google-signup">
-    <%= link_to user_google_oauth2_omniauth_authorize_path, class: "btn btn-danger", method: :post do %>
+    <%= link_to user_google_oauth2_omniauth_authorize_path, class: "btn btn-google", method: :post do %>
       <i class="fab fa-google"> Googleで登録</i>
     <% end %>
   </div>
   <div class="twitter-signup">
-    <%= link_to user_twitter_omniauth_authorize_path, class: "btn btn-info", method: :post do %>
+    <%= link_to user_twitter_omniauth_authorize_path, class: "btn btn-twitter", method: :post do %>
       <i class="fab fa-twitter"> Twitterで登録</i>
     <% end %>
   </div>
   <div class="facebook-signup">
-    <%= link_to user_facebook_omniauth_authorize_path, class:"btn btn-primary", method: :post do %>
+    <%= link_to user_facebook_omniauth_authorize_path, class:"btn btn-facebook", method: :post do %>
       <i class="fab fa-facebook-square"> Facebookで登録</i>
     <% end %>
   </div>

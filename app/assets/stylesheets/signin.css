@@ -8,6 +8,15 @@
   padding: 20px 0 0 0;
 }
 
+.remember-field > #user_remember_me{
+  height: 20px;
+  width: 20px;
+}
+
+.remember-field label{
+  font-size: 20px;
+}
+
 .actions{
   text-align: center;
   padding: 35px 0 0 0;
@@ -16,16 +25,22 @@
 .actions input{
   width: 500px;
   height: 45px;
-  font-size: 20px;
+  font-size: 23px;
   border-style: none;
   border-radius: 5px 5px;
-  background: #FFC107;
-  color: black;
+  background-color: black;
+  color: whitesmoke;
   cursor: pointer;
 }
 
 .actions input:hover{
-  background: #e0a800;
+  color: yellow;
+}
+
+.signin-btn-bridge{
+  text-align: center;
+  font-size: 20px;
+  padding: 10px 0 10px 0;
 }
 
 .google-signin{
@@ -34,13 +49,21 @@
   justify-content: center;
 }
 
-.google-signin > .btn-danger{
+.google-signin > .btn-google{
   width: 500px;
   height: 45px;
+  background-color: black;
+  color: whitesmoke;
+}
+
+.google-signin > .btn-google:hover{
+  color: orangered;
 }
 
 .google-signin i{
-  padding: 5px;
+  padding: 6px;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 .twitter-signin{
@@ -49,14 +72,21 @@
   justify-content: center;
 }
 
-.twitter-signin > .btn-info{
+.twitter-signin > .btn-twitter{
   width: 500px;
   height: 45px;
+  background-color: black;
+  color: whitesmoke;
+}
+
+.twitter-signin > .btn-twitter:hover{
+  color: skyblue;
 }
 
 .twitter-signin i{
-  padding: 5px;
+  padding: 6px;
   font-weight: bold;
+  font-size: 20px;
 }
 
 .facebook-signin{
@@ -65,12 +95,19 @@
   justify-content: center;
 }
 
-.facebook-signin > .btn-primary{
+.facebook-signin > .btn-facebook{
   width: 500px;
   height: 45px;
+  background-color: black;
+  color: whitesmoke;
+}
+
+.facebook-signin > .btn-facebook:hover{
+  color: #007bff;
 }
 
 .facebook-signin i{
-  padding: 5px;
+  padding: 6px;
   font-weight: bold;
+  font-size: 20px;
 }
