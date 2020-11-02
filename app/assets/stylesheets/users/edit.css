@@ -78,3 +78,13 @@
 .user-edit-btn input:hover{
   background: #e0a800;
 }
+
+.user-destroy{
+  padding: 10px 0 0 0;
+}
+
+.btn-outline-danger{
+  width: 500px;
+  height: 45px;
+  padding: 10px;
+}
