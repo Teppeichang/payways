@@ -76,32 +76,44 @@
 .signup-btn input{
   width: 500px;
   height: 45px;
-  font-size: 20px;
+  font-size: 23px;
   border-style: none;
   border-radius: 5px 5px;
-  background: #28a745;
+  background-color: black;
   color: whitesmoke;
   cursor: pointer;
 }
 
 .signup-btn input:hover{
-  background: #218838;
+  color: lime;
+}
+
+.signup-btn-bridge{
+  text-align: center;
+  font-size: 20px;
+  padding: 10px 0 10px 0;
 }
 
 .google-signup{
-  padding: 10px 0 0 0;
   display: flex;
   justify-content: center;
 }
 
-.google-signup > .btn-danger{
+.google-signup > .btn-google{
   width: 500px;
   height: 45px;
+  background-color: black;
+  color: whitesmoke;
+}
+
+.google-signup > .btn-google:hover{
+  color: orangered;
 }
 
 .google-signup i{
-  padding: 5px;
+  padding: 6px;
   font-weight: bold;
+  font-size: 20px;
 }
 
 .twitter-signup{
@@ -110,14 +122,21 @@
   justify-content: center;
 }
 
-.twitter-signup > .btn-info{
+.twitter-signup > .btn-twitter{
   width: 500px;
   height: 45px;
+  background-color: black;
+  color: whitesmoke;
+}
+
+.twitter-signup > .btn-twitter:hover{
+  color:skyblue;
 }
 
 .twitter-signup i{
-  padding: 5px;
+  padding: 6px;
   font-weight: bold;
+  font-size: 20px;
 }
 
 .facebook-signup{
@@ -126,12 +145,19 @@
   justify-content: center;
 }
 
-.facebook-signup > .btn-primary{
+.facebook-signup > .btn-facebook{
   width: 500px;
   height: 45px;
+  background-color: black;
+  color: whitesmoke;
+}
+
+.facebook-signup > .btn-facebook:hover{
+  color: #007bff;
 }
 
 .facebook-signup i{
-  padding: 5px;
+  padding: 6px;
   font-weight: bold;
+  font-size: 20px;
 }

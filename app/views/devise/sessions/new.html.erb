@@ -28,20 +28,20 @@
   <div class="actions">
     <%= f.submit "ログイン" %>
   </div>
-
+  <p class="signin-btn-bridge">または</p>
   <div class="google-signin">
-    <%= link_to user_google_oauth2_omniauth_authorize_path, class: "btn btn-danger", method: :post do %>
-      <i class="fab fa-google"></i>Googleでログイン
+    <%= link_to user_google_oauth2_omniauth_authorize_path, class: "btn btn-google", method: :post do %>
+      <i class="fab fa-google"> Googleでログイン</i>
     <% end %>
   </div>
   <div class="twitter-signin">
-    <%= link_to user_twitter_omniauth_authorize_path, class: "btn btn-info", method: :post do %>
+    <%= link_to user_twitter_omniauth_authorize_path, class: "btn btn-twitter", method: :post do %>
       <i class="fab fa-twitter"> Twitterでログイン</i>
     <% end %>
   </div>
   <div class="facebook-signin">
-    <%= link_to user_facebook_omniauth_authorize_path, class:"btn btn-primary", method: :post do %>
-      <i class="fab fa-facebook-square"> Facebookで登録</i>
+    <%= link_to user_facebook_omniauth_authorize_path, class:"btn btn-facebook", method: :post do %>
+      <i class="fab fa-facebook-square"> Facebookでログイン</i>
     <% end %>
   </div>
 <% end %>
