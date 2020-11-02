@@ -17,7 +17,7 @@
     <div class="fav-shop-field">
       <%= f.label "好きなお店・ジャンル" %><br />
       <%= f.text_field :favorite_shop %>
-    </div>    
+    </div>
     <div class="living-area-field">
       <%= f.label "お住まいの地域" %><br />
       <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"living-area-select"}) %>
