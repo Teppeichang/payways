@@ -37,7 +37,7 @@
       <%= form.submit "更新" %>
     </div>
     <div class="user-destroy">
-      <%= link_to "退会する", user_path(current_user.id), method: :delete, "data-confirm"=>"本当に退会しますか？", class:"btn btn-danger" %>
+      <%= link_to "退会する", user_path(current_user.id), method: :delete, "data-confirm"=>"本当に退会しますか？", class:"btn btn-outline-danger" %>
     </div>
   <% end %>
 </div>

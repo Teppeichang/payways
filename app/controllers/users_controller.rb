@@ -20,7 +20,6 @@ class UsersController < ApplicationController
   def destroy
     @user = User.find(params[:id])
     @user.destroy
-    flash[:notice] = "退会が完了しました。またのご利用をお待ちしております。"
     redirect_to root_path
   end
   
