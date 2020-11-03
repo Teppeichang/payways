@@ -1,1 +1,2 @@
-$("#follow_form").html("<%= j(render 'users/follow') %>");
+$("#follow_form").html('<%= j(render "users/follow") %>');
+$("#follower-count").html('<%= link_to "フォロワー#{@user.followers.count}", followers_user_path(@user.id) %>')
