@@ -8,6 +8,10 @@ class User < ApplicationRecord
   has_one_attached :image
   has_many :likes
   has_many :like_posts, through: :likes, source: :post
+  has_many :following_relationships, foreign_key: "follower_id", class_name: "Relationship"
+  has_many :following, through: :following_relationships
+  has_many :follower_relationships, foreign_key: "following_id", class_name: "Relationship"
+  has_many :followers, through: :follower_relationships
   
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to_active_hash :prefecture
@@ -31,6 +35,21 @@ class User < ApplicationRecord
       user.password = Devise.friendly_token[0,20]
       user.prefecture_id = 1
     end
+  end
+
+  # フォローしているかを確認するメソッド
+  def following?(user)
+    following_relationships.find_by(following_id: user.id)
+  end
+
+  # フォローする時のメソッド
+  def follow(user)
+    following_relationships.create!(following_id: user.id)
+  end
+
+  # フォローを解除する時のメソッド
+  def unfollow(user)
+    following_relationships.find_by(following_id: user.id).destroy
   end
 
   private

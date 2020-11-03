@@ -1,0 +1,3 @@
+<%= form_with(model: current_user, url: relationship_path(@user), method: :delete, remote: true) do |f| %>
+  <%= f.submit "フォロー解除" %>
+<% end %>

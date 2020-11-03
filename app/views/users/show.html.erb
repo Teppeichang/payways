@@ -30,7 +30,14 @@
         <%= link_to "ユーザー情報の編集", edit_user_path(@user.id) %>
       <% end %>
     </div>
+    <div class="follow-count">
+      <%= link_to "フォロー#{@user.following.count}", following_user_path(@user.id) %>
+    </div>
+    <div id="follower-count">
+      <%= link_to "フォロワー#{@user.followers.count}", followers_user_path(@user.id) %>
+    </div>
   </div>
+  <%= render "follow_form" %>
 </div>
 
 <div class="user-post-container">
