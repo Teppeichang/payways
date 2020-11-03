@@ -17,8 +17,14 @@
   color: whitesmoke;
 }
 
+.search-form-header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .search-form-header #keyword{
-  width: 400px;
+  width: 790px;
 } 
 
 .search-form-header input{
