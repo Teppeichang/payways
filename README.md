@@ -32,7 +32,7 @@ https://www.payways.work/
 - GitHub
 
 ## インフラ構成
-![payways_インフラ図](https://user-images.githubusercontent.com/65349790/96076842-499b1080-0ee9-11eb-9769-09dd18f6abed.png)
+![payways_インフラ図](https://user-images.githubusercontent.com/65349790/98081149-eda92380-1eb9-11eb-96a9-80d269174d5a.png)
 
 ## DB設計
 ![payways_er_diagram](https://user-images.githubusercontent.com/65349790/98077844-4ecdf880-1eb4-11eb-8e58-93d5a3403943.png)
