@@ -12,7 +12,8 @@ class User < ApplicationRecord
   has_many :following, through: :following_relationships
   has_many :follower_relationships, foreign_key: "following_id", class_name: "Relationship"
   has_many :followers, through: :follower_relationships
-  
+  has_many :active_notifications, foreign_key: "visiter_id", class_name: "Notification", dependent: :destroy
+  has_many :passive_notifications, foreign_key: "visited_id", class_name: "Notification", dependent: :destroy
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to_active_hash :prefecture
 

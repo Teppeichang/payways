@@ -5,7 +5,7 @@ class Post < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_one_attached :image
   has_many :likes, dependent: :destroy
-
+  has_many :notifications, dependent: :destroy
   geocoded_by :shop_name
   after_validation :geocode, if: :shop_name_changed?
   
