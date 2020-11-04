@@ -1,0 +1,8 @@
+<%= render partial: "posts/header" %>
+
+<div class="following-users">
+  <h1>フォロー中</h1>
+  <% @user.following.each do |user| %>
+    <%= link_to user.name, user_path(user.id) %>
+  <% end %>
+</div>
