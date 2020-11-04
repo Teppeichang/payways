@@ -35,19 +35,20 @@ https://www.payways.work/
 ![payways_インフラ図](https://user-images.githubusercontent.com/65349790/96076842-499b1080-0ee9-11eb-9769-09dd18f6abed.png)
 
 ## DB設計
-![payways_er_diagram](https://user-images.githubusercontent.com/65349790/97428693-b2f33880-1959-11eb-8f6e-8c4117ce62f0.png)
+![payways_er_diagram](https://user-images.githubusercontent.com/65349790/98077844-4ecdf880-1eb4-11eb-8e58-93d5a3403943.png)
 
 ## アプリケーションの機能
 - 検索機能(複数ワードで検索可能)
 - 検索結果表示画面にページネーションを実装(kaminari)
-- ユーザーログイン/登録機能(devise)
+- ユーザーログイン/登録/退会機能(devise)
 - ゲストログイン機能
 - Google,Twitter,Facebook認証(OmniAuth)
 - ユーザープロフィール編集機能
 - 店舗情報の投稿のCRUD機能ととタグ付け(タグ付け機能はacts-as-taggable-onで実装)
-- 投稿に対する「いいね！」機能(非同期通信)
-- 投稿に対するコメント投稿機能(非同期通信)
-- 画像投稿機能(非同期通信によるプレビュー付き)
+- 投稿に対する「いいね！」機能(ajax)
+- 投稿に対するコメント投稿機能(ajax)
+- 画像投稿機能(ajaxによるプレビュー付き)
+- フォロー/フォロー解除機能(ajax)
 - 投稿された店舗情報に基づいたGoogle Mapでの位置表示(GoogleMaps API)
 
 ## 開発において意識したこと
