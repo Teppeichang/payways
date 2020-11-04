@@ -1,0 +1,8 @@
+<%= render partial: "posts/header" %>
+
+<div class="follower-index">
+  <h1>フォロワー</h1>
+  <% @user.followers.each do |user| %>
+    <%= link_to user.name, user_path(user.id) %>
+  <% end %>
+</div>
