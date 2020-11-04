@@ -11,6 +11,9 @@
     </div>
     <div class="user-name">
       <h2><%= @user.name %><h2>
+      <div class="follow-btn">
+        <%= render "follow_form" %>
+      </div>
     </div>
     <div class="user-introduce">
       <%= @user.introduce %>
@@ -23,21 +26,21 @@
       <p style="color: blue;">お住まいの地域</p>
       <%= @user.prefecture.name %>
     </div>
+    <div class="user-follow">
+      <div id="follow-count">
+        <%= link_to "フォロー#{@user.following.count}", following_user_path(@user.id) %>
+      </div>
+      <div id="follower-count">
+        <%= link_to "フォロワー#{@user.followers.count}", followers_user_path(@user.id) %>
+      </div>
+    </div>
     <div class="user-edit">
       <!--自分以外のユーザーの編集ページと、ゲストユーザーの編集ページにはアクセスできないよう設定-->
       <% if @user == current_user && current_user.id != 5 %>
-        <i class="far fa-edit"></i>
-        <%= link_to "ユーザー情報の編集", edit_user_path(@user.id) %>
+        <%= link_to "ユーザー情報の編集", edit_user_path(@user.id), class:"btn btn-primary" %>
       <% end %>
     </div>
-    <div class="follow-count">
-      <%= link_to "フォロー#{@user.following.count}", following_user_path(@user.id) %>
-    </div>
-    <div id="follower-count">
-      <%= link_to "フォロワー#{@user.followers.count}", followers_user_path(@user.id) %>
-    </div>
   </div>
-  <%= render "follow_form" %>
 </div>
 
 <div class="user-post-container">

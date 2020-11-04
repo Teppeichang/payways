@@ -1,4 +1,4 @@
 <%= form_with(model: current_user, url: relationships_path, method: :post, remote: true) do |f| %>
   <%= hidden_field_tag :following_id, @user.id %>
-  <%= f.submit "フォローする" %>
+  <%= f.submit "フォローする", class:"btn btn-primary" %>
 <% end %>
