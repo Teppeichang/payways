@@ -5,35 +5,25 @@
 
 .overview-area{
   height: 1000px;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   background-image: url("/ec-cash-1750490_1920.jpg");
   background-size: cover;
 }
 
 .overview-area h1{
-  padding: 150px 0 55px 0;
-  font-size: 60px;
+  padding: 100px 0 55px 0;
+  font-size: 70px;
   font-family: 'Zapfino', sans-serif;
   color: whitesmoke;
 }
 
 .overview-area p{
-  padding: 2px 0 0 0;
-  font-size: 25px;
+  padding: 10px 0 0 0;
+  font-size: 30px;
   color: whitesmoke;
-}
-
-
-.search-form-area input[name="keyword"]{
-  width: 500px;
-  height: 40px;
-  margin: 200px 0 0 0;
-}
-
-.search-form-area input[name="commit"]{
-  width: 90px;
-  height: 40px;
-  margin: 200px 0 0 10px;
 }
 
 .about-service{

@@ -3,12 +3,6 @@
   <div class="overview-area">
     <h1>Payways</h1>
     <p>キャッシュレス生活者に向けた店舗検索・情報共有サービス</p>
-    <div class="search-form-area">
-      <%= form_with url: search_posts_path, local: true, method: :get do |form| %>
-        <%= form.text_field :keyword, placeholder: "店名・キーワードを入力してください" %>
-        <%= form.submit "検索" %>
-      <% end %>
-    </div>
   </div>
 
   <div class="about-service">
