@@ -1,69 +1,63 @@
 <%= render partial: "posts/header" %>
 
-  <% unless user_signed_in? %>
-    <div class="overview-area">
-      <h1>Payways</h1>
-      <p>キャッシュレス生活者に向けた店舗検索・情報共有サービス</p>
-      <div class="search-form-area">
-        <%= form_with url: search_posts_path, local: true, method: :get do |form| %>
-          <%= form.text_field :keyword, placeholder: "店名・キーワードを入力してください" %>
-          <%= form.submit "検索" %>
+  <div class="overview-area">
+    <h1>Payways</h1>
+    <p>キャッシュレス生活者に向けた店舗検索・情報共有サービス</p>
+    <div class="search-form-area">
+      <%= form_with url: search_posts_path, local: true, method: :get do |form| %>
+        <%= form.text_field :keyword, placeholder: "店名・キーワードを入力してください" %>
+        <%= form.submit "検索" %>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="about-service">
+    <h2>Paywaysのサービス</h2>
+    <h1>店舗検索と情報共有</h1>
+      <div class="icon-area">
+        <div class="credit-card-icon">
+          <p>〜 検索ツールとして 〜</p>
+          <%= image_tag  "/クレジットカードのアイコン素材.png" %>
+          <%= image_tag  "/スマホアイコン.png" %>
+          <p>クレジットカード/電子マネー/スマートフォン決済<br>キャッシュレス決済に対応しているお店をジャンル問わず、店名やキーワードで検索可能。</p>
+        </div>
+        <div class="icon-area">
+          <div class="comment-icon">
+            <p>〜 SNSとして 〜</p>
+            <%= image_tag  "/コメントのアイコン素材 その2.png" %>
+            <%= image_tag "/人物アイコン　チーム.png" %>
+            <p>ユーザー登録することで、あなたが行ったお店の情報を投稿し<br>ユーザー同士で共有することができます。</p>
+          </div>
+        </div>
+    </div>
+
+  <div class="invitation">
+    <h1>今すぐPaywaysをはじめてみましょう!</h1>
+    <div class="btn">
+      <div class="signup">
+        <%= link_to "新規登録", new_user_registration_path, class:"btn btn-signup" %>
+      </div>
+      <div class="signin">
+        <%= link_to "ログイン", new_user_session_path, class:"btn btn-signin" %>
+      </div>
+    </div>
+    <div class="oauth-btn">
+      <div class="google-signup-home">
+        <%= link_to user_google_oauth2_omniauth_authorize_path, class: "btn btn-google", method: :post do %>
+          <i class="fab fa-google"> Googleで登録</i>
+        <% end %>
+      </div>
+      <div class="twitter-signup-home">
+        <%= link_to user_twitter_omniauth_authorize_path, class: "btn btn-twitter", method: :post do %>
+          <i class="fab fa-twitter"> Twitterで登録</i>
+        <% end %>
+      </div>
+      <div class="facebook-signup-home">
+        <%= link_to user_facebook_omniauth_authorize_path, class:"btn btn-facebook", method: :post do %>
+          <i class="fab fa-facebook-square"> Facebookで登録</i>
         <% end %>
       </div>
     </div>
-  <% end %>
-
-  <% unless user_signed_in? %>
-    <div class="about-service">
-      <h2>Paywaysのサービス</h2>
-      <h1>店舗検索と情報共有</h1>
-        <div class="icon-area">
-          <div class="credit-card-icon">
-            <p>〜 検索ツールとして 〜</p>
-            <%= image_tag  "/クレジットカードのアイコン素材.png" %>
-            <%= image_tag  "/スマホアイコン.png" %>
-            <p>クレジットカード/電子マネー/スマートフォン決済<br>キャッシュレス決済に対応しているお店をジャンル問わず、店名やキーワードで検索可能。</p>
-          </div>
-          <div class="icon-area">
-            <div class="comment-icon">
-              <p>〜 SNSとして 〜</p>
-              <%= image_tag  "/コメントのアイコン素材 その2.png" %>
-              <%= image_tag "/人物アイコン　チーム.png" %>
-              <p>ユーザー登録することで、あなたが行ったお店の情報を投稿し<br>ユーザー同士で共有することができます。</p>
-            </div>
-          </div>
-      </div>
-  <% end %>
-
-  <% unless user_signed_in? %>
-    <div class="invitation">
-      <h1>今すぐPaywaysをはじめてみましょう!</h1>
-      <div class="btn">
-        <div class="signup">
-          <%= link_to "新規登録", new_user_registration_path, class:"btn btn-signup" %>
-        </div>
-        <div class="signin">
-          <%= link_to "ログイン", new_user_session_path, class:"btn btn-signin" %>
-        </div>
-      </div>
-      <div class="oauth-btn">
-        <div class="google-signup-home">
-          <%= link_to user_google_oauth2_omniauth_authorize_path, class: "btn btn-google", method: :post do %>
-            <i class="fab fa-google"> Googleで登録</i>
-          <% end %>
-        </div>
-        <div class="twitter-signup-home">
-          <%= link_to user_twitter_omniauth_authorize_path, class: "btn btn-twitter", method: :post do %>
-            <i class="fab fa-twitter"> Twitterで登録</i>
-          <% end %>
-        </div>
-        <div class="facebook-signup-home">
-          <%= link_to user_facebook_omniauth_authorize_path, class:"btn btn-facebook", method: :post do %>
-            <i class="fab fa-facebook-square"> Facebookで登録</i>
-          <% end %>
-        </div>
-      </div>
-    </div>
-  <% end %>
+  </div>
 
 <%= render partial: "posts/footer" %>
