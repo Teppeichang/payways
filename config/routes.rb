@@ -33,5 +33,8 @@ Rails.application.routes.draw do
   post 'like/:id' => 'likes#create', as: 'create_like'
   delete 'like/:id' => 'likes#destroy', as: 'destroy_like'
   get 'like/index' => 'likes#index', as: 'like_index'
-    
+
+  # 通知機能に関するルーティング
+  resources :notifications, only:[:index, :destroy]
+
 end

@@ -16,6 +16,10 @@
     <ul class="header-menu">
       <% if user_signed_in? %>
         <li class="header"><%= link_to current_user.name, user_path(current_user) %></li>
+        <% if unchecked_notifications.any? %>
+          <i class="fa fa-circle" style="color: gold;"></i>
+        <% end %>
+        <li class="header"><%= link_to "通知", notifications_path %></li>
         <li class="header"><%= link_to "新規投稿", new_post_path %></li>
         <li class="header"><%= link_to "お気に入り", like_index_path %></li>
         <li class="header"><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>

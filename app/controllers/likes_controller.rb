@@ -7,6 +7,12 @@ class LikesController < ApplicationController
   def create
     @like = Like.create(user_id: current_user.id, post_id: params[:id])
     @post = Post.find_by(id: @like.post_id)
+    # いいね！の通知の作成
+    @post.create_notification_by(current_user)
+    respond_to do |format|
+      format.html{redirect_to request.referrer}
+      format.js
+    end
   end 
 
   def destroy
