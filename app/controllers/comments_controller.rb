@@ -4,10 +4,14 @@ class CommentsController < ApplicationController
     @post = Post.find(params[:post_id])
     @comment = Comment.new(comment_params)
     @comment.user_id = current_user.id
-    @comment_text = @comment.text
+    @comments = @post.comments.includes(:user)
     if @comment.save
+      @post.create_notification_comment(current_user, @comment.id)
+      render :create
+    else
+      @post = Post.find(params[:post_id])
       @comments = @post.comments.includes(:user)
-      # @comment_text.create_notification_comment!(current_user, @comment.id)
+      render :show
     end
   end
 
