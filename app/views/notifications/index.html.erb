@@ -1,0 +1,16 @@
+<%= render partial: "posts/header" %>
+
+<div class="notification-index">
+  <h1>通知一覧</h1>
+  <%= link_to notification_path(@notifications), method: :delete do %>
+    <i class="fas fa-trash" style="color: black;"></i>
+    <h2 style="color: black;">通知をすべて削除</h2>
+  <% end %>
+  <% if @notifications.exists? %>
+    <div class="user-notifications">
+      <%= render @notifications %>
+    </div>
+  <% else %>
+    <h2>通知はありません</h2>
+  <% end %>
+</div>
