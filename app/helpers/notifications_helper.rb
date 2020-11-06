@@ -2,16 +2,15 @@ module NotificationsHelper
 
   def notification_form(notification)
     @comment = nil
-    visiter = notification.visiter.name
-    your_post = "あなたの投稿"
+    @visiter = notification.visiter
     case notification.action
     when "follow" then
-      "#{visiter}があなたをフォローしました"
+      tag.a(@visiter.name, href: user_path(@visiter))+"があなたをフォローしました"
     when "like" then
-      "#{visiter}が#{your_post}にいいね！しました"
+      tag.a(@visiter.name, href: user_path(@visiter))+"が"+tag.a("あなたの投稿", href: post_path(notification.post_id))+"にいいね！しました"
     when "comment" then
       @comment = Comment.find_by(id: notification.comment_id)&.text
-      "#{visiter}が#{your_post}にコメントしました"
+      tag.a(@visiter.name, href: user_path(@visiter))+"が"+tag.a("あなたの投稿", href: post_path(notification.post_id))+"にコメントしました"
     end
   end
 
