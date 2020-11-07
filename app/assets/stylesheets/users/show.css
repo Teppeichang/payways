@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 200px;
+  padding-top: 150px;
 }
 
 .user-profile{
@@ -17,8 +17,8 @@
 }
 
 .user-image img{
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
 }
 
@@ -43,8 +43,15 @@
   justify-content: center;
 }
 
-.btn-primary{
-  width: 400px;
+.btn-user-edit{
+  width: 300px;
+  background-color: royalblue;
+  color: whitesmoke;
+}
+
+.btn-user-edit:hover{
+  background-color: darkblue;
+  color: whitesmoke;
 }
 
 .user-edit a{
