@@ -83,3 +83,19 @@ li a{
     width: 200px;
   } 
 }
+
+/* ヘッダー右側 li要素:タブレット */
+@media (max-width: 1024px){
+  li a{
+    font-size: 15px;
+    padding: 0 15px 0 15px;
+  }
+}
+
+/* ヘッダー右側 li要素:スマートフォン */
+@media (max-width: 1024px){
+  li a{
+    font-size: 15px;
+    padding: 0 15px 0 15px;
+  }
+}
