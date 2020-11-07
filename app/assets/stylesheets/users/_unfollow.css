@@ -1,0 +1,10 @@
+.btn-unfollow{
+  width: 300px;
+  background-color: crimson;
+  color: whitesmoke;
+}
+
+.btn-unfollow:hover{
+  background-color: firebrick;
+  color: whitesmoke;
+}

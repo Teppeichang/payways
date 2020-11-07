@@ -37,7 +37,7 @@
     <div class="user-edit">
       <!--自分以外のユーザーの編集ページと、ゲストユーザーの編集ページにはアクセスできないよう設定-->
       <% if @user == current_user && current_user.id != 5 %>
-        <%= link_to "ユーザー情報の編集", edit_user_path(@user.id), class:"btn btn-primary" %>
+        <%= link_to "ユーザー情報の編集", edit_user_path(@user.id), class:"btn btn-user-edit" %>
       <% end %>
     </div>
   </div>

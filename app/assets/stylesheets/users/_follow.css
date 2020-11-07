@@ -1,0 +1,10 @@
+.btn-follow{
+  width: 300px;
+  background-color: royalblue;
+  color: whitesmoke;
+}
+
+.btn-follow:hover{
+  background-color: darkblue;
+  color: whitesmoke;
+}
