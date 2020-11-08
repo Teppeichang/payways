@@ -5,9 +5,6 @@
 }
 
 .post-left-content{
-  border-top: 1px solid gainsboro;
-  border-bottom: 1px solid gainsboro;
-  border-left: 1px solid gainsboro;
   width:400px;
   background-color: whitesmoke;
   box-shadow: 10px 10px 5px 2px gray;
@@ -22,9 +19,7 @@
 }
 
 .post-right-content{
-  border-top: 1px solid gainsboro;
-  border-right: 1px solid gainsboro;
-  border-bottom: 1px solid gainsboro;
+  border-left: 1px solid gainsboro;
   width: 600px;
   padding: 20px;
   background-color: whitesmoke;

@@ -8,8 +8,65 @@
   padding: 0 0 10px 0;
 }
 
-.badge-primary a{
-  color: whitesmoke;
-  font-size: 15px;
+.liked-post-container{
+  display: flex;
+  justify-content: center;
+  padding: 20px 0 20px 0px;
+}
+
+.liked-post-left{
+  width:300px;
+  background-color: whitesmoke;
+  box-shadow: 10px 10px 5px 2px gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.liked-post-left img{
+  width: 300px;
+  height: 300px;
+}
+
+.liked-post-right{
+  border-left: 1px solid gainsboro;
+  width: 550px;
+  padding: 15px;
+  background-color: whitesmoke;
+  box-shadow: 10px 10px 5px 2px gray;
+}
+
+.liked-post-right-top{
+  border-bottom: 1px solid gainsboro;
+  text-align: center;
+}
+
+.liked-post-right-top a{
+  color: black;
   text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.liked-post-right-bottom p{
+  padding: 20px 0 0 0;
+}
+
+.liked-post-tags{
+  padding: 20px 0 20px 0 ;
+}
+
+.liked-post-detail{
+  padding: 90px 0 0 0;
+}
+
+.btn-liked-post-detail{
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
+.btn-liked-post-detail:hover{
+  background-color: black;
+  color: whitesmoke;
 }
