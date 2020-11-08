@@ -17,8 +17,6 @@
   justify-content: center;
 }
 
-
-
 .post-right-content{
   border-top: 1px solid black;
   border-right: 1px solid black;
@@ -101,10 +99,16 @@
   border: 1px solid red;
 }
 
+.shop-place{
+  text-align: center;
+  padding: 20px 0 0 0;
+  font-size: 20px;
+}
+
 .post-map{
   display: flex;
   justify-content: center;
-  padding: 40px 0 0 0;
+  padding: 10px 0 0 0;
 }
 
 #map{

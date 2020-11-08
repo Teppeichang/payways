@@ -10,6 +10,7 @@
   </div>
   <div class="post-right-content">
     <h2 class="shop-name"><%= @post.shop_name %></h2>
+    <%= @post.explain %>
     <div class="post-tags">
       <% if @post.tag_list.present? %>
         <% @post.tag_list.each do |tag| %>
@@ -17,7 +18,6 @@
         <% end %>
       <% end %>
     </div>
-    <%= @post.explain %>
     <div class="like-btn">
       <div class="buttons_<%= @post.id %>" id="buttons"><%= render partial: "like", post: @post %></div>
     </div>
@@ -30,6 +30,9 @@
   </div>
 </div>
 
+<h2 class="shop-place">
+  <i class="fas fa-map-marker-alt"></i>お店の場所
+</h2>
 <div class="post-map">
   <div id="map"></div>
 </div>
