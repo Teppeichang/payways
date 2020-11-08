@@ -5,11 +5,7 @@
 }
 
 .post-left{
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
-  border-left: 1px solid black;
-  width:270px;
-  padding: 20px;
+  width:300px;
   background-color: whitesmoke;
   box-shadow: 10px 10px 5px 2px gray;
   display: flex;
@@ -17,36 +13,50 @@
   justify-content: center;
 }
 
+.post-left img{
+  width: 300px;
+  height: 300px;
+}
 
 .post-right{
-  border-top: 1px solid black;
-  border-right: 1px solid black;
-  border-bottom: 1px solid black;
+  border-left: 1px solid gainsboro;
   width: 550px;
-  padding: 20px;
+  padding: 15px;
   background-color: whitesmoke;
   box-shadow: 10px 10px 5px 2px gray;
 }
 
+.post-right-top{
+  border-bottom: 1px solid gainsboro;
+  text-align: center;
+}
+
 .post-right-top a{
-  color: blue;
+  color: black;
   text-decoration: none;
   font-size: 20px;
   font-weight: bold;
+}
+
+.post-right-bottom p{
+  padding: 20px 0 0 0;
 }
 
 .post-tags{
   padding: 20px 0 20px 0 ;
 }
 
+.post-detail{
+  padding: 90px 0 0 0;
+}
 
-.badge-primary a{
+.btn-post-detail{
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
+.btn-post-detail:hover{
+  background-color: black;
   color: whitesmoke;
-  font-size: 15px;
-  text-decoration: none;
 }
-
-.post-right-middle{
-  padding: 10px 0 0 0 ;
-}
-

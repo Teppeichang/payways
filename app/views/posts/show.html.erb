@@ -3,35 +3,36 @@
 <div class="post-area">
   <div class="post-left-content">
     <% unless @post.image.blank?%>
-      <%= image_tag @post.image.variant(resize:'250x250') %>
+      <%= image_tag @post.image %>
     <% else %>
       <p>No Image</p>
     <% end %>
   </div>
   <div class="post-right-content">
     <h2 class="shop-name"><%= @post.shop_name %></h2>
+    <p><%= @post.explain %></p>
     <div class="post-tags">
       <% if @post.tag_list.present? %>
         <% @post.tag_list.each do |tag| %>
-          <span class="badge badge-primary"><%= link_to tag, tag_path(tag) %></span>
+          <%= link_to tag, tag_path(tag), class:"fas fa-hashtag" %>
         <% end %>
       <% end %>
     </div>
-    <%= @post.explain %>
     <div class="like-btn">
-      <div class="buttons_<%= @post.id %>"><%= render partial: "like", post: @post %></div>
+      <div class="buttons_<%= @post.id %>" id="buttons"><%= render partial: "like", post: @post %></div>
     </div>
     <div class="post-right-bottom-content">
       <% if user_signed_in? && current_user.id == @post.user_id %>
-        <i class="far fa-edit"></i>
-        <%= link_to "編集", edit_post_path(@post.id), class:"post-edit" %>
-        <i class="fas fa-trash"></i>
-        <%= link_to "削除", post_path(@post.id), method: :delete, class:"post-delete" %>
+        <%= link_to "編集", edit_post_path(@post.id), class:"btn btn-post-edit" %>
+        <%= link_to "削除", post_path(@post.id), method: :delete, class:"btn btn-post-delete", "data-confirm"=>"本当に削除しますか？" %>
       <% end %>
     </div>
   </div>
 </div>
 
+<h2 class="shop-place">
+  <i class="fas fa-map-marker-alt"></i>お店の場所
+</h2>
 <div class="post-map">
   <div id="map"></div>
 </div>

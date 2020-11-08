@@ -3,25 +3,28 @@
 <div class="user-liked-index">
   <h2 class="liked-index-head">いいね！した投稿</h2>
   <% @like_posts.each do |l_post| %>
-    <div class="post-container">
-      <div class="post-left">
+    <div class="liked-post-container">
+      <div class="liked-post-left">
         <% if l_post.image.blank? %>
           <p class="no-image">No Image</p>
         <% else %>
-          <%= image_tag l_post.image.variant(resize:'250x250') %>
+          <%= image_tag l_post.image %>
         <% end %>
       </div>
-      <div class="post-right">
-        <div class="post-right-top">
+      <div class="liked-post-right">
+        <div class="liked-post-right-top">
           <%= link_to l_post.shop_name, post_path(l_post.id) %>
         </div>
-        <div class="post-tags">
+        <div class="liked-post-right-bottom">
+          <p><%= l_post.explain %></p>
+        </div>
+        <div class="liked-post-tags">
           <% if l_post.tag_list.present? %>
-            <span class="badge badge-primary"><%= link_to l_post.tag_list, tag_path(l_post.tag_list) %></span>
+            <%= link_to l_post.tag_list, tag_path(l_post.tag_list), class:"fas fa-hashtag" %>
           <% end %>
         </div>
-        <div class="post-right-bottom">
-          <%= l_post.explain %>
+        <div class="liked-post-detail">
+          <%= link_to "詳細", post_path(l_post.id), class:"btn btn-liked-post-detail"%>
         </div>
       </div>
     </div>
