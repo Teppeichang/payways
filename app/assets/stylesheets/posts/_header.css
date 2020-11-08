@@ -21,14 +21,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
-.search-form-header #keyword{
-  width: 790px;
+.header-search-input{
+  width: 500px;
 } 
 
-.search-form-header input{
-  width: 70px;
+#header-search-reset{
+  position: absolute;
+  right: 20px;
+  top: 5px;
+  cursor: pointer;
 }
 
 .header-area ul{
