@@ -5,9 +5,9 @@
 }
 
 .post-left-content{
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
-  border-left: 1px solid black;
+  border-top: 1px solid gainsboro;
+  border-bottom: 1px solid gainsboro;
+  border-left: 1px solid gainsboro;
   width:400px;
   background-color: whitesmoke;
   box-shadow: 10px 10px 5px 2px gray;
@@ -22,9 +22,9 @@
 }
 
 .post-right-content{
-  border-top: 1px solid black;
-  border-right: 1px solid black;
-  border-bottom: 1px solid black;
+  border-top: 1px solid gainsboro;
+  border-right: 1px solid gainsboro;
+  border-bottom: 1px solid gainsboro;
   width: 600px;
   padding: 20px;
   background-color: whitesmoke;
@@ -32,10 +32,16 @@
 }
 
 .shop-name{
+  text-align: center;
   font-size: 20px;
   font-weight: bold;
   color: blue;
-  padding: 0 0 15px 0;
+  padding: 0 0 10px 0;
+  border-bottom: 1px solid gainsboro;
+}
+
+.post-right-content p{
+  padding: 15px 0 0 0;
 }
 
 .like-btn{
@@ -76,7 +82,7 @@
 .post-right-bottom-content{
   display: flex;
   float: right;
-  padding: 50px 0 0 0;
+  padding: 120px 0 0 0;
 }
 
 .btn-post-edit{

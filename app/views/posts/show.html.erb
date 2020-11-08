@@ -10,7 +10,7 @@
   </div>
   <div class="post-right-content">
     <h2 class="shop-name"><%= @post.shop_name %></h2>
-    <%= @post.explain %>
+    <p><%= @post.explain %></p>
     <div class="post-tags">
       <% if @post.tag_list.present? %>
         <% @post.tag_list.each do |tag| %>
