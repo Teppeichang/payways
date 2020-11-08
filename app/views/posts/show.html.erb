@@ -19,14 +19,12 @@
     </div>
     <%= @post.explain %>
     <div class="like-btn">
-      <div class="buttons_<%= @post.id %>"><%= render partial: "like", post: @post %></div>
+      <div class="buttons_<%= @post.id %>" id="buttons"><%= render partial: "like", post: @post %></div>
     </div>
     <div class="post-right-bottom-content">
       <% if user_signed_in? && current_user.id == @post.user_id %>
-        <i class="far fa-edit"></i>
-        <%= link_to "編集", edit_post_path(@post.id), class:"post-edit" %>
-        <i class="fas fa-trash"></i>
-        <%= link_to "削除", post_path(@post.id), method: :delete, class:"post-delete" %>
+        <%= link_to "編集", edit_post_path(@post.id), class:"btn btn-post-edit" %>
+        <%= link_to "削除", post_path(@post.id), method: :delete, class:"btn btn-post-delete", "data-confirm"=>"本当に削除しますか？" %>
       <% end %>
     </div>
   </div>

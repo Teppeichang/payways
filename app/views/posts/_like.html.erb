@@ -1,9 +1,9 @@
 <% if user_signed_in? %>
   <% if current_user.liked_by?(@post.id) %>
     <i class="fas fa-heart", style="color: orangered;"><%= @post.likes.count %></i>
-    <%= link_to "いいね！済み", destroy_like_path(post_id: @post.id), method: :delete, remote: true %>
+    <%= link_to "いいね！済", destroy_like_path(post_id: @post.id), method: :delete, remote: true, class:"btn btn-destroy-like" %>
   <% else %>
     <i class="fas fa-heart", style="color: gray;"><%= @post.likes.count %></i>
-    <%= link_to "いいね！", create_like_path(post_id: @post.id), method: :post, remote: true %>
+    <%= link_to "いいね！", create_like_path(post_id: @post.id), method: :post, remote: true, class:"btn btn-like" %>
   <% end %>
 <% end %>

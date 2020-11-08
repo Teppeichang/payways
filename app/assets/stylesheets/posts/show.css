@@ -40,33 +40,65 @@
   padding: 30px 0 0 0;
 }
 
-.like-btn a{
-  text-decoration: none;
+#buttons{
+  display: flex;
+}
+
+.fa-heart{
+  padding: 10px 10px 0 0;
+}
+
+.btn-like{
+  background-color: black;
+  color: whitesmoke;
+  width: 100px;
+}
+
+.btn-like:hover{
+  background-color: black;
+  color: whitesmoke;
+}
+
+.btn-destroy-like{
+  background-color: white;
   color: orangered;
-  border: 2px solid orangered;
-  margin: 0 0 0 10px;
-  padding: 10px 10px 10px 10px;
+  border: 1px solid orangered;
+  width: 150px;
+}
+
+.btn-destroy-like:hover{
+  background-color:white;
+  color: orangered;
 }
 
 .post-right-bottom-content{
-  text-align: right;
-  padding: 30px 10px 0 0;
+  display: flex;
+  float: right;
+  padding: 50px 0 0 0;
 }
 
-.post-right-bottom a{
-  text-decoration: none;
-  font-weight: bold;
+.btn-post-edit{
+  color: whitesmoke;
+  background-color: black;
+  width: 90px;
+  margin: 0 10px 0 0;
 }
 
-.post-edit{
-  color: green;
-  padding: 0 15px 0 0;
-  text-decoration: none;
+.btn-post-edit:hover{
+  color: lime;
 }
 
-.post-delete{
+.btn-post-delete{
+  color:whitesmoke;
+  background-color: black;
+  width: 90px;
+  margin: 0 0 0 10px;
+}
+
+.btn-post-delete:hover{
   color: red;
-  text-decoration: none;
+  background-color: white;
+  border: 1px solid red;
 }
 
 .post-map{
