@@ -4,7 +4,7 @@
             <% if post.image.blank? %>
                 <p class="no-image">No Image</p>
             <% else %>
-                <%= image_tag post.image.variant(resize:'250x250') %>
+                <%= image_tag post.image %>
             <% end %>
         </div>
         <div class="post-right">
@@ -12,7 +12,7 @@
                 <%= link_to post.shop_name, post_path(post.id) %>
             </div>
             <div class="post-right-bottom">
-                <%= post.explain %>
+                <p><%= post.explain %></p>
             </div>
             <div class="post-tags">
                 <% if post.tag_list.present? %>
@@ -20,6 +20,9 @@
                         <%= link_to tag, tag_path(tag), class:"fas fa-hashtag" %>
                     <% end %>
                 <% end %>
+            </div>
+            <div class="post-detail">
+                <%= link_to "詳細", post_path(post.id), class:"btn btn-post-detail"%>
             </div>
         </div>
     </div>
