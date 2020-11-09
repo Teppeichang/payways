@@ -29,6 +29,7 @@
 .post-right-top{
   border-bottom: 1px solid gainsboro;
   text-align: center;
+  margin: 0 0 10px 0;
 }
 
 .post-right-top a{
@@ -38,12 +39,8 @@
   font-weight: bold;
 }
 
-.post-right-bottom p{
-  padding: 20px 0 0 0;
-}
-
 .post-tags{
-  padding: 20px 0 20px 0 ;
+  padding: 15px 0 15px 0 ;
 }
 
 .post-detail{

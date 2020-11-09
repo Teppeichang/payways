@@ -21,6 +21,9 @@
                     <% end %>
                 <% end %>
             </div>
+            <div class="posted-user">
+                <p>Posted by:<%= link_to post.user.name, user_path(post.user_id) %></p>
+            </div>
             <div class="post-detail">
                 <%= link_to "詳細", post_path(post.id), class:"btn btn-post-detail"%>
             </div>

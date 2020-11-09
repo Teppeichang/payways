@@ -18,6 +18,9 @@
         <% end %>
       <% end %>
     </div>
+    <div class="posted-user">
+      <p>Posted by:<%= link_to @post.user.name, user_path(@post.user_id) %></p>
+    </div>
     <div class="like-btn">
       <div class="buttons_<%= @post.id %>" id="buttons"><%= render partial: "like", post: @post %></div>
     </div>
