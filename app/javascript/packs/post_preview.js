@@ -9,8 +9,8 @@ if (document.URL.match( /edit/ ) || document.URL.match( /new/ ) ){
 
       // 表示する画像を生成
       const blobImage = document.createElement('img');
-      blobImage.width = 250
-      blobImage.height = 250
+      blobImage.width = 300
+      blobImage.height = 300
       blobImage.setAttribute('src', blob);
       // 生成したHTMLの要素をブラウザに表示させる
       imageElement.appendChild(blobImage);
