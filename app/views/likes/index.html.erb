@@ -23,6 +23,9 @@
             <%= link_to l_post.tag_list, tag_path(l_post.tag_list), class:"fas fa-hashtag" %>
           <% end %>
         </div>
+        <div class="posted-user">
+          <p>Posted by:<%= link_to l_post.user.name, user_path(l_post.user_id) %></p>
+        </div>
         <div class="liked-post-detail">
           <%= link_to "詳細", post_path(l_post.id), class:"btn btn-liked-post-detail"%>
         </div>
