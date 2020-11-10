@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "ユーザー新規登録", type: :system do
+RSpec.describe 'ユーザー新規登録', type: :system do
   before do
     @user = FactoryBot.build(:user)
   end
@@ -10,18 +10,18 @@ RSpec.describe "ユーザー新規登録", type: :system do
       # トップページに遷移する
       visit root_path
       # トップページに「新規登録」ボタンがあることを確認する
-      expect(page).to have_content("新規登録")
+      expect(page).to have_content('新規登録')
       # ユーザー新規登録ページへ遷移する
       visit new_user_registration_path
       # ユーザー情報を入力する
-      fill_in "user_name", with: @user.name 
-      fill_in "user_email", with: @user.email
-      fill_in "user_password", with: @user.password
-      fill_in "user_password_confirmation", with: @user.password_confirmation
+      fill_in 'user_name', with: @user.name
+      fill_in 'user_email', with: @user.email
+      fill_in 'user_password', with: @user.password
+      fill_in 'user_password_confirmation', with: @user.password_confirmation
       # 「登録」ボタンを押すとユーザーモデルのカウントが1上がる
-      expect{
-        find('input[name = "commit"]').click  
-      }.to change {User.count}.by(1)
+      expect  do
+        find('input[name = "commit"]').click
+      end.to change { User.count }.by(1)
       # トップページに遷移することを確認する
       expect(current_path).to eq posts_path
     end
@@ -31,25 +31,25 @@ RSpec.describe "ユーザー新規登録", type: :system do
       # トップページに遷移する
       visit root_path
       # トップページに「新規登録」ボタンがあることを確認する
-      expect(page).to have_content("新規登録")
+      expect(page).to have_content('新規登録')
       # ユーザー新規登録ページへ遷移する
       visit new_user_registration_path
       # ユーザー情報を正しく入力しない
-      fill_in "user_name", with: ""
-      fill_in "user_email", with: ""
-      fill_in "user_password", with: ""
-      fill_in "user_password_confirmation", with: ""
+      fill_in 'user_name', with: ''
+      fill_in 'user_email', with: ''
+      fill_in 'user_password', with: ''
+      fill_in 'user_password_confirmation', with: ''
       # 「登録」ボタンを押してもユーザーモデルのカウントが上がらない
-      expect{
-        find('input[name = "commit"]').click  
-      }.to change {User.count}.by(0)
+      expect  do
+        find('input[name = "commit"]').click
+      end.to change { User.count }.by(0)
       # ユーザー新規登録ページへ戻されることを確認する
-      expect(current_path).to eq "/users"
+      expect(current_path).to eq '/users'
     end
   end
 end
 
-RSpec.describe "ログイン", type: :system do
+RSpec.describe 'ログイン', type: :system do
   before do
     @user = FactoryBot.create(:user)
   end
@@ -59,19 +59,19 @@ RSpec.describe "ログイン", type: :system do
       # トップページに遷移する
       visit root_path
       # トップページに「ログイン」ボタンがあることを確認する
-      expect(page).to have_content("ログイン")
+      expect(page).to have_content('ログイン')
       # ログインページへ遷移する
       visit new_user_session_path
       # ユーザー情報を正しく入力する
-      fill_in "user_email", with: @user.email
-      fill_in "user_password", with: @user.password
+      fill_in 'user_email', with: @user.email
+      fill_in 'user_password', with: @user.password
       # 「ログイン」ボタンをクリックする
       find('input[name = "commit"]').click
       # トップページへ遷移することを確認する
       expect(current_path).to eq posts_path
       # 「新規登録」「ログイン」ボタンが表示されていないことを確認する
-      expect(page).to have_no_content("新規登録")
-      expect(page).to have_no_content("ログイン")
+      expect(page).to have_no_content('新規登録')
+      expect(page).to have_no_content('ログイン')
     end
   end
   context 'ログインできない時' do
@@ -79,12 +79,12 @@ RSpec.describe "ログイン", type: :system do
       # トップページに遷移する
       visit root_path
       # トップページに「ログイン」ボタンがあることを確認する
-      expect(page).to have_content("ログイン")
+      expect(page).to have_content('ログイン')
       # ログインページへ遷移する
       visit new_user_session_path
       # ユーザー情報を正しく入力しない
-      fill_in "user_email", with: ""
-      fill_in "user_password", with: ""
+      fill_in 'user_email', with: ''
+      fill_in 'user_password', with: ''
       # 「ログイン」ボタンをクリックする
       find('input[name = "commit"]').click
       # ログインページに遷移することを確認する
@@ -93,7 +93,7 @@ RSpec.describe "ログイン", type: :system do
   end
 end
 
-RSpec.describe "ユーザー情報の編集", type: :system do
+RSpec.describe 'ユーザー情報の編集', type: :system do
   before do
     @user = FactoryBot.create(:user)
   end
@@ -102,21 +102,21 @@ RSpec.describe "ユーザー情報の編集", type: :system do
     it '編集するユーザー情報を正しく入力するとユーザー情報を編集できる' do
       # ログインする
       visit root_path
-      expect(page).to have_content("ログイン")
+      expect(page).to have_content('ログイン')
       visit new_user_session_path
-      fill_in "user_email", with: @user.email
-      fill_in "user_password", with: @user.password
+      fill_in 'user_email', with: @user.email
+      fill_in 'user_password', with: @user.password
       find('input[name = "commit"]').click
       expect(current_path).to eq posts_path
       # ユーザーページへ遷移する
       visit user_path(@user.id)
       # 「ユーザー情報の編集」ボタンがあることを確認する
-      expect(page).to have_content("ユーザー情報の編集")
+      expect(page).to have_content('ユーザー情報の編集')
       # ユーザー情報編集ページへ遷移する
       visit edit_user_path(@user.id)
       # 編集するユーザー情報を正しく入力する
-      fill_in "user_name", with: @user.name
-      fill_in "user_email", with: @user.email
+      fill_in 'user_name', with: @user.name
+      fill_in 'user_email', with: @user.email
       # 「更新」ボタンをクリックする
       find('input[name = "commit"]').click
       # トップページに遷移することを確認する

@@ -3,27 +3,27 @@ Rails.application.routes.draw do
 
   # タグにリンク付けし、同じタグを持つ投稿が一覧表示されるよう設定
   get 'tags/:tag', to: 'posts#index', as: :tag
-  
-  get '/users', to: redirect("/users/sign_up")
+
+  get '/users', to: redirect('/users/sign_up')
   devise_for :users, controllers: {
     registrations: 'users/registrations',
-    omniauth_callbacks: "users/omniauth_callbacks"
+    omniauth_callbacks: 'users/omniauth_callbacks'
   }
-  
+
   devise_scope :user do
     post 'users/guest_sign_in', to: 'users/sessions#new_guest'
   end
-  
+
   resources :users do
     member do
       get :following, :followers
     end
   end
-  
-  resources :relationships, only:[:create, :destroy]
-  
+
+  resources :relationships, only: %i[create destroy]
+
   resources :posts do
-    resources :comments, only:[:create, :destroy]
+    resources :comments, only: %i[create destroy]
     collection do
       get 'search'
     end
@@ -35,6 +35,5 @@ Rails.application.routes.draw do
   get 'like/index' => 'likes#index', as: 'like_index'
 
   # 通知機能に関するルーティング
-  resources :notifications, only:[:index, :destroy]
-
+  resources :notifications, only: %i[index destroy]
 end

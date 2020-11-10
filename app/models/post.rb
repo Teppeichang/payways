@@ -8,7 +8,7 @@ class Post < ApplicationRecord
   has_many :notifications, dependent: :destroy
   geocoded_by :shop_name
   after_validation :geocode, if: :shop_name_changed?
-  
+
   with_options presence: true do
     validates :shop_name
     validates :explain
@@ -16,7 +16,7 @@ class Post < ApplicationRecord
 
   # 検索機能
   def self.search(search)
-    if search != ""
+    if search != ''
       Post.where('shop_name LIKE(?)', "%#{search}%")
     else
       Post.all
@@ -25,7 +25,7 @@ class Post < ApplicationRecord
 
   # いいね！に関する通知
   def create_notification_by(current_user)
-    notification = current_user.active_notifications.new(post_id: id, visited_id: user_id, action: "like")
+    notification = current_user.active_notifications.new(post_id: id, visited_id: user_id, action: 'like')
     notification.save if notification.valid?
   end
 
@@ -40,10 +40,8 @@ class Post < ApplicationRecord
 
   # コメントに関する通知（１つの投稿に複数コメントされることがあるので、１つの投稿に複数回通知）
   def save_notification_comment(current_user, comment_id, visited_id)
-    notification = current_user.active_notifications.new(post_id: id, comment_id: comment_id, visited_id: visited_id, action: "comment")
-    if notification.visiter_id == notification.visited_id
-      notification.checked = true
-    end
+    notification = current_user.active_notifications.new(post_id: id, comment_id: comment_id, visited_id: visited_id, action: 'comment')
+    notification.checked = true if notification.visiter_id == notification.visited_id
     notification.save if notification.valid?
   end
 
@@ -52,16 +50,15 @@ class Post < ApplicationRecord
   # postsテーブルのshop_nameを元に、GoogleMaps API（geocoder）で緯度経度を計算する処理
   def geocode
     require 'net/http'
-    uri = URI.escape("https://maps.googleapis.com/maps/api/geocode/json?address="+self.shop_name+"&key="+ENV['MAPS_API_KEY'])
+    uri = URI.escape('https://maps.googleapis.com/maps/api/geocode/json?address=' + shop_name + '&key=' + ENV['MAPS_API_KEY'])
     res = Net::HTTP.get_response(URI.parse(uri))
     response = JSON.parse(res.body)
-    if response["status"] == "OK"
-      self.latitude = response["results"][0]["geometry"]["location"]["lat"]
-      self.longitude = response["results"][0]["geometry"]["location"]["lng"]
+    if response['status'] == 'OK'
+      self.latitude = response['results'][0]['geometry']['location']['lat']
+      self.longitude = response['results'][0]['geometry']['location']['lng']
     else
       self.latitude = 1
       self.longitude = 1
     end
   end
-  
 end

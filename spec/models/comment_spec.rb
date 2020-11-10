@@ -10,9 +10,9 @@ RSpec.describe Comment, type: :model do
       expect(@comment).to be_valid
     end
     it 'コメントが入力されていないと投稿できない' do
-      @comment.text = ""
+      @comment.text = ''
       @comment.valid?
-      expect(@comment.errors.full_messages).to include("コメントを入力してください")
+      expect(@comment.errors.full_messages).to include('コメントを入力してください')
     end
   end
 end
