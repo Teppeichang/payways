@@ -1,12 +1,9 @@
 class PostsController < ApplicationController
+  before_action :set_post, only: %i[show edit update destroy]
 
-  before_action :set_post, only:[:show, :edit, :update, :destroy]  
-  
   def index
     @posts = Post.all.order(created_at: :desc)
-    if params[:tag]
-      @posts = Post.tagged_with(params[:tag])
-    end
+    @posts = Post.tagged_with(params[:tag]) if params[:tag]
   end
 
   def new
@@ -27,8 +24,7 @@ class PostsController < ApplicationController
     @comments = @post.comments.includes(:user)
   end
 
-  def edit
-  end
+  def edit; end
 
   def update
     if @post.update(post_params)
@@ -43,15 +39,14 @@ class PostsController < ApplicationController
     redirect_to posts_path
   end
 
-
   def search
-    split_keywords = params[:keyword].split(/[[:blank]]+/) #検索キーワードを分割可能にする
+    split_keywords = params[:keyword].split(/[[:blank]]+/) # 検索キーワードを分割可能にする
     @posts = []
-    split_keywords.each do |keyword| #分割したキーワードごとに検索する
-      if keyword == ""
-        @posts += Post.where('shop_name LIKE(?)', "%#{keyword}%") #部分一致でキーワードごとに検索
+    split_keywords.each do |keyword| # 分割したキーワードごとに検索する
+      if keyword == ''
+        @posts += Post.where('shop_name LIKE(?)', "%#{keyword}%") # 部分一致でキーワードごとに検索
       else
-        @posts.uniq! #検索レコードの重複を防ぐための処理
+        @posts.uniq! # 検索レコードの重複を防ぐための処理
       end
     end
     @posts = Post.search(params[:keyword]).page(params[:page]).per(10)
@@ -66,5 +61,4 @@ class PostsController < ApplicationController
   def set_post
     @post = Post.find(params[:id])
   end
-
 end

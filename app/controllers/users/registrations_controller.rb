@@ -51,7 +51,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   # 新規登録後の遷移ページ指定
-  def after_sign_up_path_for(resource)
+  def after_sign_up_path_for(_resource)
     posts_path
   end
 

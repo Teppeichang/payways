@@ -10,14 +10,14 @@ RSpec.describe Post, type: :model do
       expect(@post).to be_valid
     end
     it '店名が入力されていないと投稿できない' do
-      @post.shop_name = ""
+      @post.shop_name = ''
       @post.valid?
-      expect(@post.errors.full_messages).to include("店名を入力してください")
+      expect(@post.errors.full_messages).to include('店名を入力してください')
     end
     it '決済方式・お店に関する情報が入力されていないと投稿できない' do
-      @post.explain = ""
+      @post.explain = ''
       @post.valid?
-      expect(@post.errors.full_messages).to include("決済方式・お店に関する情報を入力してください")
+      expect(@post.errors.full_messages).to include('決済方式・お店に関する情報を入力してください')
     end
   end
 
@@ -26,14 +26,14 @@ RSpec.describe Post, type: :model do
       expect(@post).to be_valid
     end
     it '店名が入力されていないと投稿できない' do
-      @post.shop_name = ""
+      @post.shop_name = ''
       @post.valid?
-      expect(@post.errors.full_messages).to include("店名を入力してください")
+      expect(@post.errors.full_messages).to include('店名を入力してください')
     end
     it '決済方式・お店に関する情報が入力されていないと投稿できない' do
-      @post.explain = ""
+      @post.explain = ''
       @post.valid?
-      expect(@post.errors.full_messages).to include("決済方式・お店に関する情報を入力してください")
+      expect(@post.errors.full_messages).to include('決済方式・お店に関する情報を入力してください')
     end
   end
 end

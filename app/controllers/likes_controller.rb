@@ -1,5 +1,4 @@
 class LikesController < ApplicationController
-  
   def index
     @like_posts = current_user.like_posts
   end
@@ -10,15 +9,14 @@ class LikesController < ApplicationController
     # いいね！の通知の作成
     @post.create_notification_by(current_user)
     respond_to do |format|
-      format.html{redirect_to request.referrer}
+      format.html { redirect_to request.referrer }
       format.js
     end
-  end 
+  end
 
   def destroy
     @like = Like.find_by(user_id: current_user.id, post_id: params[:id])
     @post = Post.find_by(id: @like.post_id)
     @like.destroy
   end
-
 end
