@@ -28,10 +28,10 @@
     </div>
     <div class="user-follow">
       <div id="follow-count">
-        <%= link_to "フォロー#{@user.following.count}", following_user_path(@user.id) %>
+        <%= link_to "フォロー #{@user.following.count}", following_user_path(@user.id) %>
       </div>
       <div id="follower-count">
-        <%= link_to "フォロワー#{@user.followers.count}", followers_user_path(@user.id) %>
+        <%= link_to "フォロワー #{@user.followers.count}", followers_user_path(@user.id) %>
       </div>
     </div>
     <div class="user-edit">
