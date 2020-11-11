@@ -27,9 +27,9 @@ RSpec.describe '店舗情報の投稿', type: :system do
       expect  do
         find('input[name="commit"]').click
       end.to change { Post.count }.by(1)
-      # トップページに遷移する
+      # 投稿一覧ページに遷移する
       visit posts_path
-      # トップページに先程投稿した内容が表示されていることを確認する
+      # 投稿一覧ページに先程投稿した内容が表示されていることを確認する
       expect(page).to have_content(@posts_shop_name)
       expect(page).to have_content(@posts_explain)
     end
