@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "通知機能", type: :system do
+RSpec.describe '通知機能', type: :system do
   before do
     @user1 = FactoryBot.create(:user)
     @user2 = FactoryBot.create(:user)
