@@ -17,7 +17,7 @@
       <%= form.text_field :tag_list, value: @post.tag_list.join(','), placeholder: "例: 全クレジットカード対応" %>
     </div>
     <div class="post-btn">
-      <%= form.submit "投稿する"%>
+      <%= form.submit "投稿する", class:"btn post-submit-btn" %>
     </div>
   <% end %>
 </div>

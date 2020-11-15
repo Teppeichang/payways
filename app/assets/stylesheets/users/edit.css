@@ -63,31 +63,41 @@
 .introduce textarea{
   width: 500px;
 }
-.user-edit-btn{
+.user-edit{
   padding: 20px 0 0 0;
 }
 
-.user-edit-btn input{
+.user-edit-btn{
   width: 500px;
   height: 45px;
   font-size: 20px;
-  border-style: none;
   border-radius: 5px 5px;
-  background: #FFC107;
+  background-color: white;
   color: black;
-  cursor: pointer;
+  border: 1px solid black;
 }
 
-.user-edit-btn input:hover{
-  background: #e0a800;
+.user-edit-btn:hover{
+  background-color: black;
+  color: white;
 }
 
 .user-destroy{
   padding: 10px 0 0 0;
 }
 
-.btn-outline-danger{
+.user-destroy-btn{
   width: 500px;
   height: 45px;
-  padding: 10px;
+  font-size: 20px;
+  border-radius: 5px 5px;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
+.user-destroy-btn:hover{
+  background-color: white;
+  color:red;
+  border: 1px solid red;
 }

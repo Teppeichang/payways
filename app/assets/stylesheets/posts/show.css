@@ -49,21 +49,23 @@
 }
 
 .btn-like{
-  background-color: black;
-  color: whitesmoke;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
   width: 100px;
 }
 
 .btn-like:hover{
-  background-color: black;
-  color: whitesmoke;
+  background-color:orangered;
+  color: white;
+  border: 1px solid orangered;
 }
 
 .btn-destroy-like{
-  background-color: white;
-  color: orangered;
+  background-color:orangered;
+  color: white;
   border: 1px solid orangered;
-  width: 150px;
+  width: 120px;
 }
 
 .btn-destroy-like:hover{
@@ -78,19 +80,22 @@
 }
 
 .btn-post-edit{
-  color: whitesmoke;
-  background-color: black;
+  color: black;
+  background-color:white;
+  border: 1px solid black;
   width: 90px;
   margin: 0 10px 0 0;
 }
 
 .btn-post-edit:hover{
-  color: lime;
+  color: white;
+  background-color: black;
 }
 
 .btn-post-delete{
-  color:whitesmoke;
-  background-color: black;
+  color:black;
+  background-color: white;
+  border: 1px solid black;
   width: 90px;
   margin: 0 0 0 10px;
 }

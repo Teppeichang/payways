@@ -27,17 +27,17 @@
   padding: 35px 0 0 0;
 }
 
-.post-btn input{
+.post-submit-btn{
   width: 500px;
   height: 45px;
   font-size: 20px;
-  border-style: none;
   border-radius: 5px 5px;
-  background: #FFC107;
+  background-color: white;
   color: black;
-  cursor: pointer;
+  border: 1px solid black;
 }
 
-.post-btn input:hover{
-  background: #e0a800;
+.post-submit-btn:hover{
+  background-color: black;
+  color: white;
 }

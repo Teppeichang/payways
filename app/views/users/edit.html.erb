@@ -33,11 +33,11 @@
         <%= form.text_area :introduce %>
       </div>
     </div>
-    <div class="user-edit-btn">
-      <%= form.submit "更新" %>
+    <div class="user-edit">
+      <%= form.submit "更新", class:"btn user-edit-btn" %>
     </div>
     <div class="user-destroy">
-      <%= link_to "退会する", user_path(current_user.id), method: :delete, "data-confirm"=>"本当に退会しますか？", class:"btn btn-outline-danger" %>
+      <%= link_to "退会する", user_path(current_user.id), method: :delete, "data-confirm"=>"本当に退会しますか？", class:"btn user-destroy-btn" %>
     </div>
   <% end %>
 </div>
