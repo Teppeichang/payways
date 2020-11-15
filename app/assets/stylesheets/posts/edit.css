@@ -33,7 +33,17 @@ h1{
   padding: 35px 0 0 0;
 }
 
-.post-btn input{
-  background: linear-gradient(to bottom, yellow,whitesmoke);
-  cursor: pointer;
+.post-edit-btn{
+  width: 500px;
+  height: 45px;
+  font-size: 20px;
+  border-radius: 5px 5px;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
+.post-edit-btn:hover{
+  background-color: black;
+  color: white;
 }
