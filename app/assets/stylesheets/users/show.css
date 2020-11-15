@@ -46,13 +46,14 @@
 
 .btn-user-edit{
   width: 300px;
-  background-color: royalblue;
-  color: whitesmoke;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
 }
 
 .btn-user-edit:hover{
-  background-color: darkblue;
-  color: whitesmoke;
+  background-color: black;
+  color: white;
 }
 
 .user-edit a{

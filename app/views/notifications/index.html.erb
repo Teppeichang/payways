@@ -1,7 +1,6 @@
 <%= render partial: "posts/header" %>
 
 <div class="notification-index">
-  <h1 class="moderate-font text-center">通知一覧</h1>
   <%= link_to "通知をすべて削除", notification_path(@notifications), method: :delete, class: "btn btn-notice-delete" %>
   <% if @notifications.exists? %>
     <div class="user-notifications">

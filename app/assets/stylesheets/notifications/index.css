@@ -1,5 +1,5 @@
 .notification-index{
-  padding: 100px 0 0 0;
+  padding: 80px 0 0 0;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -19,11 +19,12 @@
 .btn-notice-delete{
   width:200px;
   margin: 20px 0 10px 0;
-  background-color: crimson;
-  color: whitesmoke;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
 }
 
 .btn-notice-delete:hover{
-  background-color: firebrick;
-  color: whitesmoke;
+  background-color: black;
+  color: white;
 }
