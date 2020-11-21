@@ -64,7 +64,7 @@ li a{
 .guest-login:focus,
 .guest-login:hover {
   text-decoration: none;
-  color: lime;
+  color: whitesmoke;
 }
 
 /* ヘッダー検索フォーム:タブレット */
