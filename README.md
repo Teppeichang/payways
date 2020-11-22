@@ -22,6 +22,9 @@ https://www.payways.work/
 - Ruby 2.7.1
 - Ruby on Rails 6.0.3.3
 - JavaScript
+- jQuery(ver 3.5.1)
+- Bootstrap(ver 4.3.1)
+- GoogleMaps API(Maps JavaScript API,Places API,Geocoding API,Geolocation API)
 - AWS(S3,VPC,EC2,Route53,ACM,ELB)
 - Nginx,Unicorn
 - Capistranoによる自動デプロイ
@@ -58,5 +61,3 @@ https://www.payways.work/
 - 冒頭に挙げた自身の失敗体験をもとに、同じ思いをする人を減らすよう「課題解決」を意識して作成しました。
 - 「映え」や「いいね！」を好むSNSユーザーの使用も想定し、画像投稿・タグ付け、投稿に対する「いいね！」機能を実装しました。
 - 現場での開発を想定し、GitHubを使用してこまめなcommitやissue管理を行いました。
-
-
