@@ -1,6 +1,6 @@
 if (document.URL.match( /edit/ ) ){
   document.addEventListener('DOMContentLoaded', function(){
-    const ImageList = document.getElementById('image-list');
+    const ImageList = document.getElementById('user-image-list');
 
     // 選択した画像を表示する関数
     const createImageHTML = (blob) => {
