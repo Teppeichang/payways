@@ -111,3 +111,36 @@ li a{
     font-size: 15px;
   }
 }
+
+/* マウスオーバー時の吹き出し */
+.balloon{
+  display: none;
+  width: auto;
+  position: absolute;
+  top: 50px;
+  right: 100px;
+  padding: 15px;
+  border-radius: 5px;
+  background: black;
+  color: white;
+}
+
+#mypage:hover + .balloon{
+  display: block;
+}
+
+#notifications:hover + .balloon{
+  display: block;
+}
+
+#new_post:hover + .balloon{
+  display: block;
+}
+
+#bookmark:hover + .balloon{
+  display: block;
+}
+
+#logout:hover + .balloon{
+  display: block;
+}
