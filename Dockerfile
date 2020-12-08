@@ -12,3 +12,4 @@ RUN apt-get update && apt-get install -y yarn
 WORKDIR /documents/portfolio/payways
 COPY Gemfile Gemfile.lock /documents/portfolio/payways/
 RUN bundle install
+COPY . /documents/portfolio/payways
