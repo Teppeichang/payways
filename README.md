@@ -25,6 +25,7 @@ https://www.payways.work/
 - jQuery(ver 3.5.1)
 - Bootstrap(ver 4.3.1)
 - GoogleMaps API(Maps JavaScript API,Places API,Geocoding API,Geolocation API)
+- Docker(ver19.03.13)とdocker-compose(ver1.27.4)による開発環境構築
 - AWS(S3,VPC,EC2,Route53,ACM,ELB)
 - Nginx,Unicorn
 - Capistranoによる自動デプロイ
