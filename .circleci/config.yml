@@ -72,8 +72,8 @@ jobs:
             bundle exec cap production unicorn:stop
             bundle exec cap production deploy
 
-workflows:
-  build:
-    jobs:
-      - build:
-          context: payways_context
+# workflows:
+#   build:
+#     jobs:
+#       - build:
+#           context: payways_context
