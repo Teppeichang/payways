@@ -11,7 +11,7 @@ jobs:
           - MYSQL_ALLOW_EMPTY_PASSWORD: 'true'
           - MYSQL_ROOT_HOST: '%'
           
-      working_directory: /documents/portfolio/payways
+    working_directory: /documents/portfolio/payways
 
           steps:
       - checkout
@@ -71,7 +71,7 @@ jobs:
             fi
             bundle exec cap production unicorn:stop
             bundle exec cap production deploy
-            
+
 workflows:
   build:
     jobs:
