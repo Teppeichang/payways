@@ -13,7 +13,7 @@ jobs:
           
     working_directory: /documents/portfolio/payways
 
-          steps:
+    steps:
       - checkout
 
       - restore_cache:
