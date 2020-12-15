@@ -7,7 +7,6 @@
 .post-left-content{
   width:400px;
   background-color: whitesmoke;
-  box-shadow: 10px 10px 5px 2px gray;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,9 +20,9 @@
 .post-right-content{
   border-left: 1px solid gainsboro;
   width: 600px;
+  height: 400px;
   padding: 20px;
   background-color: whitesmoke;
-  box-shadow: 10px 10px 5px 2px gray;
 }
 
 .shop-name{
@@ -76,7 +75,6 @@
 .post-right-bottom-content{
   display: flex;
   float: right;
-  padding: 120px 0 0 0;
 }
 
 .btn-post-edit{

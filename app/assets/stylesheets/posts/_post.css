@@ -5,25 +5,30 @@
 }
 
 .post-left{
-  width:300px;
+  width: 400px;
+  height: 400px;
   background-color: whitesmoke;
-  box-shadow: 10px 10px 5px 2px gray;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .post-left img{
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 400px;
+}
+
+.post-left a{
+  text-decoration: none;
+  color: black;
 }
 
 .post-right{
   border-left: 1px solid gainsboro;
   width: 550px;
+  height: 400px;
   padding: 15px;
   background-color: whitesmoke;
-  box-shadow: 10px 10px 5px 2px gray;
 }
 
 .post-right-top{
@@ -39,21 +44,11 @@
   font-weight: bold;
 }
 
+.post-right-bottom a{
+  text-decoration: none;
+  color: black;
+}
+
 .post-tags{
   padding: 15px 0 15px 0 ;
-}
-
-.post-detail{
-  padding: 90px 0 0 0;
-}
-
-.btn-post-detail{
-  background-color: white;
-  color: black;
-  border: 1px solid black;
-}
-
-.btn-post-detail:hover{
-  background-color: black;
-  color: whitesmoke;
 }
