@@ -2,9 +2,9 @@
     <div class="post-container">
         <div class="post-left">
             <% if post.image.blank? %>
-                <p class="no-image">No Image</p>
+                <%= link_to "No image", post_path(post.id) %>
             <% else %>
-                <%= image_tag post.image %>
+                <%= link_to (image_tag post.image), post_path(post.id) %>
             <% end %>
         </div>
         <div class="post-right">
@@ -12,7 +12,7 @@
                 <%= link_to post.shop_name, post_path(post.id) %>
             </div>
             <div class="post-right-bottom">
-                <p><%= post.explain %></p>
+                <%= link_to post.explain, post_path(post.id) %>
             </div>
             <div class="post-tags">
                 <% if post.tag_list.present? %>
@@ -23,9 +23,6 @@
             </div>
             <div class="posted-user">
                 <p>Posted by:<%= link_to post.user.name, user_path(post.user_id) %></p>
-            </div>
-            <div class="post-detail">
-                <%= link_to "詳細", post_path(post.id), class:"btn btn-post-detail"%>
             </div>
         </div>
     </div>
