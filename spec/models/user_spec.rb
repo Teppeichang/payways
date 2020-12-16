@@ -9,8 +9,8 @@ RSpec.describe User, type: :model do
     it 'すべての情報が正しく入力されているとユーザー登録できる' do
       expect(@user).to be_valid
     end
-    it 'ユーザー名が半角英数字でないと登録できない' do
-      @user.name = 'あいうえお'
+    it 'ユーザー名が入力されてないと登録できない' do
+      @user.name = ''
       @user.valid?
       expect(@user.errors.full_messages).to include('ユーザー名を正しく入力してください')
     end
