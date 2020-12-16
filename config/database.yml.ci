@@ -9,3 +9,4 @@ default: &default
 test:
   <<: *default
   database: payways_test
+    host: 127.0.0.1
