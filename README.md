@@ -29,6 +29,7 @@ https://www.payways.work/
 - AWS(S3,VPC,EC2,Route53,ACM,ELB)
 - Nginx,Unicorn
 - Capistranoによる自動デプロイ
+- CircleCIによるCI/CDパイプライン構築
 - 常時SSL化
 - レスポンシブデザイン対応
 - RSpec
@@ -36,7 +37,7 @@ https://www.payways.work/
 - GitHub
 
 ## インフラ構成
-![payways_インフラ図](https://user-images.githubusercontent.com/65349790/102014504-a86df080-3d99-11eb-9085-29d73b05855b.png)
+![payways_インフラ図](https://user-images.githubusercontent.com/65349790/102466110-e2890c00-4091-11eb-96f0-8738d252acbc.png)
 
 ## DB設計
 ![payways_er_diagram](https://user-images.githubusercontent.com/65349790/98211877-11d23680-1f86-11eb-8829-539b811bf15b.png)
