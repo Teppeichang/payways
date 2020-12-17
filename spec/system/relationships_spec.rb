@@ -36,10 +36,10 @@ RSpec.describe 'フォロー・フォロー解除', type: :system do
       visit user_path(@user2)
       # フォローボタンをクリックし、ユーザー２をフォローする
       find('input[name="commit"]').click
-      expect(page).to have_content('フォロワー 1')
+      expect(page).to have_content('フォロワー1')
       # フォローボタンを再度クリックし、ユーザー２のフォローを解除する
       find('input[name="commit"]').click
-      expect(page).to have_content('フォロワー 0')
+      expect(page).to have_content('フォロワー0')
     end
   end
 end

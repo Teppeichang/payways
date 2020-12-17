@@ -22,8 +22,8 @@ RSpec.describe 'ユーザー新規登録', type: :system do
       expect  do
         find('input[name = "commit"]').click
       end.to change { User.count }.by(1)
-      # トップページに遷移することを確認する
-      expect(current_path).to eq posts_path
+      # ユーザーページに遷移することを確認する
+      expect(current_path).to eq user_path(@user.id)
     end
   end
   context 'ユーザー新規登録ができない時' do
@@ -67,8 +67,8 @@ RSpec.describe 'ログイン', type: :system do
       fill_in 'user_password', with: @user.password
       # 「ログイン」ボタンをクリックする
       find('input[name = "commit"]').click
-      # トップページへ遷移することを確認する
-      expect(current_path).to eq posts_path
+      # ユーザーページへ遷移することを確認する
+      expect(current_path).to eq user_path(@user.id)
       # 「新規登録」「ログイン」ボタンが表示されていないことを確認する
       expect(page).to have_no_content('新規登録')
       expect(page).to have_no_content('ログイン')
@@ -107,7 +107,7 @@ RSpec.describe 'ユーザー情報の編集', type: :system do
       fill_in 'user_email', with: @user.email
       fill_in 'user_password', with: @user.password
       find('input[name = "commit"]').click
-      expect(current_path).to eq posts_path
+      expect(current_path).to eq user_path(@user.id)
       # ユーザーページへ遷移する
       visit user_path(@user.id)
       # 「ユーザー情報の編集」ボタンがあることを確認する
