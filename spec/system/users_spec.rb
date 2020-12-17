@@ -23,7 +23,7 @@ RSpec.describe 'ユーザー新規登録', type: :system do
         find('input[name = "commit"]').click
       end.to change { User.count }.by(1)
       # ユーザーページに遷移することを確認する
-      expect(current_path).to eq user_path(@user.id)
+      expect(current_path).to eq user_path(@user)
     end
   end
   context 'ユーザー新規登録ができない時' do
