@@ -12,7 +12,7 @@ RSpec.describe User, type: :model do
     it 'ユーザー名が入力されてないと登録できない' do
       @user.name = ''
       @user.valid?
-      expect(@user.errors.full_messages).to include('ユーザー名を正しく入力してください')
+      expect(@user.errors.full_messages).to include('ユーザー名を入力してください')
     end
     it 'メールアドレスが入力されていないと登録できない' do
       @user.email = ''
@@ -60,9 +60,15 @@ RSpec.describe User, type: :model do
     it 'ユーザー名が入力されていないと情報を更新できない' do
       @user.name = ''
       @user.valid?
-      expect(@user.errors.full_messages).to include('ユーザー名とメールアドレスを入力してください')
+      expect(@user.errors.full_messages).to include('ユーザー名を入力してください')
     end
     it 'メールアドレスが入力されていないと情報を更新できない' do
+      @user.email = ''
+      @user.valid?
+      expect(@user.errors.full_messages).to include('メールアドレスを入力してください')
+    end
+    it 'ユーザー名とメールアドレスの両方が入力されていないと情報を更新できない' do
+      @user.name = ''
       @user.email = ''
       @user.valid?
       expect(@user.errors.full_messages).to include('ユーザー名とメールアドレスを入力してください')

@@ -25,7 +25,7 @@ RSpec.describe '通知機能', type: :system do
       # ユーザー2の投稿詳細ページへ遷移する
       visit post_path(@user2_post)
       # いいねボタンをクリックする
-      click_on('いいね！')
+      click_on('いいね!')
       # コメントする
       fill_in 'comment_text', with: @comment.text
       click_on('コメントする')
