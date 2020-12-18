@@ -17,7 +17,7 @@ RSpec.describe '店舗情報の投稿', type: :system do
       fill_in 'user_password', with: @user.password
       find('input[name = "commit"]').click
       # 「新規投稿」ボタンがある
-      expect(page).to have_link new_post_path
+      expect(page).to have_link "/posts/new"
       # 新規投稿ページに遷移する
       visit new_post_path
       # 投稿フォームに情報を入力する
@@ -39,7 +39,7 @@ RSpec.describe '店舗情報の投稿', type: :system do
       # トップページに遷移する
       visit root_path
       # 「新規投稿」ボタン（新規投稿ページにリンク）がないことを確認する
-      expect(page).to have_no_content('新規投稿')
+      expect(page).to have_no_link "/posts/new"
     end
   end
 end
