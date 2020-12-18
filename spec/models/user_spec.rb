@@ -60,12 +60,12 @@ RSpec.describe User, type: :model do
     it 'ユーザー名が入力されていないと情報を更新できない' do
       @user.name = ''
       @user.valid?
-      expect(@user.errors.full_messages).to include('ユーザー名を入力してください')
+      expect(@user.errors.full_messages).to include('ユーザー名とメールアドレスを入力してください')
     end
     it 'メールアドレスが入力されていないと情報を更新できない' do
       @user.email = ''
       @user.valid?
-      expect(@user.errors.full_messages).to include('メールアドレスを入力してください')
+      expect(@user.errors.full_messages).to include('ユーザー名とメールアドレスを入力してください')
     end
   end
 end

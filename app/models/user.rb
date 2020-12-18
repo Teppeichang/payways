@@ -17,6 +17,8 @@ class User < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to_active_hash :prefecture
 
+  validates :name, presence: true
+
   def liked_by?(post_id)
     likes.where(post_id: post_id).exists?
   end
