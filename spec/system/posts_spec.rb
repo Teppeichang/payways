@@ -1,5 +1,4 @@
 # 開発環境・本番環境ともに正常に動作するが、CircleCI上でテストを行うと下記エラーが発生。修正を重ねたが解決に至らなかったため一旦コメントアウトする。
-# RSpec::Core::MultipleExceptionError
 # Failure/Error: uri = CGI.escape('https://maps.googleapis.com/maps/api/geocode/json?address=' + shop_name + '&key=' + ENV['MAPS_API_KEY'])
 # TypeError: no implicit conversion of nil into String
 
