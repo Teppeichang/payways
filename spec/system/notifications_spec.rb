@@ -2,7 +2,6 @@
 # Failure/Error: uri = CGI.escape('https://maps.googleapis.com/maps/api/geocode/json?address=' + shop_name + '&key=' + ENV['MAPS_API_KEY'])
 # TypeError: no implicit conversion of nil into String
 
-
 # require 'rails_helper'
 
 # RSpec.describe '通知機能', type: :system do

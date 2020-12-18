@@ -21,7 +21,7 @@
 #       fill_in 'user_password', with: @user.password
 #       find('input[name = "commit"]').click
 #       # 「新規投稿」ボタンがある
-#       expect(page).to have_link href: "/posts/new" 
+#       expect(page).to have_link href: "/posts/new"
 #       # 新規投稿ページに遷移する
 #       visit new_post_path
 #       # 投稿フォームに情報を入力する
