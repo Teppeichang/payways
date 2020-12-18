@@ -8,7 +8,7 @@ RSpec.describe Post, type: :model do
   describe '店舗情報の投稿' do
     it '写真とタグが入力されていなくても、店名と決済方式・お店に関する情報の両方が入力されていると投稿できる' do
       @post.image = nil
-      @post.tags = ''
+      @post.tag_list = ''
       expect(@post).to be_valid
     end
     it '店名が入力されていないと投稿できない' do
