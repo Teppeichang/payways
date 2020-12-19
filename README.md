@@ -47,7 +47,7 @@ https://www.payways.work/
 - 検索結果表示画面にページネーションを実装(kaminari)
 - ユーザーログイン/登録/退会機能(ログイン・登録はdevise)
 - ゲストログイン機能
-- Google,Twitter,Facebook認証(OmniAuth)
+- Google/Twitter/Facebook認証(OmniAuth)
 - ユーザープロフィール編集機能
 - 店舗情報の投稿のCRUD機能ととタグ付け(タグ付け機能はacts-as-taggable-onで実装)
 - 投稿に対する「いいね！」機能(ajax)
