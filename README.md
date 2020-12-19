@@ -19,22 +19,35 @@ https://www.payways.work/
 という思いからこの「Payways」を作りました。
 
 ## 使用技術
-- Ruby 2.7.1
-- Ruby on Rails 6.0.3.3
-- JavaScript
-- jQuery(ver 3.5.1)
-- Bootstrap(ver 4.3.1)
-- GoogleMaps API(Maps JavaScript API,Places API,Geocoding API,Geolocation API)
-- Docker(ver19.03.13)とdocker-compose(ver1.27.4)による開発環境構築
-- AWS(S3,VPC,EC2,Route53,ACM,ELB)
-- Nginx,Unicorn
-- Capistranoによる自動デプロイ
-- CircleCIによるCI/CDパイプライン構築
-- 常時SSL化
-- レスポンシブデザイン対応
-- RSpec
-- Rubocop
-- GitHub
+- フロントエンド
+    - JavaScript
+    - jQuery(ver 3.5.1)
+    - Bootstrap(ver 4.3.1)
+
+- バックエンド
+    - Ruby 2.7.1
+    - Ruby on Rails 6.0.3.3
+
+- Web API
+    - GoogleMaps API(Maps JavaScript API,Places API,Geocoding API,Geolocation API)
+
+- インフラ(開発環境)
+    - Docker(ver19.03.13)
+    - docker-compose(ver1.27.4)
+
+- インフラ(本番環境)
+    - AWS(S3,VPC,EC2,Route53,ACM,ELB)
+    - Nginx
+    - Unicorn
+
+- その他使用技術・ツール
+    - Capistranoによる自動デプロイ
+    - CircleCIによるCI/CDパイプライン構築
+    - 常時SSL化
+    - レスポンシブデザイン対応
+    - RSpec
+    - Rubocop
+    - GitHub
 
 ## インフラ構成
 ![payways_インフラ図](https://user-images.githubusercontent.com/65349790/102466110-e2890c00-4091-11eb-96f0-8738d252acbc.png)
