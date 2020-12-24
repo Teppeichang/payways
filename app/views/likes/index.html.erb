@@ -5,9 +5,9 @@
     <div class="liked-post-container">
       <div class="liked-post-left">
         <% if l_post.image.blank? %>
-          <p class="no-image">No Image</p>
+          <%= link_to "No image", post_path(l_post.id) %>
         <% else %>
-          <%= image_tag l_post.image %>
+          <%= link_to (image_tag l_post.image), post_path(l_post.id) %>
         <% end %>
       </div>
       <div class="liked-post-right">
@@ -15,7 +15,7 @@
           <%= link_to l_post.shop_name, post_path(l_post.id) %>
         </div>
         <div class="liked-post-right-bottom">
-          <p><%= l_post.explain %></p>
+          <%= link_to l_post.explain, post_path(l_post.id) %>
         </div>
         <div class="liked-post-tags">
           <% if l_post.tag_list.present? %>
@@ -24,9 +24,6 @@
         </div>
         <div class="posted-user">
           <p>Posted by:<%= link_to l_post.user.name, user_path(l_post.user_id) %></p>
-        </div>
-        <div class="liked-post-detail">
-          <%= link_to "詳細", post_path(l_post.id), class:"btn btn-liked-post-detail"%>
         </div>
       </div>
     </div>

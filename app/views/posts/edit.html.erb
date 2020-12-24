@@ -8,14 +8,14 @@
       <%= render "shared/error_messages", model: form.object %>
     </div>
     <div class="post-form">
-      <p>店名（必須）</p>
+      <p>店名<span style="color:red;">（必須）</span></p>
       <%= form.text_field :shop_name, class: "shop_name" %>
       <p>写真</p>
       <%= form.file_field :image %>
       <div id="image-list"></div>
       <p>タグ</p>
       <%= form.text_field :tag_list, value: @post.tag_list.join(',') %>
-      <p>決済方式・お店に関する情報（必須）</p>
+      <p>決済方式・お店に関する情報<span style="color:red;">（必須）</span></p>
       <%= form.text_area :explain, class: "shop_explain" %>
     </div>
     <div class="post-btn">

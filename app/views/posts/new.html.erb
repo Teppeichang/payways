@@ -9,9 +9,9 @@
       <p>写真</p>
       <%= form.file_field :image %>
       <div id="image-list"></div>
-      <p>店名（必須）</p>
+      <p>店名<span style="color:red;">（必須）</span></p>
       <%= form.text_field :shop_name, placeholder: "例: スターバックスコーヒー 原宿店", class: "shop_name" %>
-      <p>決済方式・お店に関する情報（必須）</p>
+      <p>決済方式・お店に関する情報<span style="color:red;">（必須）</span></p>
       <%= form.text_area :explain, placeholder: "例: クレジットカードは全ブランド使えます。カフェラテとサンドイッチがとても美味しいお店です。 ", class: "shop_explain" %>
       <p>タグ</p>
       <%= form.text_field :tag_list, value: @post.tag_list.join(','), placeholder: "例: 全クレジットカード対応" %>
