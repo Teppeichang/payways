@@ -42,7 +42,6 @@
 
 .about-service h1{
   font-size: 32px;
-  font-family: 'ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN',sans-serif;
   margin-bottom:120px;
   color: white;
 }
@@ -69,19 +68,37 @@
 }
 
 .invitation{
-  height: 500px;
+  height: 1000px;
   background-color: whitesmoke;
 }
 
 .invitation h1{
   text-align: center;
-  padding: 100px 0 100px 0 ;
+  padding: 100px 0 80px 0 ;
   color: black;
 }
 
 .btn{
   display: flex;
   justify-content: center;
+}
+
+.btn-guest-signin{
+  width: 200px;
+  height:45px;
+  margin: 0 30px 20px 0;
+  background-color: black;
+}
+
+.guest-signin a{
+  text-decoration: none;
+  color: whitesmoke;
+  font-size: 20px;
+}
+
+.guest-signin a:hover{
+  text-decoration: none;
+  color: yellow;
 }
 
 .btn-signup{
@@ -123,6 +140,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   padding: 15px 0 0 0;
 }
 
@@ -150,7 +168,7 @@
 
 .twitter-signup-home{
   padding: 10px 20px 0 20px;
-  margin: 0 30px 0 30px;
+  margin: 30px 30px 30px 30px;
   width: 350px;
   height: 45px;
   border-radius: 5px 5px;
