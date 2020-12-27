@@ -52,14 +52,10 @@
   padding-bottom: 80px;
 }
 
-.about-service p{
-  padding: 30px 0 30px 0;
-  color: white;
-  font-size: 20px;
-}
-
 .icon-area p{
   font-size: 24px;
+  color: white;
+  padding: 30px 0 30px 0;
 }
 
 .icon-area img{
