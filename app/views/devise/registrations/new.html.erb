@@ -8,11 +8,11 @@
     <h1>ユーザー新規登録</h1>
     <div class="name-field">
       <p>ユーザー名<span style="color:red;">（必須）</span></p>
-      <%= f.text_field :name, placeholder: "半角英数字で入力してください" %>
+      <%= f.text_field :name, placeholder: "  半角英数字で入力してください" %>
     </div>
     <div class="email-field">
       <p>メールアドレス<span style="color:red;">（必須）</span></p>
-      <%= f.email_field :email, placeholder: "PC・携帯どちらでも可能", autofocus: true, autocomplete: "email" %>
+      <%= f.email_field :email, placeholder: "  PC・携帯どちらでも可能", autofocus: true, autocomplete: "email" %>
     </div>
     <div class="fav-shop-field">
       <p>好きなお店・ジャンル</p>
@@ -24,11 +24,11 @@
     </div>
     <div class="password-field">
       <p>パスワード<span style="color:red;">（必須）</span></p>
-      <%= f.password_field :password, placeholder:"6文字以上の半角英数字", autocomplete: "new-password", minlength: "6" %>
+      <%= f.password_field :password, placeholder:"  6文字以上の半角英数字", autocomplete: "new-password", minlength: "6" %>
     </div>
     <div class="password-confirm-field">
       <p>パスワード確認<span style="color:red;">（必須）</span></p>
-      <%= f.password_field :password_confirmation, placeholder:"同じパスワードを入力してください", autocomplete: "new-password" %>
+      <%= f.password_field :password_confirmation, placeholder:"  同じパスワードを入力してください", autocomplete: "new-password" %>
     </div>
   </div>
   <div class="signup-btn">
