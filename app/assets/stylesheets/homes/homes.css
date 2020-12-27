@@ -17,13 +17,13 @@
   padding: 100px 0 55px 0;
   font-size: 70px;
   font-family: 'Zapfino', sans-serif;
-  color: whitesmoke;
+  color: white;
 }
 
 .overview-area p{
   padding: 10px 0 0 0;
   font-size: 30px;
-  color: whitesmoke;
+  color: white;
 }
 
 .about-service{
@@ -35,19 +35,21 @@
 
 .about-service h2{
   color: yellow;
-  font-size: 25px;
-  padding: 20px 0 0 0 ;
+  font-size: 48px;
+  font-family: 'ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN',sans-serif;
+  padding:120px 0px 40px 0px;
 }
 
 .about-service h1{
-  font-size: 30px;
-  padding: 10px 0 30px 0;
+  font-size: 32px;
+  margin-bottom:120px;
   color: white;
 }
 
 .icon-area{
   display: flex;
   justify-content: space-around;
+  padding-bottom: 80px;
 }
 
 .about-service p{
@@ -56,20 +58,47 @@
   font-size: 20px;
 }
 
+.icon-area p{
+  font-size: 24px;
+}
+
+.icon-area img{
+  height: 240px;
+  width: 240px;
+}
+
 .invitation{
-  height: 500px;
+  height: 1000px;
   background-color: whitesmoke;
 }
 
 .invitation h1{
   text-align: center;
-  padding: 100px 0 100px 0 ;
+  padding: 100px 0 80px 0 ;
   color: black;
 }
 
 .btn{
   display: flex;
   justify-content: center;
+}
+
+.btn-guest-signin{
+  width: 200px;
+  height:45px;
+  margin: 0 30px 20px 0;
+  background-color: black;
+}
+
+.guest-signin a{
+  text-decoration: none;
+  color: whitesmoke;
+  font-size: 20px;
+}
+
+.guest-signin a:hover{
+  text-decoration: none;
+  color: yellow;
 }
 
 .btn-signup{
@@ -111,6 +140,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   padding: 15px 0 0 0;
 }
 
@@ -138,7 +168,7 @@
 
 .twitter-signup-home{
   padding: 10px 20px 0 20px;
-  margin: 0 30px 0 30px;
+  margin: 30px 30px 30px 30px;
   width: 350px;
   height: 45px;
   border-radius: 5px 5px;

@@ -9,7 +9,7 @@
     </div>
     <div class="search-form-header">
       <%= form_with url: search_posts_path, local: true, method: :get do |form| %>
-        <%= form.text_field :keyword, placeholder:"キーワードを入力", class:"header-search-input" %>
+        <%= form.text_field :keyword, placeholder:"  検索", class:"header-search-input" %>
         <i class="fas fa-times-circle", id="header-search-reset"></i>
         <%= form.submit "検索", class:"header-search-btn", style:"display: none;" %>
       <% end %>
