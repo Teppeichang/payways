@@ -64,24 +64,25 @@
 }
 
 .invitation{
-  height: 1000px;
+  height: 800px;
   background-color: whitesmoke;
 }
 
 .invitation h1{
   text-align: center;
-  padding: 100px 0 80px 0 ;
+  padding: 100px 0 0 0 ;
   color: black;
 }
 
 .btn{
   display: flex;
   justify-content: center;
+  margin-bottom: 20px;
 }
 
 .btn-guest-signin{
   width: 200px;
-  height:45px;
+  height: 45px;
   margin: 0 30px 20px 0;
   background-color: black;
 }
@@ -142,6 +143,7 @@
 
 .google-signup-home{
   padding: 10px 0 0 0;
+  margin-top: 20px;
   width: 350px;
   height: 45px;
   border-radius: 5px 5px;
