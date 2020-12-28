@@ -70,7 +70,7 @@
 
 .invitation h1{
   text-align: center;
-  padding: 100px 0 80px 0 ;
+  padding: 100px 0 50px 0 ;
   color: black;
 }
 
@@ -142,6 +142,7 @@
 
 .google-signup-home{
   padding: 10px 0 0 0;
+  margin-top: 10px;
   width: 350px;
   height: 45px;
   border-radius: 5px 5px;
