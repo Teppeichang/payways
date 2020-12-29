@@ -3,7 +3,7 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all.order(created_at: :desc)
-    @posts = Post.tagged_with(params[:tag]) if params[:tag]
+    @posts = Post.tagged_with(params[:tag].split(/[[:blank:]]+/).select(&:present?)) if params[:tag]
   end
 
   def new
