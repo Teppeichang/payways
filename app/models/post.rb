@@ -11,7 +11,7 @@ class Post < ApplicationRecord
 
   with_options presence: true do
     validates :shop_name
-    validates :explain
+    validates :explain, length: {maximum: 300}
   end
 
   # 検索機能
