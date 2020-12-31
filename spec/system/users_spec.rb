@@ -70,9 +70,9 @@ RSpec.describe 'ログイン', type: :system do
       find('input[name = "commit"]').click
       # ユーザーページへ遷移することを確認する
       expect(current_path).to eq user_path(@user.id)
-      # 「新規登録」「ログイン」ボタンが表示されていないことを確認する
+      # 「新規登録」ボタンが表示されていないことと、「ログイン中」の表示があることを確認する
       expect(page).to have_no_content('新規登録')
-      expect(page).to have_no_content('ログイン')
+      expect(page).to have_content('ログイン中')
     end
   end
   context 'ログインできない時' do
