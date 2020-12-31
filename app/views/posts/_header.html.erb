@@ -2,7 +2,8 @@
   <div class="header-area">
     <div class="app-name">
       <% if user_signed_in? %>
-        <%= link_to "Payways", posts_path %>
+        <%= link_to "Payways", posts_path, id:"index" %>
+        <p class="balloon">投稿一覧へ</p>
       <% else %>
         <%= link_to "Payways", root_path %>
       <% end %>
@@ -16,6 +17,7 @@
     </div>
     <ul class="header-menu">
       <% if user_signed_in? %>
+          <p class="during-login">ログイン中</p>
         <li class="header">
           <%= link_to user_path(current_user) do %>
             <i class="fas fa-user", id="mypage"></i>
