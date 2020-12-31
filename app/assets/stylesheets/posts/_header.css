@@ -54,6 +54,11 @@ li a{
   color: whitesmoke;
 }
 
+.during-login{
+  padding: 2px 2px 0 0;
+  color: lime;
+}
+
 .guest-login {
   font-size: 20px;
   padding: 0 15px 0 15px;
