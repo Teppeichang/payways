@@ -49,8 +49,8 @@ class Post < ApplicationRecord
 
   # postsテーブルのshop_nameを元に、GoogleMaps API（geocoder）で緯度経度を計算する処理
   def geocode
-    require "net/http"
-    require "addressable/uri"
+    require 'net/http'
+    require 'addressable/uri'
     uri = Addressable::URI.encode('https://maps.googleapis.com/maps/api/geocode/json?address=' + shop_name + '&key=' + ENV['MAPS_API_KEY'])
     res = Net::HTTP.get_response(URI.parse(uri))
     response = JSON.parse(res.body)
