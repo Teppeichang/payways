@@ -393,6 +393,7 @@ PLATFORMS
 DEPENDENCIES
   active_hash
   acts-as-taggable-on
+  addressable
   aws-sdk-s3
   bootsnap (>= 1.4.2)
   byebug
