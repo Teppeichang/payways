@@ -1,4 +1,5 @@
 class LikesController < ApplicationController
+  before_action :set_search, only: %i[index]
   def index
     @like_posts = current_user.like_posts
   end
@@ -19,4 +20,11 @@ class LikesController < ApplicationController
     @post = Post.find_by(id: @like.post_id)
     @like.destroy
   end
+
+  private
+
+  def set_search
+    @q = Post.ransack(params[:q])
+  end
+
 end

@@ -14,15 +14,6 @@ class Post < ApplicationRecord
     validates :explain, length: { maximum: 300 }
   end
 
-  # 検索機能
-  def self.search(search)
-    if search != ''
-      Post.where('shop_name LIKE(?)', "%#{search}%")
-    else
-      Post.all
-    end
-  end
-
   # いいね！に関する通知
   def create_notification_by(current_user)
     notification = current_user.active_notifications.new(post_id: id, visited_id: user_id, action: 'like')

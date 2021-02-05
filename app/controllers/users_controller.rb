@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :set_search
+  
   def show
     @user = User.find(params[:id])
     @posts = @user.posts
@@ -40,4 +42,9 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:name, :email, :image, :favorite_shop, :prefecture_id, :introduce)
   end
+
+  def set_search
+    @q = Post.ransack(params[:q])
+  end
+
 end
