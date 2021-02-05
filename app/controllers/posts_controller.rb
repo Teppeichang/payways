@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, only: %i[show edit update destroy]
-  before_action :set_search, only: %i[index new show edit] 
+  before_action :set_search, only: %i[index new show edit]
 
   def index
     @posts = Post.all.order(created_at: :desc)
@@ -26,7 +26,7 @@ class PostsController < ApplicationController
     @comments = @post.comments.includes(:user)
   end
 
-  def edit ; end
+  def edit; end
 
   def update
     if @post.update(post_params)
@@ -63,5 +63,4 @@ class PostsController < ApplicationController
   def set_search
     @q = Post.ransack(params[:q])
   end
-
 end

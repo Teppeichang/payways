@@ -11,9 +11,8 @@ class ApplicationController < ActionController::Base
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: %i[name email password password_confirmation favorite_shop prefecture_id])
   end
-  
+
   def set_search
     @q = Post.ransack(params[:q])
   end
-
 end

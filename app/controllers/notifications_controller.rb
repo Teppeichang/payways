@@ -1,6 +1,6 @@
 class NotificationsController < ApplicationController
   before_action :set_search
-  
+
   def index
     @notifications = current_user.passive_notifications
   end
@@ -15,5 +15,4 @@ class NotificationsController < ApplicationController
   def set_search
     @q = Post.ransack(params[:q])
   end
-
 end

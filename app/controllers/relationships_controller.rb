@@ -1,6 +1,6 @@
 class RelationshipsController < ApplicationController
   before_action :set_search
-  
+
   def create
     @user = User.find(params[:following_id])
     current_user.follow(@user)
@@ -17,5 +17,4 @@ class RelationshipsController < ApplicationController
   def set_search
     @q = Post.ransack(params[:q])
   end
-
 end
