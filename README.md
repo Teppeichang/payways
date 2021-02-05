@@ -56,7 +56,7 @@ https://www.payways.work/
 ![payways_er_diagram](https://user-images.githubusercontent.com/65349790/98211877-11d23680-1f86-11eb-8829-539b811bf15b.png)
 
 ## アプリケーションの機能
-- 検索機能(複数ワードで検索可能)
+- 検索機能(Ransack)
 - 検索結果表示画面にページネーションを実装(kaminari)
 - ユーザーログイン/登録/退会機能(ログイン・登録はdevise)
 - ゲストログイン機能
