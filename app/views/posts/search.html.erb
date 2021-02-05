@@ -1,7 +1,7 @@
 <%= render partial: "header" %>
 
 <div class="search-post-area">
-  <h2 class="search-head">検索結果：<%= params[:keyword] %></h2>
+  <h2 class="search-head">検索結果</h2>
   <%= render partial: "post", locals: { posts: @posts } %>
 </div>
 
