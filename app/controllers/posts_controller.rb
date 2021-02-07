@@ -4,9 +4,7 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all.order(created_at: :desc)
-    if params[:tag]
-      @posts = Post.tagged_with(params[:tag].split(/[[:blank:]]+/))
-    end
+    @posts = Post.tagged_with(params[:tag].split(/[[:blank:]]+/)) if params[:tag]
   end
 
   def new
