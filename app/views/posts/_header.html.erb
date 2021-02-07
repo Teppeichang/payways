@@ -10,7 +10,7 @@
     </div>
     <div class="search-form-header">
       <%= search_form_for(@q, url: search_posts_path) do |form| %>
-        <%= form.search_field :shop_name_cont, placeholder:"  検索", class:"header-search-input" %>
+        <%= form.text_field :shop_name_cont, placeholder:"  検索", class:"header-search-input" %>
         <i class="fas fa-times-circle", id="header-search-reset"></i>
         <%= form.submit "検索", class:"header-search-btn", style:"display: none;" %>
       <% end %>
