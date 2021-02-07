@@ -13,6 +13,7 @@ services:
       MYSQL_PASSWORD: MYSQL_ROOT_PASSWORD
     volumes:
       - mysql-data:/var/lib/mysql
+      - gem_data:/usr/local/bundle
   
   web:
     build: .
@@ -29,4 +30,4 @@ services:
 volumes: 
   mysql-data:
     driver: local
-
+  gem_data:
